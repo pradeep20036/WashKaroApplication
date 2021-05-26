@@ -25,8 +25,23 @@
         tools:replace="android:appComponentFactory">
         <activity android:name=".quiz.quizSolutionsActivity"></activity>
         <activity android:name=".satyaChat.ChatActivity" />
-        <activity android:name=".home.homeActivity" /> <!-- <activity android:name=".male_female_2" /> -->
+        <activity android:name=".home.homeActivity">
+
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+
+
+
+        </activity> <!-- <activity android:name=".male_female_2" /> -->
         <activity android:name=".home.LoginActivity"
+
+
+
             android:noHistory="true">
             <intent-filter>
             <action android:name="android.intent.action.VIEW"/>
@@ -38,16 +53,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".home.EmailLogin"
-            android:noHistory="true"/>
+            android:noHistory="true">
+
+        </activity>
+
         <activity android:name=".home.PhoneLogin"/>
         <activity android:name=".home.VerifyPhoneActivity"
             android:noHistory="true"/>
         <activity android:name=".home.WelcomeActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".survey.maleFemaleActivity" />
         <activity android:name=".news.text2speech2_2Activity" />

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:fbutton="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_effect"
@@ -11,27 +12,56 @@
 
     <TextView
         android:id="@+id/timeUpText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="385dp"
+        android:layout_height="95dp"
+        android:background="#9C27B0"
+        android:fontFamily="sans-serif-smallcaps"
         android:gravity="center"
         android:text="Time Up"
-        android:fontFamily="@font/mukta_regular"
-        android:textColor="@color/red"
-        android:textSize="50sp" />
-<ImageView
-    android:layout_width="60dp"
-    android:layout_height="60dp"
-    android:src="@drawable/ic_time"
-    />
+        android:textColor="#FFF0F0"
+        android:textSize="50sp"
+        fbutton:layout_constraintBottom_toBottomOf="parent"
+        fbutton:layout_constraintEnd_toEndOf="parent"
+        fbutton:layout_constraintStart_toStartOf="parent"
+        fbutton:layout_constraintTop_toTopOf="parent"
+        fbutton:layout_constraintVertical_bias="0.116" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="184dp"
+        android:layout_height="163dp"
+        android:src="@drawable/ic_time"
+        fbutton:layout_constraintBottom_toTopOf="@+id/playAgainButton"
+        fbutton:layout_constraintEnd_toEndOf="parent"
+        fbutton:layout_constraintHorizontal_bias="0.497"
+        fbutton:layout_constraintStart_toStartOf="parent"
+        fbutton:layout_constraintTop_toBottomOf="@+id/timeUpText"
+        fbutton:layout_constraintVertical_bias="0.444"
+        fbutton:srcCompat="@drawable/time_new" />
 
     <View
-        android:layout_width="match_parent"
-        android:layout_height="20dp"></View>
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        fbutton:layout_constraintBottom_toBottomOf="parent"
+        fbutton:layout_constraintEnd_toEndOf="parent"
+        fbutton:layout_constraintHorizontal_bias="0.0"
+        fbutton:layout_constraintStart_toStartOf="parent"
+        fbutton:layout_constraintTop_toTopOf="parent"
+        fbutton:layout_constraintVertical_bias="0.0"></View>
 
     <Button
         android:id="@+id/playAgainButton"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_width="383dp"
+        android:layout_height="96dp"
+        android:backgroundTint="#FF085C"
+        android:fontFamily="sans-serif-smallcaps"
         android:text="Play Again"
-        android:backgroundTint="@color/GreenColor" />
-</LinearLayout>
+        android:textSize="50sp"
+        fbutton:layout_constraintBottom_toBottomOf="@+id/view"
+        fbutton:layout_constraintEnd_toEndOf="parent"
+        fbutton:layout_constraintHorizontal_bias="0.492"
+        fbutton:layout_constraintStart_toStartOf="parent"
+        fbutton:layout_constraintTop_toTopOf="@+id/view"
+        fbutton:layout_constraintVertical_bias="0.792" />
+</androidx.constraintlayout.widget.ConstraintLayout>

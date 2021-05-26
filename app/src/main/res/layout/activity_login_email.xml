@@ -90,17 +90,19 @@
                     android:id="@+id/email_signup_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
                     android:layout_alignParentBottom="true"
-                    android:backgroundTint="@color/app_blue"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
                     android:background="@drawable/round_corner"
+                    android:backgroundTint="@color/app_blue"
                     android:fontFamily="@font/mukta_semibold"
+                    android:onClick="signUpEmailButton"
                     android:text="Sign Up"
                     android:textColor="@color/app_white"
                     android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:onClick="signUpEmailButton"
-                    />
+                    android:textStyle="bold" />
 
             </RelativeLayout>
 

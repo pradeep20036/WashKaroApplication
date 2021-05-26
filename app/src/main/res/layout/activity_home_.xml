@@ -21,12 +21,12 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="250dp">
 
                 <ViewFlipper
                     android:id="@+id/viewFlipper_slide_show"
                     android:layout_width="match_parent"
-                    android:layout_height="300dp" />
+                    android:layout_height="224dp" />
 
                 <ImageButton
 
@@ -35,8 +35,7 @@
                     android:layout_height="60dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="120dp"
-                    android:background="@drawable/arrow_left"
-                    />
+                    android:background="@drawable/arrow_left" />
 
                 <ImageButton
                     android:id="@+id/flipperRight"
@@ -44,6 +43,7 @@
                     android:layout_height="60dp"
                     android:layout_alignParentEnd="true"
                     android:layout_marginTop="120dp"
+                    android:layout_marginEnd="10dp"
                     android:layout_marginRight="8dp"
                     android:background="@drawable/right_arrow" />
 
@@ -395,34 +395,39 @@
                     <ImageButton
                         android:id="@+id/image_button3"
                         style="@android:style/Widget.Material.Light.ImageButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
+                        android:layout_width="59dp"
+                        android:layout_height="56dp"
                         android:layout_below="@+id/imgbut_text3"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
-                        android:background="#FFFFFF"
-                        android:clickable="false"
                         android:layout_marginTop="6dp"
                         android:layout_marginBottom="8dp"
+                        android:background="#FFFFFF"
+                        android:clickable="false"
                         android:contentDescription="Card Image"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/imgbut_text3"
-                        app:srcCompat="@drawable/ic_onair" />
+                        app:srcCompat="@drawable/ic_stories_new" />
 
                     <TextView
                         android:id="@+id/imgbut_text3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:fontFamily="@font/mukta_semibold"
+                        android:background="#EFE8E6"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:includeFontPadding="true"
+                        android:padding="2dp"
                         android:text="@string/success_stories_tile"
                         android:textAlignment="center"
-                        android:textColor="@color/app_blue"
-                        android:textSize="@dimen/home_card_font"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        android:textColor="@color/app_black"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:layout_editor_absoluteX="10dp" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -460,28 +465,33 @@
                             android:layout_alignParentStart="true"
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentBottom="true"
-                            android:background="#FFFFFF"
-                            android:clickable="false"
                             android:layout_marginTop="6dp"
                             android:layout_marginBottom="8dp"
+                            android:background="#FFFFFF"
+                            android:clickable="false"
                             android:contentDescription="Card Image"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/imgbut_text5"
-                            app:srcCompat="@drawable/ic_chat" />
+                            app:srcCompat="@drawable/ic_faq_new" />
 
                         <TextView
                             android:id="@+id/imgbut_text5"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:fontFamily="@font/mukta_semibold"
+                            android:background="#EFE8E6"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:includeFontPadding="true"
+                            android:padding="2dp"
                             android:text="@string/faqs_tile"
                             android:textAlignment="center"
-                            android:textColor="@color/app_blue"
-                            android:textSize="@dimen/home_card_font"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            android:textColor="@color/app_black"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:layout_editor_absoluteX="9dp" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -532,12 +542,17 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:fontFamily="@font/mukta_semibold"
+                            android:background="#EFE8E6"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:includeFontPadding="true"
+                            android:padding="2dp"
                             android:text="@string/myth_busters_tile"
                             android:textAlignment="center"
-                            android:textColor="@color/app_blue"
-                            android:textSize="@dimen/home_card_font"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            android:textColor="@color/app_black"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:layout_editor_absoluteX="10dp" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -581,19 +596,24 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/misc_but2_text"
-                            app:srcCompat="@drawable/ic_speech_bubble" />
+                            app:srcCompat="@drawable/ic_chatbot_new" />
 
                         <TextView
                             android:id="@+id/misc_but2_text"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:fontFamily="@font/mukta_semibold"
+                            android:background="#EFE8E6"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:includeFontPadding="true"
+                            android:padding="2dp"
                             android:text="@string/chatbot_tile"
                             android:textAlignment="center"
-                            android:textColor="@color/app_blue"
-                            android:textSize="@dimen/home_card_font"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            android:textColor="@color/app_black"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:layout_editor_absoluteX="9dp" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -647,12 +667,17 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:fontFamily="@font/mukta_semibold"
+                            android:background="#EFE8E6"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:includeFontPadding="true"
+                            android:padding="2dp"
                             android:text="@string/twitter_analysis"
                             android:textAlignment="center"
-                            android:textColor="@color/app_blue"
-                            android:textSize="@dimen/home_card_font"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            android:textColor="@color/app_black"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:layout_editor_absoluteX="10dp" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -706,12 +731,17 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:fontFamily="@font/mukta_semibold"
+                            android:background="#EFE8E6"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:includeFontPadding="true"
+                            android:padding="2dp"
                             android:text="@string/take_a_quiz"
                             android:textAlignment="center"
-                            android:textColor="@color/app_blue"
-                            android:textSize="@dimen/home_card_font"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            android:textColor="@color/app_black"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:layout_editor_absoluteX="9dp" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
