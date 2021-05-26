@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="inspire2connect.inspire2connect">
+    <!-- TODO: Why -->
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="whateverString"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:appComponentFactory">
+        <activity android:name=".quiz.quizSolutionsActivity"></activity>
+        <activity android:name=".satyaChat.ChatActivity" />
+        <activity android:name=".home.homeActivity" /> <!-- <activity android:name=".male_female_2" /> -->
+        <activity android:name=".home.LoginActivity"
+            android:noHistory="true">
+            <intent-filter>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.DEFAULT"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data
+                android:host="washkaro.page.link"
+                android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".home.EmailLogin"
+            android:noHistory="true"/>
+        <activity android:name=".home.PhoneLogin"/>
+        <activity android:name=".home.VerifyPhoneActivity"
+            android:noHistory="true"/>
+        <activity android:name=".home.WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".survey.maleFemaleActivity" />
+        <activity android:name=".news.text2speech2_2Activity" />
+        <activity android:name=".about.aboutActivity" />
+        <activity android:name=".news.onAIrActivity" /> <!-- <activity android:name=".add_new" /> -->
+        <!-- <activity android:name=".improveActivity" /> -->
+        <!-- <activity android:name=".Text2SpeechActivity" /> -->
+        <!-- <activity android:name=".Infographic" /> -->
+        <!-- <activity android:name=".daily_updates" /> -->
+        <activity android:name=".mythGuidelineUpdates.UpdateActivity" />
+        <activity android:name=".tweets.tweetActivity" />
+        <activity android:name=".quiz.quizActivity" />
+        <activity android:name=".quiz.scoreActivity" />
+        <activity android:name=".utils.urlActivity" />
+        <activity android:name=".aqi_cough.aqi_activity" />
+        <activity android:name=".aqi_cough.cough_recorder" />
+        <activity android:name=".aqi_cough.GeoTagPage" />
+
+        <service
+            android:name=".utils.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".mythGuidelineUpdates.guidelineViewActivity" />
+        <activity android:name=".home.InfographicsActivity" />
+
+        <meta-data
+            android:name="firebase_messaging_auto_init_enabled"
+            android:value="false" />
+        <meta-data
+            android:name="firebase_analytics_collection_enabled"
+            android:value="true" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/map_key" />
+    </application>
+
+</manifest>

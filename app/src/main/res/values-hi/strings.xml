@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">वॉशकरो - तपेदिक</string>
+    <string name="back_to_main_menu">मुख्य मेनू में वापस जाएं</string>
+
+    <string name="start_phone_auth">संदेश</string>
+    <string name="verify_phone_auth">सत्यापित करें</string>
+    <string name="resend_phone_auth">पुन: भेजें</string>
+    <string name="hint_phone_number">91 प्रारूप में फोन नंबर</string>
+    <string name="hint_verification_code">पुष्टि संख्या</string>
+    <string name="verification_code_help">आपको जल्द ही एक OTP प्राप्त होगा!</string>
+    <string name="instant_validation">(तत्काल सत्यापन)</string>
+    <string name="firebase_user_management">फायरबेस यूजर मैनेजमेंट</string>
+
+    <string name="tavlab_logo">IIIT दिल्ली में Tav Lab</string>
+    <string name="precog_logo">IIIT दिल्ली में Precog Lab</string>
+    <string name="iiitd_logo">आईआईआईटी दिल्ली</string>
+
+    <string name="bt_not_supported">इस डिवाइस पर ब्लूटूथ समर्थित नहीं है।</string>
+    <string name="bt_ads_not_supported">इस उपकरण पर ब्लूटूथ विज्ञापन समर्थित नहीं हैं।</string>
+
+    <string name="start_error_prefix">प्रारंभ विज्ञापन विफल:</string>
+    <string name="start_error_already_started">पहले ही शुरू हो चुका है।</string>
+    <string name="start_error_too_large">डेटा पैकेट 31 बाइट सीमा से अधिक है।</string>
+    <string name="start_error_unsupported">इस उपकरण पर समर्थित नहीं है।</string>
+    <string name="start_error_internal">आंतरिक गलती।</string>
+    <string name="start_error_too_many">बहुत सारे विज्ञापनदाता।</string>
+    <string name="seconds">सेकंड।</string>
+    <string name="scan_start_toast">के लिए स्कैनिंग</string>
+    <string name="start_error_unknown">अज्ञात त्रुटि</string>
+    <string name="advertising_timedout">समय समाप्त होने के कारण विज्ञापन बंद हो गया।</string>
+
+    <string name="login">लॉग इन करें</string>
+
+
+    <string name="presented_to_you_by">WashKaro, आपके द्वारा प्रस्तुत किया गया</string>
+    <string name="reference">संदर्भ</string>
+
+    <string name="priyanka">प्रियंका स्याल</string>
+    <string name="priyanka_tag">सॉफ्टवेयर इंजीनियर, माइक्रोसॉफ्ट आईडीसी</string>
+    <string name="chirag">चिराग जैन</string>
+    <string name="chirag_tag">अंडरग्रेजुएट, IIIT दिल्ली</string>
+
+    <string name="msg_subscribe_failed">संक्रमण विषय की सदस्यता लेने में विफल</string>
+    <string name="network_not_enabled">स्थान सक्षम नहीं है</string>
+    <string name="location_is_not_enabled">स्थान सक्षम नहीं है</string>
+    <string name="show_location_setting">अपनी स्थान सेटिंग से स्थान सक्षम करें</string>
+
+    <string name="please_select_one_choice">कृपया एक विकल्प चुनें</string>
+
+    <string name="guidelines_act">दिशा निर्देश</string>
+    <string name="myth_act">मिथक</string>
+    <string name="faq_act">सामान्य प्रश्न</string>
+    <string name="success_stories_act">सफलता की कहानियां</string>
+    <string name="govt_updates_act">सरकारी जानकारी</string>
+
+    <string name="relevant">मिलता जुलता</string>
+    <string name="irrelevant">व्यर्थ</string>
+
+    <!--    Tiles-->
+    <string name="information_link">जानकारी का श्रोत</string>
+    <string name="myth_busters_tile">मिथक</string>
+    <string name="chatbot_tile">चैटबॉट</string>
+    <string name="onair_tile">समाचार</string>
+    <string name="faqs_tile">सामान्य प्रश्न</string>
+    <string name="success_stories_tile">सफलता की कहानियां</string>
+
+    <string name="play_audio">ऑडियो चलाएं</string>
+
+    <string name="satya_chatbot">Satya चैटबोट</string>
+    <string name="share_content">इस ऐप को परिवार और दोस्तों के साथ साझा करके रोगों के प्रसार को रोकने में मदद करें।</string>
+    <string name="share_this_app">इस एप को शेयर कीजिए</string>
+    <string name="cancel_btn">रद्द करें</string>
+    <string name="pk">डॉ पोन्नुरंगम कुमारगुरु</string>
+    <string name="pk_description">प्रोफेसर (CSE), IIIT दिल्ली</string>
+    <string name="tav">डॉ तवप्रितेश सेठी</string>
+    <string name="tav_description">असिस्टेंट प्रोफेसर (CB), IIIT दिल्ली</string>
+    <string name="rohan">रोहन पांडे</string>
+    <string name="rohan_tag">अंडरग्रेजुएट, SNU</string>
+    <string name="vaibhav_tag">अंडरग्रेजुएट, SNU</string>
+    <string name="kanav">कण्व भगत</string>
+    <string name="kanav_tag">अंडरग्रेजुएट, IIIT दिल्ली</string>
+    <string name="vaibhav">वैभव गौतम</string>
+    <string name="himanshu">हिमांशु शर्मा</string>
+    <string name="himanshu_tag">अंडरग्रेजुएट, जीएल बजाज संस्थान</string>
+    <string name="bhavika_tag">अंडरग्रेजुएट, IIIT दिल्ली</string>
+    <string name="harsh_tag">अंडरग्रेजुएट, IIIT दिल्ली</string>
+    <string name="vrinda_tag">अंडरग्रेजुएट, IIIT दिल्ली</string>
+    <string name="bhavika">भाविका राणा</string>
+    <string name="harsh">हर्ष बंधे</string>
+    <string name="vihaan">विहान मिश्रा</string>
+    <string name="vrinda">वृंदा नारायण</string>
+    <string name="yashwin">यशविन अग्रवाल</string>
+    <string name="akshat">अक्षत वाधवा</string>
+    <string name="ayush">आयुष गर्ग</string>
+    <string name="rishabh">ऋषभ जालान</string>
+    <string name="vihaan_tag">अंडरग्रेजुएट, NSUT</string>
+
+    <string name="tanuj">तनुज डबास</string>
+    <string name="tanuj_tag">अंडरग्रेजुएट, IIIT दिल्ली</string>
+    <string name="yashwin_tag">अंडरग्रेजुएट, IIIT दिल्ली</string>
+
+    <string name="next">आगे</string>
+    <string name="skip">छोड़ें</string>
+    <string name="start">समझ गया</string>
+    <string name="yes">हाँ</string>
+    <string name="no">नहीं</string>
+    <string name="nextQues">आगे</string>
+    <string name="begin">शुरू</string>
+    <string name="sign_out">साइन आउट</string>
+
+
+    <string name="privacy_policy">गोपनीयता नीति</string>
+    <string name="survey">सर्वेक्षण</string>
+    <string name="language">भाषा</string>
+    <string name="about_us">हमारे बारे में</string>
+
+    <string name="enter_text">लिखना प्रारम्भ करें</string>
+    <string name="social_media_title">ट्विटर विश्लेषण</string>
+    <string name="trending_tweets">ट्रेंडिंग ट्वीट्स</string>
+    <string name="research_analytics">अनुसंधान विश्लेषिकी</string>
+    <string name="quiz_title">प्रश्नोत्तरी</string>
+    <string name="take_a_quiz">कोई प्रश्नोत्तरी लें</string>
+    <string name="twitter_analysis">ट्विटर विश्लेषण</string>
+    <string name="timeUp">समय समाप्त!</string>
+    <string name="correctAns">सही</string>
+    <string name="wrongAns">गलत</string>
+
+    <!--    AQI Hyperlocal Monitoring-->
+    <string name="aqi_hyperlocal_title">AQI हाइपरलोकल मॉनिटरिंग</string>
+    <string name="reset">रीसेट</string>
+    <string name="enter_age">आयु दर्ज करें :</string>
+    <string name="enter_gender">लिंग दर्ज करें :</string>
+    <string name="male">नर</string>
+    <string name="female">महिला</string>
+    <string name="other">अन्य</string>
+    <string name="enter_bmi">बीएमआई दर्ज करें :</string>
+    <string name="enter_bmi_hint">बीएमआई मूल्य</string>
+    <string name="suffering_from">से पीड़ित / के संदेह :</string>
+    <string name="asthma">दमा</string>
+    <string name="bronchitis">ब्रोंकाइटिस</string>
+    <string name="pneumonia">न्यूमोनिया</string>
+    <string name="tuberculosis">यक्ष्मा</string>
+    <string name="lung_cancer">फेफड़ों का कैंसर</string>
+    <string name="yesterday_aqi">कल का AQI :</string>
+    <string name="unavailable">अनुपलब्ध</string>
+    <string name="aqi_prediction_today">आज के लिए AQI भविष्यवाणी :</string>
+    <string name="aqi_hint">AQI</string>
+    <string name="geotagging">जियोटैगिंग</string>
+    <string name="data_collected_at">डेटा एकत्र:</string>
+    <string name="home_hospital">घर / अस्पताल</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</resources>
+
+
