@@ -54,14 +54,15 @@
             android:layout_height="67dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginVertical="10dp"
-            android:background="#472E2E"
-            android:backgroundTint="#E91E63"
-            android:backgroundTintMode="add"
+            android:background="#E60000"
+            android:backgroundTint="#FF0057"
+            android:backgroundTintMode="src_atop"
             android:fontFamily="sans-serif-smallcaps"
             android:text="STOP"
             android:textColor="#FFFFFF"
             android:textSize="25sp"
             android:textStyle="bold"
+            app:icon="@drawable/stop"
             app:iconTint="#FFFFFF" />
 
     </LinearLayout>
