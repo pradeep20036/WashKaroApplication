@@ -33,22 +33,7 @@
         app:layout_constraintTop_toBottomOf="@id/textView5"
         app:layout_constraintBottom_toTopOf="@id/linearLayout2">
 
-        <Button
-            android:id="@+id/recordButton1"
-            android:layout_width="267dp"
-            android:layout_height="63dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginVertical="20dp"
-            android:background="#472E2E"
-            android:backgroundTint="#E91E63"
-            android:fontFamily="sans-serif-smallcaps"
-            android:text="RECORD"
-            android:textColor="#FFFFFF"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            app:iconTint="#FFFFFF" />
-
-        <Button
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/stopButton1"
             android:layout_width="273dp"
             android:layout_height="67dp"
@@ -56,15 +41,77 @@
             android:layout_marginVertical="10dp"
             android:background="#E60000"
             android:backgroundTint="#FF0057"
-            android:backgroundTintMode="src_atop"
-            android:fontFamily="sans-serif-smallcaps"
-            android:text="STOP"
-            android:textColor="#FFFFFF"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            app:icon="@drawable/stop"
-            app:iconTint="#FFFFFF" />
+            android:backgroundTintMode="add"
+            android:clickable="true"
+            android:elevation="@dimen/home_card_elev"
 
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                tools:ignore="MissingConstraints">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/record"/>
+                <TextView
+                    android:layout_width="193dp"
+                    android:layout_height="match_parent"
+                    android:text="RECORD"
+                    android:layout_margin="10dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                   app:iconTint="#FFFFFF"
+
+                    />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/recordButton1"
+            android:layout_width="273dp"
+            android:layout_height="67dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="10dp"
+            android:background="#E60000"
+            android:backgroundTint="#FF0057"
+            android:backgroundTintMode="add"
+            android:clickable="true"
+            android:elevation="@dimen/home_card_elev"
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                tools:ignore="MissingConstraints">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/stop"/>
+                <TextView
+                    android:layout_width="193dp"
+                    android:layout_height="match_parent"
+                    android:text="STOP"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:iconTint="#FFFFFF"
+
+                    />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -75,35 +122,86 @@
         app:layout_constraintTop_toBottomOf="@id/linearLayout1"
         app:layout_constraintBottom_toTopOf="@id/submitButton1">
 
-        <Button
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/playFileButton1"
-            android:layout_width="252dp"
-            android:layout_height="65dp"
+            android:layout_width="273dp"
+            android:layout_height="67dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginVertical="10dp"
-            android:background="#472E2E"
-            android:backgroundTint="#E91E63"
-            android:fontFamily="sans-serif-smallcaps"
-            android:isScrollContainer="false"
-            android:text="Play file"
-            android:textColor="#FFFFFF"
-            android:textSize="25sp"
-            app:iconGravity="start"
-            app:iconTintMode="src_in" />
+            android:background="#E60000"
+            android:backgroundTint="#FF0057"
+            android:backgroundTintMode="add"
+            android:clickable="true"
+            android:elevation="@dimen/home_card_elev"
 
-        <Button
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                tools:ignore="MissingConstraints">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/play"/>
+                <TextView
+                    android:layout_width="193dp"
+                    android:layout_height="match_parent"
+                    android:text="PLAY FILE"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:iconTint="#FFFFFF"
+
+                    />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/stopFileButton1"
-            android:layout_width="242dp"
-            android:layout_height="61dp"
+            android:layout_width="273dp"
+            android:layout_height="67dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginVertical="20dp"
-            android:background="#472E2E"
-            android:backgroundTint="#E91E63"
-            android:fontFamily="sans-serif-smallcaps"
-            android:text="Stop File"
-            android:textColor="#FFFFFF"
-            android:textSize="25sp" />
+            android:layout_marginVertical="10dp"
+            android:background="#E60000"
+            android:backgroundTint="#FF0057"
+            android:backgroundTintMode="add"
+            android:clickable="true"
+            android:elevation="@dimen/home_card_elev"
 
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                tools:ignore="MissingConstraints">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/stop"/>
+                <TextView
+                    android:layout_width="193dp"
+                    android:layout_height="match_parent"
+                    android:text="STOP FILE"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:iconTint="#FFFFFF"
+
+                    />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 
     <Button
