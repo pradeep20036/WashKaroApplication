@@ -387,23 +387,24 @@
                 android:id="@+id/tweet_list_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/buttonback2"
-                android:backgroundTint="@color/app_blue"
+                android:background="@drawable/gradient_effect"
                 android:clickable="true"
                 android:elevation="@dimen/home_card_elev">
+
                 <TextView
                     style="@android:style/Widget.Material.Light.ImageButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="285dp"
+                    android:layout_height="71dp"
                     android:layout_marginTop="4dp"
+                    android:background="#FF085C"
                     android:fontFamily="@font/mukta_semibold"
+                    android:gravity="center"
                     android:text="@string/trending_tweets"
                     android:textAlignment="center"
                     android:textColor="@color/app_white"
                     android:textSize="20sp"
-                    android:background="@color/app_blue"
                     app:layout_constraintTop_toTopOf="parent"
-                    />
+                    tools:layout_editor_absoluteX="52dp" />
             </androidx.constraintlayout.widget.ConstraintLayout>
             <RelativeLayout
                 android:layout_width="match_parent"

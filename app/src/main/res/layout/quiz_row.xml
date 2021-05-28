@@ -27,128 +27,134 @@
 
                 <TextView
                     android:id="@+id/question_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
+                    android:layout_width="406dp"
+                    android:layout_height="96dp"
+                    android:layout_marginStart="4dp"
                     android:fontFamily="@font/mukta_semibold"
+                    android:gravity="center"
                     android:text="Question"
                     android:textAlignment="center"
                     android:textColor="@color/app_white"
                     android:textSize="25sp"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
             <LinearLayout
-                android:id="@+id/options_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                android:layout_marginBottom="20dp"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/home_card_elev"
+                app:layout_gravity="fill_horizontal">
 
                 <LinearLayout
+                    android:id="@+id/options_list"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="20dp"
-                    android:clipToPadding="false"
-                    android:gravity="center"
+                    android:layout_height="121dp"
+                    android:layout_weight="1"
                     android:orientation="vertical"
-                    android:paddingBottom="@dimen/home_card_elev"
-                    app:layout_gravity="fill_horizontal">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/option_1_tile"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginBottom="15dp"
-                        android:background="@drawable/buttonback2"
-                        android:clickable="true"
-                        android:elevation="@dimen/home_card_elev">
-
-                        <TextView
-                            android:id="@+id/option_1_text"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
-                            android:fontFamily="@font/mukta_semibold"
-                            android:text="Option 1"
-                            android:textAlignment="center"
-                            android:textColor="@color/app_purple"
-                            android:textSize="@dimen/home_card_font"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/option_2_tile"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginBottom="15dp"
-                        android:background="@drawable/buttonback2"
-                        android:clickable="true"
-                        android:elevation="@dimen/home_card_elev">
-
-                        <TextView
-                            android:id="@+id/option_2_text"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
-                            android:fontFamily="@font/mukta_semibold"
-                            android:text="Option 2"
-                            android:textAlignment="center"
-                            android:textColor="@color/app_purple"
-                            android:textSize="@dimen/home_card_font"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/option_3_tile"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginBottom="15dp"
-                        android:background="@drawable/buttonback2"
-                        android:clickable="true"
-                        android:elevation="@dimen/home_card_elev">
-
-                        <TextView
-                            android:id="@+id/option_3_text"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
-                            android:fontFamily="@font/mukta_semibold"
-                            android:text="Option 3"
-                            android:textAlignment="center"
-                            android:textColor="@color/app_purple"
-                            android:textSize="@dimen/home_card_font"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/option_4_tile"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginBottom="15dp"
-                        android:background="@drawable/buttonback2"
-                        android:clickable="true"
-                        android:elevation="@dimen/home_card_elev">
-
-                        <TextView
-                            android:id="@+id/option_4_text"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
-                            android:fontFamily="@font/mukta_semibold"
-                            android:text="Option 4"
-                            android:textAlignment="center"
-                            android:textColor="@color/app_purple"
-                            android:textSize="@dimen/home_card_font"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
 
                 </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/option_1_tile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/buttonback2"
+                    android:clickable="true"
+                    android:elevation="@dimen/home_card_elev">
+
+                    <TextView
+                        android:id="@+id/option_1_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/mukta_semibold"
+                        android:text="Option 1"
+                        android:textAlignment="center"
+                        android:textColor="@color/app_purple"
+                        android:textSize="@dimen/home_card_font"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/option_2_tile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/buttonback2"
+                    android:clickable="true"
+                    android:elevation="@dimen/home_card_elev">
+
+                    <TextView
+                        android:id="@+id/option_2_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/mukta_semibold"
+                        android:text="Option 2"
+                        android:textAlignment="center"
+                        android:textColor="@color/app_purple"
+                        android:textSize="@dimen/home_card_font"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/option_3_tile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/buttonback2"
+                    android:clickable="true"
+                    android:elevation="@dimen/home_card_elev">
+
+                    <TextView
+                        android:id="@+id/option_3_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/mukta_semibold"
+                        android:text="Option 3"
+                        android:textAlignment="center"
+                        android:textColor="@color/app_purple"
+                        android:textSize="@dimen/home_card_font"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/option_4_tile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/buttonback2"
+                    android:clickable="true"
+                    android:elevation="@dimen/home_card_elev">
+
+                    <TextView
+                        android:id="@+id/option_4_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/mukta_semibold"
+                        android:text="Option 4"
+                        android:textAlignment="center"
+                        android:textColor="@color/app_purple"
+                        android:textSize="@dimen/home_card_font"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </LinearLayout>
 
