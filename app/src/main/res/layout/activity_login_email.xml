@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/bg"
-    tools:context=".home.EmailLogin"
-    android:orientation="vertical">
+    android:background="@drawable/ca_share_app_border"
+    android:orientation="vertical"
+    tools:context=".home.EmailLogin">
 
     <ImageView
         android:id="@+id/user_picture"
         android:layout_width="match_parent"
-        android:layout_marginTop="50dp"
         android:layout_height="200dp"
-        android:src="@drawable/ic_launcher_foreground"
+        android:layout_marginTop="50dp"
         android:foregroundGravity="center_horizontal"
-         />
+        android:src="@drawable/ic_launcher_foreground" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp"
-        android:text="User LogIn "
         android:fontFamily="@font/mukta_semibold"
-        android:textSize="40sp"
+        android:text="User LogIn "
         android:textColor="@color/app_black"
-        android:layout_gravity="center_horizontal"/>
+        android:textSize="40sp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/login_tile"
@@ -33,13 +33,14 @@
         android:layout_margin="25dp"
         android:background="@drawable/buttonback2"
         android:clickable="true"
-        android:elevation="@dimen/home_card_elev"
-        >
+        android:elevation="@dimen/home_card_elev">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             tools:ignore="MissingConstraints">
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/email"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -72,19 +73,20 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPassword" />
             </com.google.android.material.textfield.TextInputLayout>
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ProgressBar
                     android:id="@+id/progressBar"
                     style="?android:attr/progressBarStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:visibility="invisible"
                     android:layout_above="@+id/email_signup_button"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="25dp"
-                    />
+                    android:visibility="invisible" />
 
                 <Button
                     android:id="@+id/email_signup_button"
@@ -110,7 +112,6 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
 </LinearLayout>
