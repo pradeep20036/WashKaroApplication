@@ -31,7 +31,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="25dp"
-        android:background="@drawable/buttonback2"
+        android:padding="10dp"
+        android:background="@drawable/round_corner"
         android:clickable="true"
         android:elevation="@dimen/home_card_elev">
 
@@ -48,13 +49,24 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"
+                app:startIconDrawable="@drawable/ic_email"
+                app:helperText="Required"
+                app:helperTextTextColor="@color/red"
+                app:counterEnabled="true"
+                app:endIconDrawable="@drawable/ic_clear"
+                app:counterMaxLength="40"
                 android:hint="Your Email"
                 android:textColorHint="@color/app_blue">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:maxLength="40"
                     android:inputType="textEmailAddress" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -64,6 +76,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
+                app:startIconDrawable="@drawable/ic_lock"
+                app:helperText="Required"
+                app:helperTextTextColor="@color/red"
+                app:counterEnabled="true"
+
+                app:counterMaxLength="20"
+
                 android:hint="Your Password"
                 android:textColorHint="@color/app_blue"
                 app:passwordToggleEnabled="true">
@@ -71,6 +90,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:maxLength="20"
                     android:inputType="textPassword" />
             </com.google.android.material.textfield.TextInputLayout>
 
