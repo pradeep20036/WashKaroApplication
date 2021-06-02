@@ -11,13 +11,15 @@
     <TextView
         android:id="@+id/quest_num"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="64dp"
         android:layout_marginBottom="20dp"
+        android:background="#F44336"
+        android:fontFamily="sans-serif-smallcaps"
         android:gravity="center"
         android:padding="8dp"
         android:text="1/5"
         android:textColor="@color/app_white"
-        android:textSize="20sp"
+        android:textSize="40sp"
         android:textStyle="bold" />
 
     <ScrollView
@@ -41,15 +43,17 @@
 
                 <TextView
                     android:id="@+id/question_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="394dp"
+                    android:layout_height="101dp"
                     android:layout_marginTop="4dp"
+                    android:background="#9C27B0"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:gravity="center"
                     android:padding="5dp"
-                    android:fontFamily="@font/mukta_semibold"
                     android:text="Question"
                     android:textAlignment="center"
                     android:textColor="@color/app_white"
-                    android:textSize="25sp"
+                    android:textSize="30sp"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 

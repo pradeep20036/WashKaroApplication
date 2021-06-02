@@ -46,28 +46,33 @@
             android:elevation="@dimen/home_card_elev"
 
             >
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
 
+                android:background="#FF4CAF50"
                 tools:ignore="MissingConstraints">
+
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="38dp"
+                    android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:src="@drawable/record"/>
+                    android:src="@drawable/rec" />
+
                 <TextView
                     android:layout_width="193dp"
                     android:layout_height="match_parent"
-                    android:text="RECORD"
+                    android:layout_gravity="center"
                     android:layout_margin="10dp"
                     android:fontFamily="sans-serif-smallcaps"
+                    android:gravity="center"
+                    android:text="RECORD"
                     android:textColor="#FFFFFF"
+
                     android:textSize="25sp"
                     android:textStyle="bold"
-                   app:iconTint="#FFFFFF"
-
-                    />
+                    app:iconTint="#FFFFFF" />
             </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -77,50 +82,53 @@
             android:id="@+id/recordButton1"
             android:layout_width="273dp"
             android:layout_height="67dp"
-            android:layout_gravity="center_horizontal"
+            android:layout_gravity="center"
             android:layout_marginVertical="10dp"
             android:background="#E60000"
             android:backgroundTint="#FF0057"
             android:backgroundTintMode="add"
-            android:clickable="true"
-            android:elevation="@dimen/home_card_elev"
 
-            >
+            android:clickable="true"
+            android:elevation="@dimen/home_card_elev">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
 
+                android:background="#FF4CAF50"
                 tools:ignore="MissingConstraints">
+
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
-                    android:src="@drawable/stop"/>
+                    android:src="@drawable/stop" />
+
                 <TextView
                     android:layout_width="193dp"
                     android:layout_height="match_parent"
-                    android:text="STOP"
-                    android:layout_gravity="center_vertical"
+                    android:layout_gravity="center"
                     android:layout_margin="10dp"
                     android:fontFamily="sans-serif-smallcaps"
+                    android:gravity="center"
+                    android:text="STOP"
                     android:textColor="#FFFFFF"
+
                     android:textSize="25sp"
                     android:textStyle="bold"
-                    app:iconTint="#FFFFFF"
-
-                    />
+                    app:iconTint="#FFFFFF" />
             </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:id="@+id/linearLayout2"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout1"
-        app:layout_constraintBottom_toTopOf="@id/submitButton1">
+        android:layout_width="411dp"
+        android:layout_height="201dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/submitButton1"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout1">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/playFileButton1"
@@ -135,29 +143,33 @@
             android:elevation="@dimen/home_card_elev"
 
             >
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
 
+                android:background="#FF4CAF50"
                 tools:ignore="MissingConstraints">
+
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
-                    android:src="@drawable/play"/>
+                    android:src="@drawable/play" />
+
                 <TextView
                     android:layout_width="193dp"
                     android:layout_height="match_parent"
-                    android:text="PLAY FILE"
-                    android:layout_gravity="center_vertical"
+                    android:layout_gravity="center"
                     android:layout_margin="10dp"
                     android:fontFamily="sans-serif-smallcaps"
+                    android:gravity="center"
+                    android:text="PLAY FILE"
                     android:textColor="#FFFFFF"
+
                     android:textSize="25sp"
                     android:textStyle="bold"
-                    app:iconTint="#FFFFFF"
-
-                    />
+                    app:iconTint="#FFFFFF" />
             </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -176,29 +188,33 @@
             android:elevation="@dimen/home_card_elev"
 
             >
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
 
+                android:background="#FF4CAF50"
                 tools:ignore="MissingConstraints">
+
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
-                    android:src="@drawable/stop"/>
+                    android:src="@drawable/stop" />
+
                 <TextView
                     android:layout_width="193dp"
                     android:layout_height="match_parent"
-                    android:text="STOP FILE"
-                    android:layout_gravity="center_vertical"
+                    android:layout_gravity="center"
                     android:layout_margin="10dp"
                     android:fontFamily="sans-serif-smallcaps"
+                    android:gravity="center"
+                    android:text="STOP FILE"
                     android:textColor="#FFFFFF"
+
                     android:textSize="25sp"
                     android:textStyle="bold"
-                    app:iconTint="#FFFFFF"
-
-                    />
+                    app:iconTint="#FFFFFF" />
             </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -214,9 +230,10 @@
         android:background="@drawable/buttonback2"
         android:backgroundTint="#FF085C"
         android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center"
         android:text="SUBMIT"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
