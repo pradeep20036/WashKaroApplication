@@ -17,7 +17,7 @@
         android:padding="8dp"
         android:text="1/5"
         android:textColor="@color/app_white"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <ScrollView
@@ -44,6 +44,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
+                    android:padding="5dp"
                     android:fontFamily="@font/mukta_semibold"
                     android:text="Question"
                     android:textAlignment="center"
@@ -64,8 +65,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
+                    android:layout_marginTop="10dp"
                     android:clipToPadding="false"
                     android:gravity="center"
+                    android:layout_marginHorizontal="10dp"
                     android:orientation="vertical"
                     android:paddingBottom="@dimen/home_card_elev"
                     app:layout_gravity="fill_horizontal">
@@ -75,7 +78,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="15dp"
-                        android:background="@drawable/buttonback2"
+                        android:padding="8dp"
+                        android:background="@drawable/quiz_round_button"
                         android:clickable="true"
                         android:elevation="@dimen/home_card_elev">
 
@@ -98,7 +102,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="15dp"
-                        android:background="@drawable/buttonback2"
+                        android:padding="8dp"
+                        android:background="@drawable/quiz_round_button"
                         android:clickable="true"
                         android:elevation="@dimen/home_card_elev">
 
@@ -121,7 +126,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="15dp"
-                        android:background="@drawable/buttonback2"
+                        android:padding="8dp"
+                        android:background="@drawable/quiz_round_button"
                         android:clickable="true"
                         android:elevation="@dimen/home_card_elev">
 
@@ -144,7 +150,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="15dp"
-                        android:background="@drawable/buttonback2"
+                        android:padding="8dp"
+                        android:background="@drawable/quiz_round_button"
                         android:clickable="true"
                         android:elevation="@dimen/home_card_elev">
 
