@@ -74,7 +74,7 @@
                 android:id="@+id/tweet_text"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:fontFamily="@font/mukta_semibold"
+                android:fontFamily="sans-serif-smallcaps"
                 android:gravity="center_vertical"
                 android:paddingLeft="4dp"
                 android:paddingTop="4dp"
