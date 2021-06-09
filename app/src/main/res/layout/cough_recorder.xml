@@ -14,7 +14,7 @@
         android:layout_height="93dp"
         android:layout_marginVertical="20dp"
         android:layout_marginTop="16dp"
-        android:background="#9C27B0"
+        android:background="#3F51B5"
         android:fontFamily="sans-serif-smallcaps"
         android:gravity="center"
         android:text="COUGH RECORDER"
@@ -26,12 +26,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
+        android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:id="@+id/linearLayout1"
-        app:layout_constraintTop_toBottomOf="@id/textView5"
-        app:layout_constraintBottom_toTopOf="@id/linearLayout2">
+        app:layout_constraintBottom_toTopOf="@id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@id/textView5">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/stopButton1"
@@ -39,9 +39,7 @@
             android:layout_height="67dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginVertical="10dp"
-            android:background="#E60000"
-            android:backgroundTint="#FF0057"
-            android:backgroundTintMode="add"
+
             android:clickable="true"
             android:elevation="@dimen/home_card_elev"
 
@@ -51,7 +49,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
 
-                android:background="#FF4CAF50"
+                android:background="@drawable/quiz_round_button"
                 tools:ignore="MissingConstraints">
 
                 <ImageView
@@ -68,7 +66,7 @@
                     android:fontFamily="sans-serif-smallcaps"
                     android:gravity="center"
                     android:text="RECORD"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#000000"
 
                     android:textSize="25sp"
                     android:textStyle="bold"
@@ -84,9 +82,7 @@
             android:layout_height="67dp"
             android:layout_gravity="center"
             android:layout_marginVertical="10dp"
-            android:background="#E60000"
-            android:backgroundTint="#FF0057"
-            android:backgroundTintMode="add"
+
 
             android:clickable="true"
             android:elevation="@dimen/home_card_elev">
@@ -95,7 +91,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
 
-                android:background="#FF4CAF50"
+                android:background="@drawable/quiz_round_button"
                 tools:ignore="MissingConstraints">
 
                 <ImageView
@@ -112,7 +108,7 @@
                     android:fontFamily="sans-serif-smallcaps"
                     android:gravity="center"
                     android:text="STOP"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#000000"
 
                     android:textSize="25sp"
                     android:textStyle="bold"
@@ -136,9 +132,6 @@
             android:layout_height="67dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginVertical="10dp"
-            android:background="#E60000"
-            android:backgroundTint="#FF0057"
-            android:backgroundTintMode="add"
             android:clickable="true"
             android:elevation="@dimen/home_card_elev"
 
@@ -148,7 +141,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
 
-                android:background="#FF4CAF50"
+                android:background="@drawable/quiz_round_button"
                 tools:ignore="MissingConstraints">
 
                 <ImageView
@@ -165,7 +158,7 @@
                     android:fontFamily="sans-serif-smallcaps"
                     android:gravity="center"
                     android:text="PLAY FILE"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#000000"
 
                     android:textSize="25sp"
                     android:textStyle="bold"
@@ -181,9 +174,6 @@
             android:layout_height="67dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginVertical="10dp"
-            android:background="#E60000"
-            android:backgroundTint="#FF0057"
-            android:backgroundTintMode="add"
             android:clickable="true"
             android:elevation="@dimen/home_card_elev"
 
@@ -193,7 +183,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
 
-                android:background="#FF4CAF50"
+                android:background="@drawable/quiz_round_button"
                 tools:ignore="MissingConstraints">
 
                 <ImageView
@@ -210,7 +200,7 @@
                     android:fontFamily="sans-serif-smallcaps"
                     android:gravity="center"
                     android:text="STOP FILE"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#000000"
 
                     android:textSize="25sp"
                     android:textStyle="bold"
@@ -227,8 +217,8 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginVertical="10dp"
         android:layout_marginBottom="4dp"
-        android:background="@drawable/buttonback2"
-        android:backgroundTint="#FF085C"
+        android:background="@drawable/bg"
+        android:backgroundTint="#1D4361"
         android:fontFamily="sans-serif-smallcaps"
         android:gravity="center"
         android:text="SUBMIT"

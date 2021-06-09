@@ -97,7 +97,7 @@
                             android:fontFamily="@font/mukta_semibold"
                             android:text="Option 1"
                             android:textAlignment="center"
-                            android:textColor="@color/app_purple"
+                            android:textColor="@color/app_black"
                             android:textSize="@dimen/home_card_font"
                             app:layout_constraintTop_toTopOf="parent" />
 
@@ -121,7 +121,7 @@
                             android:fontFamily="@font/mukta_semibold"
                             android:text="Option 2"
                             android:textAlignment="center"
-                            android:textColor="@color/app_purple"
+                            android:textColor="@color/app_black"
                             android:textSize="@dimen/home_card_font"
                             app:layout_constraintTop_toTopOf="parent" />
 
@@ -145,7 +145,7 @@
                             android:fontFamily="@font/mukta_semibold"
                             android:text="Option 3"
                             android:textAlignment="center"
-                            android:textColor="@color/app_purple"
+                            android:textColor="@color/app_black"
                             android:textSize="@dimen/home_card_font"
                             app:layout_constraintTop_toTopOf="parent" />
 
@@ -169,7 +169,7 @@
                             android:fontFamily="@font/mukta_semibold"
                             android:text="Option 4"
                             android:textAlignment="center"
-                            android:textColor="@color/app_purple"
+                            android:textColor="@color/app_black"
                             android:textSize="@dimen/home_card_font"
                             app:layout_constraintTop_toTopOf="parent" />
 
