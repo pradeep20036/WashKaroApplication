@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#BEE6E2"
+    android:background="@drawable/gradient_effect"
     tools:context=".home.homeActivity">
 
 
@@ -385,7 +385,7 @@
                         android:id="@+id/success_stories_tile"
                         android:layout_width="150dp"
                         android:layout_height="match_parent"
-                        android:background="@color/grey_100"
+                        android:background="@drawable/round_corner"
                         android:clickable="true"
                         android:elevation="@dimen/home_card_elev"
                         app:layout_column="1"
@@ -448,7 +448,7 @@
                         android:id="@+id/faqs_tile"
                         android:layout_width="150dp"
                         android:layout_height="match_parent"
-                        android:background="@color/grey_100"
+                        android:background="@drawable/round_corner"
                         android:clickable="true"
                         android:elevation="@dimen/home_card_elev"
                         app:layout_column="1"
@@ -511,7 +511,7 @@
                         android:id="@+id/misc_but3_layout"
                         android:layout_width="150dp"
                         android:layout_height="match_parent"
-                        android:background="@color/grey_100"
+                        android:background="@drawable/round_corner"
                         android:clickable="true"
                         android:elevation="@dimen/home_card_elev">
 
@@ -571,7 +571,7 @@
                         android:id="@+id/misc_but2_layout"
                         android:layout_width="150dp"
                         android:layout_height="match_parent"
-                        android:background="@color/grey_100"
+                        android:background="@drawable/round_corner"
                         android:clickable="true"
                         android:elevation="@dimen/home_card_elev">
 
@@ -631,7 +631,7 @@
                         android:id="@+id/twitter_tile"
                         android:layout_width="150dp"
                         android:layout_height="match_parent"
-                        android:background="@color/grey_100"
+                        android:background="@drawable/quiz_round_button"
                         android:clickable="true"
                         android:elevation="@dimen/home_card_elev"
                         app:layout_column="1"
@@ -694,7 +694,7 @@
                         android:id="@+id/quiz_tile"
                         android:layout_width="150dp"
                         android:layout_height="match_parent"
-                        android:background="@color/grey_100"
+                        android:background="@drawable/quiz_round_button"
                         android:clickable="true"
                         android:elevation="@dimen/home_card_elev"
                         app:layout_column="1"
