@@ -82,7 +82,7 @@
                     android:layout_height="50dp"
                     android:layout_marginTop="40dp"
 
-                    android:background="@drawable/quiz_score_btn"
+                    android:background="@drawable/quiz_round_button"
                     android:clickable="true"
                     android:elevation="@dimen/home_card_elev"
                     android:padding="8dp">
@@ -115,7 +115,7 @@
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:layout_margin="5dp"
-                    android:background="@drawable/quiz_score_btn"
+                    android:background="@drawable/quiz_round_button"
                     android:clickable="true"
                     android:elevation="@dimen/home_card_elev"
                     android:padding="8dp">
@@ -139,7 +139,7 @@
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:layout_margin="5dp"
-                    android:background="@drawable/quiz_score_btn"
+                    android:background="@drawable/quiz_round_button"
                     android:clickable="true"
                     android:elevation="@dimen/home_card_elev"
                     android:padding="8dp">
