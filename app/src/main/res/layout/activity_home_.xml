@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_effect"
+    android:background="@drawable/gradient_effect_3"
     tools:context=".home.homeActivity">
 
 
@@ -363,7 +363,7 @@
 
             <androidx.gridlayout.widget.GridLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="353dp"
                 app:columnCount="2"
                 app:rowCount="3"
                 app:useDefaultMargins="true">
@@ -433,7 +433,7 @@
 
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="102dp"
                     android:layout_marginBottom="12dp"
                     android:clipToPadding="false"
                     android:gravity="center"
@@ -569,7 +569,7 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/misc_but2_layout"
-                        android:layout_width="150dp"
+                        android:layout_width="147dp"
                         android:layout_height="match_parent"
                         android:background="@drawable/round_corner"
                         android:clickable="true"
@@ -577,8 +577,8 @@
 
                         <ImageButton
                             style="@android:style/Widget.Material.Light.ImageButton"
-                            android:layout_width="wrap_content"
-                            android:layout_height="50dp"
+                            android:layout_width="51dp"
+                            android:layout_height="46dp"
                             android:layout_below="@+id/misc_but2_text"
                             android:layout_alignParentStart="true"
                             android:layout_alignParentEnd="true"
@@ -631,7 +631,7 @@
                         android:id="@+id/twitter_tile"
                         android:layout_width="150dp"
                         android:layout_height="match_parent"
-                        android:background="@drawable/quiz_round_button"
+                        android:background="@drawable/round_corner"
                         android:clickable="true"
                         android:elevation="@dimen/home_card_elev"
                         app:layout_column="1"
@@ -694,7 +694,7 @@
                         android:id="@+id/quiz_tile"
                         android:layout_width="150dp"
                         android:layout_height="match_parent"
-                        android:background="@drawable/quiz_round_button"
+                        android:background="@drawable/round_corner"
                         android:clickable="true"
                         android:elevation="@dimen/home_card_elev"
                         app:layout_column="1"

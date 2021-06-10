@@ -7,65 +7,40 @@
         android:background="@drawable/gradient_effect"
         tools:context=".about.aboutActivity">
 
-        <ImageView
-            android:id="@+id/tavlabLogo"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="10dp"
-            android:contentDescription="@string/tavlab_logo"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/precogLogo"
-            app:srcCompat="@drawable/tavlab" />
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="294dp"
+        android:layout_height="139dp"
+        android:background="@drawable/ca_who_guidelines_border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tavlabLogo"
+        app:layout_constraintVertical_bias="0.383" />
 
-        <ImageView
-            android:id="@+id/precogLogo"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="@dimen/about_bottom_margin"
-            android:contentDescription="@string/iiitd_logo"
-            app:layout_constraintEnd_toStartOf="@+id/iiitdLogo"
-            app:layout_constraintStart_toEndOf="@+id/tavlabLogo"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            app:srcCompat="@drawable/precog" />
+    <ImageView
+        android:id="@+id/iiitdLogo"
+        android:layout_width="253dp"
+        android:layout_height="92dp"
+        android:contentDescription="@string/precog_logo"
+        app:layout_constraintBottom_toBottomOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.617"
+        app:srcCompat="@drawable/iiitd" />
 
-        <ImageView
-            android:id="@+id/iiitdLogo"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginEnd="24dp"
-            android:contentDescription="@string/precog_logo"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/precogLogo"
-            app:srcCompat="@drawable/iiitd" />
+    <ImageView
+        android:id="@+id/tavlabLogo"
+        android:layout_width="365dp"
+        android:layout_height="170dp"
+        android:contentDescription="@string/tavlab_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.477"
+        app:srcCompat="@drawable/tavlab" />
 
-        <in.srain.cube.views.GridViewWithHeaderAndFooter
-            android:id="@+id/gridview"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:gravity="center"
-            android:numColumns="auto_fit"
-            android:verticalSpacing="10dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/precogLogo">
-        </in.srain.cube.views.GridViewWithHeaderAndFooter>
-
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/about_bottom_margin"
-            android:text="@string/presented_to_you_by"
-
-            android:fontFamily="@font/opensans_regular"
-            android:textColor="@color/app_white"
-
-            android:textSize="@dimen/about_head"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

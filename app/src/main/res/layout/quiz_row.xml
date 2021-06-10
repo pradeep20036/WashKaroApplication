@@ -30,10 +30,10 @@
 
                 <TextView
                     android:id="@+id/question_text"
-                    android:layout_width="394dp"
-                    android:layout_height="101dp"
+                    android:layout_width="392dp"
+                    android:layout_height="121dp"
                     android:layout_marginTop="40dp"
-                    android:background="#9C27B0"
+                    android:background="#92E91E63"
                     android:fontFamily="sans-serif-smallcaps"
                     android:gravity="center"
                     android:padding="5dp"
