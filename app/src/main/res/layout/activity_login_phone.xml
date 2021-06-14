@@ -45,6 +45,13 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:startIconDrawable="@drawable/fui_ic_phone_white_24dp"
+                app:helperText="Required"
+                app:helperTextTextColor="@color/red"
+                app:counterEnabled="true"
+                app:endIconDrawable="@drawable/ic_clear"
+                app:counterMaxLength="40"
+
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"
                 android:hint="Your Phone Number"
@@ -53,6 +60,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:maxLength="40"
                     android:inputType="textEmailAddress" />
 
             </com.google.android.material.textfield.TextInputLayout>

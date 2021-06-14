@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_effect"
+    android:background="#222831"
     android:orientation="vertical"
     tools:context=".quiz.quizActivity">
 
@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:layout_marginBottom="20dp"
-        android:background="#F44336"
+        android:background="#00adb5"
         android:fontFamily="sans-serif-smallcaps"
         android:gravity="center"
         android:padding="8dp"
@@ -43,10 +43,10 @@
 
                 <TextView
                     android:id="@+id/question_text"
-                    android:layout_width="394dp"
+                    android:layout_width="match_parent"
                     android:layout_height="101dp"
                     android:layout_marginTop="4dp"
-                    android:background="#9C27B0"
+                    android:background="#393e46"
                     android:fontFamily="sans-serif-smallcaps"
                     android:gravity="center"
                     android:padding="5dp"

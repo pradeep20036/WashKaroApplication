@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".about.aboutActivity"
-    android:background="@drawable/gradient_effect">
+    android:background="#222831">
 
     <ImageView
         android:id="@+id/tbcindia"
@@ -42,13 +42,13 @@
         android:layout_width="312dp"
         android:layout_height="70dp"
         android:layout_marginTop="@dimen/about_bottom_margin"
-        android:background="#FF085C"
+        android:background="#eeeeee"
 
         android:fontFamily="sans-serif-smallcaps"
         android:gravity="center"
 
         android:text="@string/reference"
-        android:textColor="#F8F0F0"
+        android:textColor="@color/app_black"
         android:textSize="45sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
