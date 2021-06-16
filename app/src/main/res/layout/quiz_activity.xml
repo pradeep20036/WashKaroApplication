@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_effect"
+    android:background="#222831"
     android:orientation="vertical"
     tools:context=".quiz.quizActivity">
 
@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:layout_marginBottom="20dp"
-        android:background="#F44336"
+        android:background="#00adb5"
         android:fontFamily="sans-serif-smallcaps"
         android:gravity="center"
         android:padding="8dp"
@@ -43,10 +43,10 @@
 
                 <TextView
                     android:id="@+id/question_text"
-                    android:layout_width="394dp"
+                    android:layout_width="match_parent"
                     android:layout_height="101dp"
                     android:layout_marginTop="4dp"
-                    android:background="#9C27B0"
+                    android:background="#393e46"
                     android:fontFamily="sans-serif-smallcaps"
                     android:gravity="center"
                     android:padding="5dp"
@@ -97,7 +97,7 @@
                             android:fontFamily="@font/mukta_semibold"
                             android:text="Option 1"
                             android:textAlignment="center"
-                            android:textColor="@color/app_purple"
+                            android:textColor="@color/app_black"
                             android:textSize="@dimen/home_card_font"
                             app:layout_constraintTop_toTopOf="parent" />
 
@@ -121,7 +121,7 @@
                             android:fontFamily="@font/mukta_semibold"
                             android:text="Option 2"
                             android:textAlignment="center"
-                            android:textColor="@color/app_purple"
+                            android:textColor="@color/app_black"
                             android:textSize="@dimen/home_card_font"
                             app:layout_constraintTop_toTopOf="parent" />
 
@@ -145,7 +145,7 @@
                             android:fontFamily="@font/mukta_semibold"
                             android:text="Option 3"
                             android:textAlignment="center"
-                            android:textColor="@color/app_purple"
+                            android:textColor="@color/app_black"
                             android:textSize="@dimen/home_card_font"
                             app:layout_constraintTop_toTopOf="parent" />
 
@@ -169,7 +169,7 @@
                             android:fontFamily="@font/mukta_semibold"
                             android:text="Option 4"
                             android:textAlignment="center"
-                            android:textColor="@color/app_purple"
+                            android:textColor="@color/app_black"
                             android:textSize="@dimen/home_card_font"
                             app:layout_constraintTop_toTopOf="parent" />
 
