@@ -22,7 +22,7 @@
                 android:id="@+id/textView9"
                 android:layout_width="352dp"
                 android:layout_height="70dp"
-                android:background="@drawable/gradient_effect_2"
+                android:background="#00ADB5"
                 android:gravity="center"
                 android:text="CORRECT"
                 android:textColor="#FFFFFF"

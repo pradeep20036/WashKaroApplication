@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#222831"
+    android:background="@drawable/gradient_effect"
     tools:context=".home.homeActivity">
 
 
@@ -21,11 +21,6 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="250dp">
-
-                <ViewFlipper
-                    android:id="@+id/viewFlipper_slide_show"
-                    android:layout_width="match_parent"
-                    android:layout_height="224dp" />
 
                 <ImageButton
 

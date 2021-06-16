@@ -5,7 +5,7 @@
     android:id="@+id/coughConsLay"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_effect"
+    android:background="#222831"
     android:orientation="vertical">
 
     <TextView
@@ -14,11 +14,11 @@
         android:layout_height="93dp"
         android:layout_marginVertical="20dp"
         android:layout_marginTop="16dp"
-        android:background="#9C27B0"
+        android:background="#616c7d"
         android:fontFamily="sans-serif-smallcaps"
         android:gravity="center"
         android:text="COUGH RECORDER"
-        android:textColor="@color/app_white"
+        android:textColor="#FFFFFF"
         android:textSize="36sp"
         app:fontFamily="sans-serif-condensed-medium"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,12 +26,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
+        android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:id="@+id/linearLayout1"
-        app:layout_constraintTop_toBottomOf="@id/textView5"
-        app:layout_constraintBottom_toTopOf="@id/linearLayout2">
+        app:layout_constraintBottom_toTopOf="@id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@id/textView5">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/stopButton1"
@@ -51,7 +51,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
 
-                android:background="#FF4CAF50"
+                android:background="#eeeeee"
                 tools:ignore="MissingConstraints">
 
                 <ImageView
@@ -68,7 +68,7 @@
                     android:fontFamily="sans-serif-smallcaps"
                     android:gravity="center"
                     android:text="RECORD"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#000000"
 
                     android:textSize="25sp"
                     android:textStyle="bold"
@@ -84,8 +84,7 @@
             android:layout_height="67dp"
             android:layout_gravity="center"
             android:layout_marginVertical="10dp"
-            android:background="#E60000"
-            android:backgroundTint="#FF0057"
+            android:background="#a4ebf3"
             android:backgroundTintMode="add"
 
             android:clickable="true"
@@ -95,7 +94,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
 
-                android:background="#FF4CAF50"
+                android:background="#eeeeee"
                 tools:ignore="MissingConstraints">
 
                 <ImageView
@@ -112,7 +111,7 @@
                     android:fontFamily="sans-serif-smallcaps"
                     android:gravity="center"
                     android:text="STOP"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#000000"
 
                     android:textSize="25sp"
                     android:textStyle="bold"
@@ -148,7 +147,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
 
-                android:background="#FF4CAF50"
+                android:background="#eeeeee"
                 tools:ignore="MissingConstraints">
 
                 <ImageView
@@ -165,7 +164,7 @@
                     android:fontFamily="sans-serif-smallcaps"
                     android:gravity="center"
                     android:text="PLAY FILE"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#000000"
 
                     android:textSize="25sp"
                     android:textStyle="bold"
@@ -193,7 +192,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
 
-                android:background="#FF4CAF50"
+                android:background="#eeeeee"
                 tools:ignore="MissingConstraints">
 
                 <ImageView
@@ -210,7 +209,7 @@
                     android:fontFamily="sans-serif-smallcaps"
                     android:gravity="center"
                     android:text="STOP FILE"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#000000"
 
                     android:textSize="25sp"
                     android:textStyle="bold"
@@ -227,8 +226,8 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginVertical="10dp"
         android:layout_marginBottom="4dp"
-        android:background="@drawable/buttonback2"
-        android:backgroundTint="#FF085C"
+        android:background="#00adb5"
+        android:backgroundTint="#00adb5"
         android:fontFamily="sans-serif-smallcaps"
         android:gravity="center"
         android:text="SUBMIT"
