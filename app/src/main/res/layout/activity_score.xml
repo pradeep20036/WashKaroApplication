@@ -24,11 +24,6 @@
             android:layout_gravity="center"
             tools:ignore="MissingConstraints,UselessParent">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="60dp"
-                android:src="" />
 
             <ImageView
                 android:layout_width="match_parent"
