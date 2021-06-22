@@ -1,67 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/bg"
-    tools:context=".home.PhoneLogin"
-    android:orientation="vertical">
+    android:background="@drawable/image_bg"
+    android:orientation="vertical"
+    tools:context=".home.PhoneLogin">
 
     <ImageView
         android:id="@+id/user_picture"
         android:layout_width="match_parent"
-        android:layout_marginTop="50dp"
         android:layout_height="200dp"
-        android:src="@drawable/ic_launcher_foreground"
-        android:foregroundGravity="center_horizontal"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="Enter your phone number"
+        android:foregroundGravity="center_horizontal"
+        android:src="@drawable/ic_launcher_foreground" />
+
+    <TextView
+        android:layout_width="331dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/full_guidline_view_roundcorner"
+        android:backgroundTint="d"
         android:fontFamily="@font/mukta_semibold"
-        android:textSize="25sp"
-        android:textColor="@color/app_black"
-        android:layout_gravity="center_horizontal"/>
+        android:gravity="center"
+        android:text="Enter your phone number"
+        android:textColor="@color/app_icon_round_background"
+        android:textSize="25sp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/login_tile"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="316dp"
         android:layout_margin="25dp"
         android:background="@drawable/buttonback2"
         android:clickable="true"
-        android:elevation="@dimen/home_card_elev"
-        >
+        android:elevation="@dimen/home_card_elev">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             tools:ignore="MissingConstraints">
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/editTextMobile"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:startIconDrawable="@drawable/fui_ic_phone_white_24dp"
-                app:helperText="Required"
-                app:helperTextTextColor="@color/red"
-                app:counterEnabled="true"
-                app:endIconDrawable="@drawable/ic_clear"
-                app:counterMaxLength="40"
-
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"
                 android:hint="Your Phone Number"
-                android:textColorHint="@color/app_blue">
+                android:textColorHint="@color/app_blue"
+                app:counterEnabled="true"
+                app:counterMaxLength="40"
+
+                app:endIconDrawable="@drawable/ic_clear"
+                app:helperText="Required"
+                app:helperTextTextColor="@color/red"
+                app:startIconDrawable="@drawable/fui_ic_phone_white_24dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:maxLength="40"
-                    android:inputType="textEmailAddress" />
+                    android:inputType="textEmailAddress"
+                    android:maxLength="40" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -69,30 +73,33 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ProgressBar
                     android:id="@+id/progressBar"
                     style="?android:attr/progressBarStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:visibility="invisible"
                     android:layout_above="@+id/buttonContinue"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="25dp"
-                    />
+                    android:visibility="invisible" />
+
                 <Button
                     android:id="@+id/buttonContinue"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
+                    android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
-                    android:backgroundTint="@color/app_blue"
-                    android:background="@drawable/round_corner"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="#393E46"
+                    android:backgroundTint="#393E46"
                     android:fontFamily="@font/mukta_semibold"
                     android:text="Submit"
                     android:textColor="@color/app_white"
                     android:textSize="20sp"
-                    android:textStyle="bold"
-                    />
+                    android:textStyle="bold" />
 
             </RelativeLayout>
 
@@ -100,7 +107,6 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
 </LinearLayout>

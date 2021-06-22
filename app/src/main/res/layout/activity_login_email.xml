@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
+    android:background="@drawable/image_bg"
     android:orientation="vertical"
     tools:context=".home.EmailLogin">
 
@@ -17,24 +17,27 @@
         android:src="@drawable/ic_launcher_foreground" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="263dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp"
-        android:fontFamily="@font/mukta_semibold"
+        android:background="@drawable/full_guidline_view_roundcorner"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center"
+        android:padding="5dp"
         android:text="User LogIn "
-        android:textColor="@color/app_black"
-        android:textSize="40sp" />
+        android:textColor="@color/Home_background_color"
+        android:textSize="34sp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/login_tile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="25dp"
-        android:padding="10dp"
         android:background="@drawable/round_corner"
         android:clickable="true"
-        android:elevation="@dimen/home_card_elev">
+        android:elevation="@dimen/home_card_elev"
+        android:padding="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -49,24 +52,24 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"
-                app:startIconDrawable="@drawable/ic_email"
+                android:hint="Your Email"
+                android:textColorHint="@color/app_blue"
+                app:counterEnabled="true"
+                app:counterMaxLength="40"
+                app:endIconDrawable="@drawable/ic_clear"
                 app:helperText="Required"
                 app:helperTextTextColor="@color/red"
-                app:counterEnabled="true"
-                app:endIconDrawable="@drawable/ic_clear"
-                app:counterMaxLength="40"
-                android:hint="Your Email"
-                android:textColorHint="@color/app_blue">
+                app:startIconDrawable="@drawable/ic_email">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:maxLength="40"
-                    android:inputType="textEmailAddress" />
+                    android:inputType="textEmailAddress"
+                    android:maxLength="40" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -76,22 +79,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                app:startIconDrawable="@drawable/ic_lock"
-                app:helperText="Required"
-                app:helperTextTextColor="@color/red"
-                app:counterEnabled="true"
-
-                app:counterMaxLength="20"
-
                 android:hint="Your Password"
                 android:textColorHint="@color/app_blue"
-                app:passwordToggleEnabled="true">
+                app:counterEnabled="true"
+                app:counterMaxLength="20"
+
+                app:helperText="Required"
+
+                app:helperTextTextColor="@color/red"
+                app:passwordToggleEnabled="true"
+                app:startIconDrawable="@drawable/ic_lock">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:maxLength="20"
-                    android:inputType="textPassword" />
+                    android:inputType="textPassword"
+                    android:maxLength="20" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <RelativeLayout
@@ -110,16 +113,16 @@
 
                 <Button
                     android:id="@+id/email_signup_button"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="303dp"
+                    android:layout_height="67dp"
                     android:layout_alignParentBottom="true"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginEnd="20dp"
                     android:layout_marginBottom="20dp"
                     android:background="@drawable/round_corner"
-                    android:backgroundTint="@color/app_blue"
-                    android:fontFamily="@font/mukta_semibold"
+                    android:backgroundTint="#393E46"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:onClick="signUpEmailButton"
                     android:text="Sign Up"
                     android:textColor="@color/app_white"

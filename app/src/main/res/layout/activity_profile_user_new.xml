@@ -11,19 +11,18 @@
         android:layout_width="match_parent"
 
         android:layout_height="match_parent"
-        android:background="#222831">
+        android:background="@drawable/image_bg">
 
         <androidx.cardview.widget.CardView
-            android:layout_width="180dp"
-            android:layout_height="173dp"
-            android:layout_marginTop="24dp"
+            android:id="@+id/cardView3"
+            android:layout_width="184dp"
+            android:layout_height="179dp"
+            android:layout_marginTop="56dp"
             app:cardCornerRadius="160dp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView27"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.338">
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/imageView10"
@@ -36,111 +35,82 @@
         <TextView
             android:id="@+id/textView26"
             android:layout_width="0dp"
-            android:layout_height="207dp"
+            android:layout_height="155dp"
             android:background="#00ADB5"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView27"
-            android:layout_width="0dp"
-            android:layout_height="181dp"
-            android:background="#00ADB5"
-            app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
+            android:id="@+id/tv_name"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="344dp"
+            android:background="@drawable/quiz_score_btn"
+            android:fontFamily="sans-serif-smallcaps"
+            android:gravity="center"
+            android:text="Pradeep Kumar"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView26" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout3"
-            android:layout_width="391dp"
-            android:layout_height="465dp"
-            android:layout_marginTop="105dp"
+        <TextView
+            android:id="@+id/bt_signout"
+            android:layout_width="144dp"
+            android:layout_height="47dp"
+            android:layout_marginBottom="76dp"
+            android:background="@drawable/quiz_round_button"
+            android:backgroundTint="#00ADB5"
+            android:fontFamily="sans-serif-smallcaps"
+            android:gravity="center"
+            android:text="Sign Out"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent" />
 
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView26"
-            app:layout_constraintVertical_bias="0.0">
+        <TextView
+            android:id="@+id/tv_bloodgp"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/quiz_score_btn"
+            android:fontFamily="sans-serif-smallcaps"
 
-            <TextView
-                android:id="@+id/bt_signout"
-                android:layout_width="144dp"
-                android:layout_height="47dp"
-                android:layout_marginBottom="32dp"
-                android:background="@drawable/quiz_round_button"
-                android:fontFamily="sans-serif-smallcaps"
-                android:gravity="center"
-                android:text="Sign Out"
-                android:textColor="#000000"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.497"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_bloodgp"
-                app:layout_constraintVertical_bias="0.367" />
+            android:gravity="center"
+            android:text="O+ve"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_email"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_email"
+            app:layout_constraintTop_toBottomOf="@+id/tv_email" />
 
-            <TextView
-                android:id="@+id/tv_email"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="40dp"
-                android:background="@drawable/full_guidline_view_roundcorner"
-                android:ems="10"
-                android:fontFamily="sans-serif-smallcaps"
-                android:gravity="center"
-                android:hint="Email "
-                android:inputType="textEmailAddress"
-                android:text="Email"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/quiz_score_btn"
+            android:ems="10"
+            android:fontFamily="sans-serif-smallcaps"
+            android:gravity="center"
+            android:hint="Email "
+            android:inputType="textEmailAddress"
 
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.494"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_name"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <TextView
-                android:id="@+id/tv_name"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
-                android:background="@drawable/full_guidline_view_roundcorner"
-                android:fontFamily="sans-serif-smallcaps"
-                android:gravity="center"
-                android:text="Pradeep Kumar"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.494"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.069" />
-
-            <TextView
-                android:id="@+id/tv_bloodgp"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="40dp"
-                android:background="@drawable/full_guidline_view_roundcorner"
-                android:fontFamily="sans-serif-smallcaps"
-                android:gravity="center"
-                android:text="O+ve"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp"
-
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.494"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_email"
-                app:layout_constraintVertical_bias="0.0" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            android:text="Email"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_name"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

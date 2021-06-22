@@ -1,30 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/bg"
-    tools:context=".home.VerifyPhoneActivity"
-    android:orientation="vertical">
+    android:background="@drawable/image_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".home.VerifyPhoneActivity">
 
     <ImageView
         android:id="@+id/user_picture"
         android:layout_width="match_parent"
-        android:layout_marginTop="50dp"
         android:layout_height="200dp"
-        android:src="@drawable/ic_launcher_foreground"
-        android:foregroundGravity="center_horizontal"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="Enter the verfification code sent to you"
+        android:foregroundGravity="center_horizontal"
+        android:src="@drawable/ic_launcher_foreground" />
+
+    <TextView
+        android:layout_width="398dp"
+        android:layout_height="68dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/full_guidline_view_roundcorner"
         android:fontFamily="@font/mukta_semibold"
-        android:textSize="20sp"
-        android:textColor="@color/app_black"
-        android:layout_gravity="center_horizontal"/>
+        android:gravity="center"
+        android:text="Enter the verfification code sent to you"
+        android:textColor="@color/Home_background_color"
+        android:textSize="20sp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/login_tile"
@@ -33,13 +36,14 @@
         android:layout_margin="25dp"
         android:background="@drawable/buttonback2"
         android:clickable="true"
-        android:elevation="@dimen/home_card_elev"
-        >
+        android:elevation="@dimen/home_card_elev">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             tools:ignore="MissingConstraints">
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/editTextCode"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -61,30 +65,33 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ProgressBar
                     android:id="@+id/progressBar"
                     style="?android:attr/progressBarStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:visibility="invisible"
                     android:layout_above="@+id/buttonSignIn"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="25dp"
-                    />
+                    android:visibility="invisible" />
+
                 <Button
                     android:id="@+id/buttonSignIn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
                     android:layout_alignParentBottom="true"
-                    android:backgroundTint="@color/app_blue"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="21dp"
                     android:background="@drawable/round_corner"
+                    android:backgroundTint="#393E46"
                     android:fontFamily="@font/mukta_semibold"
                     android:text="Sign In"
                     android:textColor="@color/app_white"
                     android:textSize="20sp"
-                    android:textStyle="bold"
-                    />
+                    android:textStyle="bold" />
 
             </RelativeLayout>
 
@@ -92,7 +99,6 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
 </LinearLayout>
