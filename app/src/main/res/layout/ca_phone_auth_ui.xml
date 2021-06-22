@@ -4,7 +4,7 @@
     android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey_100"
+    android:background="#222831"
     android:orientation="vertical"
     android:weightSum="4">
 
@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="@color/grey_300"
+        android:background="#222831"
         android:gravity="center_vertical">
 
         <LinearLayout
@@ -32,6 +32,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+
                     android:hint="@string/hint_phone_number"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
@@ -40,6 +41,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1.0"
+                        android:background="#EEEEEE"
+                        android:textColor="@color/app_black"
                         android:layout_marginVertical="4dp"
                         android:layout_gravity="center"
                         android:inputType="phone" />
@@ -59,7 +62,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginVertical="4dp"
                         android:layout_marginTop="4dp"
+                        android:background="#EEEEEE"
                         android:layout_weight="1.0"
+                        android:textColor="@color/app_black"
                         android:layout_gravity="center"
                         android:inputType="number"/>
 
@@ -81,7 +86,10 @@
                     android:layout_marginTop="@dimen/button_horizontal_margin"
                     android:layout_weight="1.0"
                     android:layout_gravity="center"
+                    android:background="@drawable/full_guidline_lastrow"
                     android:textSize="16sp"
+                    android:textColor="@color/app_white"
+                    android:backgroundTint="#00ADB5"
                     android:text="@string/start_phone_auth" />
 
                 <com.google.android.material.button.MaterialButton
@@ -91,6 +99,10 @@
                     android:layout_marginTop="@dimen/button_horizontal_margin"
                     android:layout_weight="1.0"
                     android:layout_gravity="center"
+                    android:background="@drawable/full_guidline_lastrow"
+                    android:textSize="16sp"
+                    android:textColor="@color/app_white"
+                    android:backgroundTint="#00ADB5"
                     android:text="@string/verify_phone_auth" />
 
                 <com.google.android.material.button.MaterialButton
@@ -99,6 +111,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/button_horizontal_margin"
                     android:layout_gravity="center"
+                    android:background="@drawable/full_guidline_lastrow"
+                    android:textSize="16sp"
+                    android:textColor="@color/app_white"
+                    android:backgroundTint="#00ADB5"
                     android:layout_weight="1.0"
                     android:text="@string/resend_phone_auth" />
             </LinearLayout>

@@ -15,6 +15,7 @@
 
         android:layout_marginLeft="10dp"
         android:layout_marginTop="5dp"
+        android:background="#393E46"
         android:layout_marginRight="10dp"
 
         android:layout_marginBottom="5dp"
@@ -44,6 +45,7 @@
                 <ImageView
                     android:id="@+id/share_tweet_button"
                     android:layout_width="match_parent"
+                    android:background="#393E46"
                     android:layout_height="wrap_content"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -55,7 +57,7 @@
                     android:id="@+id/play_pause_tweet"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@color/transparent"
+                    android:background="#393E46"
                     app:srcCompat="@drawable/ic_play_arrow_black_34dp" />
 
                 <TextView
@@ -63,6 +65,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
+                    android:background="#393E46"
                     android:fontFamily="@font/mukta_semibold"
                     android:text="@string/play_audio"
                     android:textColor="@color/app_blue"
@@ -77,11 +80,12 @@
                 android:fontFamily="sans-serif-smallcaps"
                 android:gravity="center_vertical"
                 android:paddingLeft="4dp"
+                android:background="#393E46"
                 android:paddingTop="4dp"
                 android:paddingRight="4dp"
                 android:paddingBottom="4dp"
                 android:text="Titledfngjsfgjfn"
-                android:textColor="@color/blackcolor"
+                android:textColor="#EEEEEE"
                 android:textSize="@dimen/about_content"
                 app:layout_constrainedWidth="true"
                 app:layout_constraintBottom_toBottomOf="@+id/linearLayout6"

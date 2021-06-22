@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="@drawable/gradient_effect">
+    android:background="#222831">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -33,7 +33,7 @@
                     android:layout_width="392dp"
                     android:layout_height="121dp"
                     android:layout_marginTop="40dp"
-                    android:background="#92E91E63"
+                    android:background="#393e46"
                     android:fontFamily="sans-serif-smallcaps"
                     android:gravity="center"
                     android:padding="5dp"

@@ -20,8 +20,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="User LogIn "
-        android:fontFamily="@font/mukta_semibold"
+        android:text="User Login "
+        android:fontFamily="sans-serif-smallcaps"
         android:textSize="40sp"
         android:textColor="@color/app_black"
         android:layout_gravity="center_horizontal"/>

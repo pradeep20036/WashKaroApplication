@@ -4,7 +4,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/gradient_effect"
+        android:background="#222831"
         tools:context=".about.aboutActivity">
 
         <ImageView
@@ -59,11 +59,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/about_bottom_margin"
             android:text="@string/presented_to_you_by"
+            android:background="#EEEEEE"
+            android:fontFamily="sans-serif-smallcaps"
+            android:padding="15dp"
+            android:textColor="@color/app_black"
+            android:elevation="2dp"
 
-            android:fontFamily="@font/opensans_regular"
-            android:textColor="@color/app_white"
-
-            android:textSize="@dimen/about_head"
+            android:textSize="25dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

@@ -5,7 +5,7 @@
     android:id="@+id/consMapLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/app_blue"
+    android:background="#222831"
     android:orientation="vertical">
 
     <fragment
@@ -25,9 +25,10 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
-        android:background="@color/app_white"
+        android:background="@drawable/full_guidline_lastrow"
         android:text="COUGH"
-        android:textColor="@color/app_blue"
+        android:textColor="@color/app_white"
+        android:backgroundTint="#00ADB5"
         android:textSize="18sp"
         android:textStyle="bold" />
 
