@@ -17,11 +17,13 @@
             android:id="@+id/cardView3"
             android:layout_width="184dp"
             android:layout_height="179dp"
-            android:layout_marginTop="56dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="90dp"
             app:cardCornerRadius="160dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tv_name"
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
@@ -32,37 +34,30 @@
                 app:srcCompat="@drawable/ic_cough" />
         </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:id="@+id/textView26"
-            android:layout_width="0dp"
-            android:layout_height="155dp"
-            android:background="#00ADB5"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_name"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:layout_marginTop="344dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/quiz_score_btn"
             android:fontFamily="sans-serif-smallcaps"
             android:gravity="center"
             android:text="Pradeep Kumar"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_email"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView26" />
+            app:layout_constraintTop_toBottomOf="@id/cardView3" />
 
         <TextView
             android:id="@+id/bt_signout"
-            android:layout_width="144dp"
-            android:layout_height="47dp"
-            android:layout_marginBottom="76dp"
+            android:layout_width="167dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"
             android:background="@drawable/quiz_round_button"
             android:backgroundTint="#00ADB5"
             android:fontFamily="sans-serif-smallcaps"
@@ -72,14 +67,16 @@
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_bloodgp"
+            app:layout_constraintVertical_bias="0.848" />
 
         <TextView
             android:id="@+id/tv_bloodgp"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/quiz_score_btn"
             android:fontFamily="sans-serif-smallcaps"
 
@@ -90,13 +87,14 @@
             app:layout_constraintEnd_toEndOf="@+id/tv_email"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/tv_email"
+            app:layout_constraintBottom_toTopOf="@id/bt_signout"
             app:layout_constraintTop_toBottomOf="@+id/tv_email" />
 
         <TextView
             android:id="@+id/tv_email"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/quiz_score_btn"
             android:ems="10"
             android:fontFamily="sans-serif-smallcaps"
@@ -110,6 +108,7 @@
             app:layout_constraintEnd_toEndOf="@+id/tv_name"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/tv_name"
+            app:layout_constraintBottom_toTopOf="@id/tv_bloodgp"
             app:layout_constraintTop_toBottomOf="@+id/tv_name" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
