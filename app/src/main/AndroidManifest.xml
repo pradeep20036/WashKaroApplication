@@ -28,12 +28,6 @@
 
         <activity android:name=".TestingActivity">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
         </activity>
 
 
@@ -60,7 +54,14 @@
         </activity>
         <activity
             android:name=".home.EmailLogin"
-            android:noHistory="true"></activity>
+            android:noHistory="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
         <activity android:name=".home.PhoneLogin" />
         <activity
             android:name=".home.VerifyPhoneActivity"

@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/image_bg"
@@ -13,11 +20,12 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_marginTop="50dp"
+        android:backgroundTint="#982222"
         android:foregroundGravity="center_horizontal"
         android:src="@drawable/ic_launcher_foreground" />
 
     <TextView
-        android:layout_width="263dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp"
@@ -25,7 +33,7 @@
         android:fontFamily="sans-serif-smallcaps"
         android:gravity="center"
         android:padding="5dp"
-        android:text="User LogIn "
+        android:text="Create New Account"
         android:textColor="@color/Home_background_color"
         android:textSize="34sp" />
 
@@ -50,8 +58,11 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/app_black"
                 android:layout_marginTop="20dp"
+
                 android:layout_marginBottom="10dp"
+
                 android:hint="Your Email"
                 android:textColorHint="@color/app_blue"
                 app:counterEnabled="true"
@@ -59,13 +70,17 @@
                 app:endIconDrawable="@drawable/ic_clear"
                 app:helperText="Required"
                 app:helperTextTextColor="@color/red"
+                app:hintTextColor="@color/app_black"
                 app:startIconDrawable="@drawable/ic_email">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
-                    android:maxLength="40" />
+                    android:textColorHighlight="@color/app_black"
+                    android:textColorHint="@color/app_black"
+                    android:maxLength="40"
+                    android:visibility="visible" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
@@ -77,13 +92,15 @@
                 android:id="@+id/pwd"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
+                app:boxStrokeColor="@color/app_black"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
+                app:hintTextColor="@color/app_black"
+                android:outlineSpotShadowColor="@color/app_black"
                 android:hint="Your Password"
                 android:textColorHint="@color/app_blue"
                 app:counterEnabled="true"
                 app:counterMaxLength="20"
-
                 app:helperText="Required"
 
                 app:helperTextTextColor="@color/red"
@@ -94,7 +111,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
-                    android:maxLength="20" />
+
+                    android:textColorHint="@color/blackcolor"
+                    android:maxLength="20"
+                    android:visibility="visible" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <RelativeLayout
@@ -138,3 +158,5 @@
 
 
 </LinearLayout>
+
+</ScrollView>
