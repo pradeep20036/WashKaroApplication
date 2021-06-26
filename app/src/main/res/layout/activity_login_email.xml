@@ -32,9 +32,10 @@
         android:background="@drawable/full_guidline_view_roundcorner"
         android:fontFamily="sans-serif-smallcaps"
         android:gravity="center"
-        android:padding="5dp"
+        android:padding="15dp"
+        android:elevation="2dp"
         android:text="Create New Account"
-        android:textColor="@color/Home_background_color"
+        android:textColor="#EEEEEE"
         android:textSize="34sp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -42,7 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="25dp"
-        android:background="@drawable/round_corner"
+        android:background="@drawable/quiz_round_button"
         android:clickable="true"
         android:elevation="@dimen/home_card_elev"
         android:padding="10dp">
@@ -140,8 +141,8 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginEnd="20dp"
                     android:layout_marginBottom="20dp"
-                    android:background="@drawable/round_corner"
-                    android:backgroundTint="#393E46"
+                    android:background="@drawable/full_guidline_lastrow"
+                    android:backgroundTint="#00ADB5"
                     android:fontFamily="sans-serif-smallcaps"
                     android:onClick="signUpEmailButton"
                     android:text="Sign Up"

@@ -31,8 +31,8 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp"
         android:background="@drawable/full_guidline_view_roundcorner"
-        android:backgroundTint="d"
-        android:fontFamily="@font/mukta_semibold"
+        android:elevation="3dp"
+        android:fontFamily="sans-serif-smallcaps"
         android:gravity="center"
         android:text="Enter your phone number"
         android:textColor="@color/app_icon_round_background"
@@ -43,7 +43,8 @@
         android:layout_width="match_parent"
         android:layout_height="316dp"
         android:layout_margin="25dp"
-        android:background="@drawable/buttonback2"
+        android:background="@drawable/quiz_round_button"
+        android:padding="10dp"
         android:clickable="true"
         android:elevation="@dimen/home_card_elev">
 
@@ -60,6 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"
+                app:boxStrokeColor="@color/app_black"
                 android:hint="Your Phone Number"
                 android:textColorHint="@color/app_blue"
                 app:counterEnabled="true"
@@ -102,9 +104,9 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginEnd="10dp"
                     android:layout_marginBottom="24dp"
-                    android:background="#393E46"
-                    android:backgroundTint="#393E46"
-                    android:fontFamily="@font/mukta_semibold"
+                    android:background="@drawable/full_guidline_lastrow"
+                    android:backgroundTint="#00ADB5"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:text="Submit"
                     android:textColor="@color/app_white"
                     android:textSize="20sp"
@@ -119,3 +121,4 @@
 
 
 </LinearLayout>
+</ScrollView>

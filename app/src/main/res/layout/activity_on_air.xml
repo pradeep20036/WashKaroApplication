@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_effect"
+    android:background="#222831"
     android:theme="@style/CustomTheme"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".news.onAIrActivity">

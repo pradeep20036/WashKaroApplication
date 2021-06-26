@@ -9,6 +9,19 @@
         <path
             android:name="triangle"
             android:fillColor="#00ADB5"
-            android:pathData="M 0,20 L 0,0 L 100,0 L 100,20 L 54,55  l -1,0.6  l -1,0.4  l -1,0.2  l -1,0   l -1,-0  l -1,-0.2  l -1,-0.4  l -1,-0.6    L 46,55   L 0,20 -100,-100 Z" />
+            android:pathData="M 0,20 L 0,0 L 100,0 L 100,20 L 54,55 L 46,55   L 0,20 -100,-100 Z" />
+    <path
+        android:name="background"
+        android:fillColor="#222831"
+        android:pathData="M 0,20 L 0,1000 L 1000,1000 L 1000,20 L 54,55 L46,55 L 0,20 z  "/>
+        <path
+            android:name="nextbg"
+            android:fillColor="#222831"
+            android:pathData="M 100,20 L 100,1000 L 54,55"/>
+<!--        <path-->
+<!--            android:name="filling"-->
+<!--            android:fillColor="#EEEEEE"-->
+<!--            android:pathData="M 0,20 L 0,22 L46,57 L 54,57 L100,22 L100,20,L54,55 L46,55"/>-->
     </group>
+
 </vector>
