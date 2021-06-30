@@ -12,6 +12,23 @@
 
         android:layout_height="match_parent"
         android:background="@drawable/image_bg">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/account_image"
+            android:layout_width="146dp"
+            android:layout_height="167dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:src="@drawable/common_google_signin_btn_icon_dark"
+
+            app:layout_constraintBottom_toTopOf="@id/tv_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.134" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView3"
