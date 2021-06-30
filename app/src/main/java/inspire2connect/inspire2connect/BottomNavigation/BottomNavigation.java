@@ -42,13 +42,7 @@ public class BottomNavigation extends AppCompatActivity {
 
                         break;
 
-                    case R.id.about:
 
-                        startActivity(new Intent(getApplicationContext(),
-                                Time_Up.class));
-                        overridePendingTransition(0,0);
-
-                        break;
 
                 }
 

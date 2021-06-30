@@ -36,17 +36,7 @@ public class HomeActivityBottomNavigation extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(),
                                 HomeActivityBottomNavigation.class));
                         overridePendingTransition(0,0);
-
                         break;
-
-                    case R.id.about:
-
-                        startActivity(new Intent(getApplicationContext(),
-                                AboutActivityNavigation.class));
-                        overridePendingTransition(0,0);
-
-                        break;
-
                 }
 
 

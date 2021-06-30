@@ -28,12 +28,6 @@
 
         <activity android:name=".BottomNavigation.BottomNavigation">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
 
 
 
@@ -41,7 +35,13 @@
         <activity android:name=".TestingActivity" />
         <activity android:name=".quiz.quizSolutionsActivity" />
         <activity android:name=".satyaChat.ChatActivity" />
-        <activity android:name=".home.HomeActivity" /> <!-- <activity android:name=".male_female_2" /> -->
+        <activity android:name=".home.HomeActivity">
+
+
+        </activity>
+
+
+        <!-- <activity android:name=".male_female_2" /> -->
         <activity
             android:name=".home.LoginActivity"
             android:noHistory="true">
@@ -60,8 +60,17 @@
             android:name=".home.EmailLogin"
             android:noHistory="true">
 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+
         </activity>
         <activity android:name=".home.PhoneLogin" />
+        <activity android:name=".profile.ProfileActivity" />
+
         <activity
             android:name=".home.VerifyPhoneActivity"
             android:noHistory="true" />
