@@ -76,7 +76,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
         FirebaseUser user = mAuth.getCurrentUser();
         if (user != null) {
             progressDialog.dismiss();
-            startActivity(new Intent(LoginActivity.this, homeActivity.class));
+            startActivity(new Intent(LoginActivity.this, HomeActivity.class));
         }
         progressDialog.dismiss();
 
@@ -148,7 +148,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            Intent i = new Intent(LoginActivity.this, homeActivity.class);
+                            Intent i = new Intent(LoginActivity.this, HomeActivity.class);
                             startActivity(i);
                         } else {
                             // If sign in fails, display a message to the user.
@@ -163,7 +163,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
         try{
             GoogleSignInAccount acc = completedTask.getResult(ApiException.class);
             Toast.makeText(LoginActivity.this,"Signed In Successfully",Toast.LENGTH_SHORT).show();
-            Intent i = new Intent(LoginActivity.this, homeActivity.class);
+            Intent i = new Intent(LoginActivity.this, HomeActivity.class);
             startActivity(i);
             FirebaseGoogleAuth(acc);
         }
@@ -183,7 +183,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
                     if (task.isSuccessful()) {
                         Toast.makeText(LoginActivity.this, "Successful", Toast.LENGTH_SHORT).show();
                         FirebaseUser user = mAuth.getCurrentUser();
-                        Intent i = new Intent(LoginActivity.this, homeActivity.class);
+                        Intent i = new Intent(LoginActivity.this, HomeActivity.class);
                         startActivity(i);
 
                     } else {

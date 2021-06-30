@@ -40,7 +40,7 @@ import java.util.Objects;
 
 import inspire2connect.inspire2connect.R;
 import inspire2connect.inspire2connect.TinyDB;
-import inspire2connect.inspire2connect.home.homeActivity;
+import inspire2connect.inspire2connect.home.HomeActivity;
 import inspire2connect.inspire2connect.utils.BaseActivity;
 import inspire2connect.inspire2connect.utils.LocaleHelper;
 
@@ -490,7 +490,7 @@ public class quizActivity extends BaseActivity implements View.OnClickListener {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent intent = new Intent(this, homeActivity.class);
+        Intent intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
         finish();
 //        countDown.cancel();

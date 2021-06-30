@@ -49,7 +49,7 @@ import inspire2connect.inspire2connect.survey.maleFemaleActivity;
 import inspire2connect.inspire2connect.utils.BaseActivity;
 import inspire2connect.inspire2connect.utils.LocaleHelper;
 
-public class homeActivity extends BaseActivity implements View.OnClickListener {
+public class HomeActivity extends BaseActivity implements View.OnClickListener {
 
     private static final int MY_REQUEST_CODE = 2399;
     ConstraintLayout[] ll_but = new ConstraintLayout[10];
@@ -75,7 +75,7 @@ public class homeActivity extends BaseActivity implements View.OnClickListener {
                 if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE && appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.IMMEDIATE)) {
                     try {
                         appUpdateManager.startUpdateFlowForResult(
-                                appUpdateInfo, AppUpdateType.IMMEDIATE, homeActivity.this, MY_REQUEST_CODE);
+                                appUpdateInfo, AppUpdateType.IMMEDIATE, HomeActivity.this, MY_REQUEST_CODE);
                     } catch (IntentSender.SendIntentException e) {
                         e.printStackTrace();
                     }
@@ -83,7 +83,7 @@ public class homeActivity extends BaseActivity implements View.OnClickListener {
                 } else if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE && appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.FLEXIBLE)) {
                     try {
                         appUpdateManager.startUpdateFlowForResult(
-                                appUpdateInfo, AppUpdateType.FLEXIBLE, homeActivity.this, MY_REQUEST_CODE);
+                                appUpdateInfo, AppUpdateType.FLEXIBLE, HomeActivity.this, MY_REQUEST_CODE);
                     } catch (IntentSender.SendIntentException e) {
                         e.printStackTrace();
                     }
@@ -158,7 +158,7 @@ public class homeActivity extends BaseActivity implements View.OnClickListener {
         flip_left = findViewById(R.id.flipperLeft);
         flip_right = findViewById(R.id.flipperRight);
 
-        inflater = (LayoutInflater) homeActivity.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        inflater = (LayoutInflater) HomeActivity.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         flip_left.setOnClickListener(this);
         flip_right.setOnClickListener(this);
@@ -230,7 +230,7 @@ public class homeActivity extends BaseActivity implements View.OnClickListener {
                 FirebaseAnalytics.getInstance(this).logEvent("ScrollingInfographics", bundle2);
                 break;
             case R.id.misc_but2_layout:
-                i = new Intent(homeActivity.this, ChatActivity.class);
+                i = new Intent(HomeActivity.this, ChatActivity.class);
                 startActivity(i);
                 break;
             case R.id.misc_but3_layout:
@@ -293,11 +293,11 @@ public class homeActivity extends BaseActivity implements View.OnClickListener {
                 toggleLang(this);
                 break;
             case R.id.Survey:
-                i = new Intent(homeActivity.this, maleFemaleActivity.class);
+                i = new Intent(HomeActivity.this, maleFemaleActivity.class);
                 startActivity(i);
                 break;
             case R.id.developers:
-                i = new Intent(homeActivity.this, aboutActivity.class);
+                i = new Intent(HomeActivity.this, aboutActivity.class);
                 startActivity(i);
                 break;
             case R.id.privacy_policy:
@@ -342,13 +342,13 @@ public class homeActivity extends BaseActivity implements View.OnClickListener {
                             viewFlipper.removeAllViews();
                             usingFirebaseImages(slideLists);
                         } else {
-                            Toast.makeText(homeActivity.this, "No images in firebase", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(HomeActivity.this, "No images in firebase", Toast.LENGTH_SHORT).show();
                         }
                     }
 
                     @Override
                     public void onCancelled(DatabaseError databaseError) {
-                        Toast.makeText(homeActivity.this, "NO images found \n" + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(HomeActivity.this, "NO images found \n" + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
 
@@ -389,7 +389,7 @@ public class homeActivity extends BaseActivity implements View.OnClickListener {
 
         String url = slideLists.get(i).InfoURL;
         String code = slideLists.get(i).Code;
-        Intent intnt = new Intent(homeActivity.this, InfographicsActivity.class);
+        Intent intnt = new Intent(HomeActivity.this, InfographicsActivity.class);
 
         // Firebase Analytics
         if (firebaseUser != null) {

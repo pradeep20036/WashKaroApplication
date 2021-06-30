@@ -23,21 +23,25 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:replace="android:appComponentFactory">
+        <activity android:name=".BottomNavigation.AboutActivityNavigation"></activity>
+        <activity android:name=".BottomNavigation.HomeActivityBottomNavigation" />
 
-<!--        Testing Activity  -->
+        <activity android:name=".BottomNavigation.BottomNavigation">
 
-        <activity android:name=".TestingActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        </activity>
-
-
-
-
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
 
+
+
+        </activity> <!-- Testing Activity -->
+        <activity android:name=".TestingActivity" />
         <activity android:name=".quiz.quizSolutionsActivity" />
         <activity android:name=".satyaChat.ChatActivity" />
-        <activity android:name=".home.homeActivity"></activity> <!-- <activity android:name=".male_female_2" /> -->
+        <activity android:name=".home.HomeActivity" /> <!-- <activity android:name=".male_female_2" /> -->
         <activity
             android:name=".home.LoginActivity"
             android:noHistory="true">
@@ -56,19 +60,12 @@
             android:name=".home.EmailLogin"
             android:noHistory="true">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
         </activity>
         <activity android:name=".home.PhoneLogin" />
         <activity
             android:name=".home.VerifyPhoneActivity"
             android:noHistory="true" />
-        <activity android:name=".home.WelcomeActivity">
-                    </activity>
-
+        <activity android:name=".home.WelcomeActivity" />
         <activity android:name=".survey.maleFemaleActivity" />
         <activity android:name=".news.text2speech2_2Activity" />
         <activity android:name=".about.aboutActivity" />

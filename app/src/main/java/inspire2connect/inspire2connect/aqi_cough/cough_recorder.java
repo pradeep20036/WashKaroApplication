@@ -27,7 +27,7 @@ import java.util.Date;
 import java.util.UUID;
 
 import inspire2connect.inspire2connect.R;
-import inspire2connect.inspire2connect.home.homeActivity;
+import inspire2connect.inspire2connect.home.HomeActivity;
 import inspire2connect.inspire2connect.utils.BaseActivity;
 
 public class cough_recorder extends BaseActivity {
@@ -87,7 +87,7 @@ public class cough_recorder extends BaseActivity {
                     }
                 });
 
-                Intent intent = new Intent(cough_recorder.this, homeActivity.class);
+                Intent intent = new Intent(cough_recorder.this, HomeActivity.class);
                 startActivity(intent);
             }
 

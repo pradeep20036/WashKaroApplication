@@ -13,7 +13,7 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 import java.util.ArrayList;
 
 import inspire2connect.inspire2connect.R;
-import inspire2connect.inspire2connect.home.homeActivity;
+import inspire2connect.inspire2connect.home.HomeActivity;
 import inspire2connect.inspire2connect.utils.BaseActivity;
 
 public class scoreActivity extends BaseActivity {
@@ -56,7 +56,7 @@ public class scoreActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(scoreActivity.this, homeActivity.class);
+                Intent intent = new Intent(scoreActivity.this, HomeActivity.class);
                 startActivity(intent);
                 finish();
 

@@ -34,7 +34,7 @@ import java.util.Locale;
 
 import inspire2connect.inspire2connect.R;
 import inspire2connect.inspire2connect.about.aboutActivity;
-import inspire2connect.inspire2connect.home.homeActivity;
+import inspire2connect.inspire2connect.home.HomeActivity;
 import inspire2connect.inspire2connect.utils.BaseActivity;
 import inspire2connect.inspire2connect.utils.LocaleHelper;
 
@@ -310,7 +310,7 @@ public class maleFemaleActivity extends BaseActivity {
 
                 if (url.equalsIgnoreCase("https://docs.google.com/forms/d/e/1FAIpQLSd6z9IzgbDvkG08rSjlq2pvTo3ChdHrSAr2u6iRqnl-FX1oFw/formResponse")) {
                     send_data();
-                    Intent i = new Intent(maleFemaleActivity.this, homeActivity.class);
+                    Intent i = new Intent(maleFemaleActivity.this, HomeActivity.class);
                     startActivity(i);
                     finish();
                 }
@@ -339,7 +339,7 @@ public class maleFemaleActivity extends BaseActivity {
 
                 if (url.equalsIgnoreCase("https://docs.google.com/forms/u/0/d/e/1FAIpQLSf-hLHpQPd7sLkoXqNfGf-RT390Q4cSP7JBmrrSXLZmqEYEYw/formResponse")) {
                     send_data();
-                    Intent i = new Intent(maleFemaleActivity.this, homeActivity.class);
+                    Intent i = new Intent(maleFemaleActivity.this, HomeActivity.class);
                     startActivity(i);
                     finish();
                 }

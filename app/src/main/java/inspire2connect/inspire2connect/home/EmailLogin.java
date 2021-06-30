@@ -49,7 +49,7 @@ public class EmailLogin extends BaseActivity {
                             t1.getEditText().setText("");
                             t2.getEditText().setText("");
                             Toast.makeText(getApplicationContext(), "Registered Successfully", Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(EmailLogin.this, homeActivity.class);
+                            Intent intent = new Intent(EmailLogin.this, HomeActivity.class);
                             startActivity(intent);
                         } else {
                             bar.setVisibility(View.INVISIBLE);
