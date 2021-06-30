@@ -8,7 +8,7 @@
 
     <item
         android:state_selected="false"
-        android:color="@color/blackcolor"
+        android:color="#222831"
         ></item>
 
 

@@ -1,22 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item
-        android:id="@+id/dashboard"
-        android:title="Dashboard"
-        android:icon="@drawable/ic_home_menu"
-    />
 
     <item
         android:id="@+id/home"
         android:title="Home"
         android:icon="@drawable/ic_home_menu"
         />
+    <item
+        android:id="@+id/wkscreen"
+        android:title="TB Screening"
+        android:icon="@drawable/ic_home_menu"
+    />
+
 
     <item
-        android:id="@+id/about"
-        android:title="About"
-        android:icon="@drawable/ic_home_menu"
+        android:id="@+id/chatbot"
+        android:title="Chatbot"
+        android:icon="@drawable/ic_chatbot_new"
+        />
+    <item
+        android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/ic_person"
         />
 
 
