@@ -47,6 +47,7 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    android:background="#393E46"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0"
                     app:srcCompat="@drawable/ic_share_black_24dp" />
@@ -55,7 +56,7 @@
                     android:id="@+id/play_pause_myth"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@color/transparent"
+                    android:background="#393E46"
                     app:srcCompat="@drawable/ic_play_arrow_black_34dp" />
 
                 <TextView
@@ -74,14 +75,15 @@
                 android:id="@+id/myth_title"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:fontFamily="@font/mukta_semibold"
+                android:fontFamily="sans-serif-smallcaps"
                 android:paddingLeft="4dp"
                 android:paddingTop="4dp"
                 android:paddingRight="4dp"
                 android:paddingBottom="4dp"
                 android:text="Titledfngjsfgjfn"
                 android:gravity="center_vertical"
-                android:textColor="@color/blackcolor"
+                android:textColor="@color/app_white"
+                android:background="#393E46"
                 android:textSize="@dimen/about_content"
                 app:layout_constrainedWidth="true"
                 app:layout_constraintBottom_toBottomOf="@+id/linearLayout5"

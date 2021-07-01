@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_effect"
+    android:background="#222831"
     >
 
     <ScrollView
@@ -72,7 +72,7 @@
                         android:id="@+id/tweet_data_tile1"
                         android:layout_width="150dp"
                         android:layout_height="match_parent"
-                        android:background="@drawable/buttonback2"
+                        android:background="@drawable/quiz_round_button"
                         android:clickable="true"
                         android:elevation="@dimen/home_card_elev"
                         app:layout_column="1"
@@ -156,7 +156,7 @@
                         android:id="@+id/tweet_data_tile2"
                         android:layout_width="150dp"
                         android:layout_height="match_parent"
-                        android:background="@drawable/buttonback2"
+                        android:background="@drawable/quiz_round_button"
                         android:clickable="true"
                         android:elevation="@dimen/home_card_elev"
                         app:layout_column="1"
@@ -238,7 +238,7 @@
                         android:id="@+id/tweet_data_tile3"
                         android:layout_width="150dp"
                         android:layout_height="match_parent"
-                        android:background="@drawable/buttonback2"
+                        android:background="@drawable/quiz_round_button"
                         android:clickable="true"
                         android:elevation="@dimen/home_card_elev">
 
@@ -318,7 +318,7 @@
                         android:id="@+id/tweet_data_tile4"
                         android:layout_width="150dp"
                         android:layout_height="match_parent"
-                        android:background="@drawable/buttonback2"
+                        android:background="@drawable/quiz_round_button"
                         android:clickable="true"
                         android:elevation="@dimen/home_card_elev">
 
@@ -387,7 +387,7 @@
                 android:id="@+id/tweet_list_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/gradient_effect"
+                android:background="#222831"
                 android:clickable="true"
                 android:elevation="@dimen/home_card_elev">
 
@@ -396,8 +396,8 @@
                     android:layout_width="285dp"
                     android:layout_height="71dp"
                     android:layout_marginTop="4dp"
-                    android:background="#FF085C"
-                    android:fontFamily="@font/mukta_semibold"
+                    android:background="#00ADB5"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:gravity="center"
                     android:text="@string/trending_tweets"
                     android:textAlignment="center"

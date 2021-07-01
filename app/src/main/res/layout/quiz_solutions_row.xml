@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="@drawable/gradient_effect">
+    android:background="#222831">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -29,10 +29,11 @@
 
                 <TextView
                     android:id="@+id/question_text"
-                    android:layout_width="407dp"
-                    android:layout_height="86dp"
-                    android:layout_marginTop="4dp"
-                    android:background="#A61CBD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:padding="25dp"
+                    android:background="#393e46"
                     android:fontFamily="sans-serif-smallcaps"
                     android:gravity="center"
                     android:text="Question"
@@ -57,6 +58,7 @@
                     android:layout_marginBottom="20dp"
                     android:clipToPadding="false"
                     android:gravity="center"
+                    android:padding="5dp"
                     android:orientation="vertical"
                     android:paddingBottom="@dimen/home_card_elev"
                     app:layout_gravity="fill_horizontal">
@@ -66,7 +68,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="15dp"
-                        android:background="@drawable/buttonback2"
+                        android:padding="8dp"
+                        android:background="@drawable/quiz_round_button"
                         android:clickable="true"
                         android:elevation="@dimen/home_card_elev">
 
@@ -78,7 +81,7 @@
                             android:fontFamily="@font/mukta_semibold"
                             android:text="Option 1"
                             android:textAlignment="center"
-                            android:textColor="@color/app_purple"
+                            android:textColor="@color/app_black"
                             android:textSize="@dimen/home_card_font"
                             app:layout_constraintTop_toTopOf="parent" />
 
@@ -89,7 +92,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="15dp"
-                        android:background="@drawable/buttonback2"
+                        android:background="@drawable/quiz_round_button"
+                        android:padding="8dp"
                         android:clickable="true"
                         android:elevation="@dimen/home_card_elev">
 
@@ -101,7 +105,7 @@
                             android:fontFamily="@font/mukta_semibold"
                             android:text="Option 2"
                             android:textAlignment="center"
-                            android:textColor="@color/app_purple"
+                            android:textColor="@color/app_black"
                             android:textSize="@dimen/home_card_font"
                             app:layout_constraintTop_toTopOf="parent" />
 
@@ -112,7 +116,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="15dp"
-                        android:background="@drawable/buttonback2"
+                        android:background="@drawable/quiz_round_button"
+                        android:padding="8dp"
                         android:clickable="true"
                         android:elevation="@dimen/home_card_elev">
 
@@ -124,7 +129,7 @@
                             android:fontFamily="@font/mukta_semibold"
                             android:text="Option 3"
                             android:textAlignment="center"
-                            android:textColor="@color/app_purple"
+                            android:textColor="@color/app_black"
                             android:textSize="@dimen/home_card_font"
                             app:layout_constraintTop_toTopOf="parent" />
 
@@ -135,7 +140,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="15dp"
-                        android:background="@drawable/buttonback2"
+                        android:background="@drawable/quiz_round_button"
+                        android:padding="8dp"
                         android:clickable="true"
                         android:elevation="@dimen/home_card_elev">
 
@@ -147,7 +153,7 @@
                             android:fontFamily="@font/mukta_semibold"
                             android:text="Option 4"
                             android:textAlignment="center"
-                            android:textColor="@color/app_purple"
+                            android:textColor="@color/app_black"
                             android:textSize="@dimen/home_card_font"
                             app:layout_constraintTop_toTopOf="parent" />
 
@@ -169,13 +175,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/source_button"
-                        android:padding="5dp"
+                        android:padding="10dp"
                         android:text="@string/view_source"
                         android:gravity="center"
-                        android:textSize="16sp"
-                        android:fontFamily="@font/mukta_regular"
-                        android:textColor="@color/app_black"
-                        android:background="@color/app_white">
+                        android:textSize="20sp"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:textColor="@color/app_white"
+                        android:background="@drawable/full_guidline_lastrow">
 
                     </TextView>
 
