@@ -6,21 +6,28 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import org.jetbrains.annotations.NotNull;
+
 import inspire2connect.inspire2connect.R;
 import inspire2connect.inspire2connect.home.EmailLogin;
+import inspire2connect.inspire2connect.home.HomeActivity;
 import inspire2connect.inspire2connect.home.LoginActivity;
+import inspire2connect.inspire2connect.satyaChat.ChatActivity;
 
 public class ProfileActivity extends AppCompatActivity {
 
@@ -40,6 +47,54 @@ public class ProfileActivity extends AppCompatActivity {
         tv_name=findViewById(R.id.tv_name);
         tv_email=findViewById(R.id.tv_email);
         tv_blood=findViewById(R.id.tv_bloodgp);
+
+
+//        code for switching activity on navbar
+
+        // handling bottom navigation
+        BottomNavigationView bottomNavigationView=findViewById(R.id.bottom_navigation);
+//    //perform item selector listener
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
+
+                switch (item.getItemId()){
+                    case R.id.home:
+                        startActivity(new Intent(getApplicationContext(),
+                                HomeActivity.class));
+                        overridePendingTransition(0,0);
+                        break;
+                    case R.id.profile:
+                        startActivity(new Intent(getApplicationContext(),
+                                ProfileActivity.class));
+                        overridePendingTransition(0,0);
+                        break;
+                    case R.id.chatbot:
+                        startActivity(new Intent(getApplicationContext(),
+                                ChatActivity.class));
+                        overridePendingTransition(0,0);
+                        break;
+//                case R.id.home:
+//                    startActivity(new Intent(getApplicationContext(),
+//                            HomeActivity.class));
+//                    overridePendingTransition(0,0);
+//                    break;
+
+
+                }
+
+
+                return false;
+            }
+        });
+
+
+
+
+
+
+
+
 
         // check if image is already saved in the memory, if yes then load it.
 
