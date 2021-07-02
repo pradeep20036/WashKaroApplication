@@ -24,6 +24,7 @@ import com.google.firebase.auth.FirebaseUser;
 import org.jetbrains.annotations.NotNull;
 
 import inspire2connect.inspire2connect.R;
+import inspire2connect.inspire2connect.aqi_cough.MainScreening;
 import inspire2connect.inspire2connect.home.EmailLogin;
 import inspire2connect.inspire2connect.home.HomeActivity;
 import inspire2connect.inspire2connect.home.LoginActivity;
@@ -74,11 +75,11 @@ public class ProfileActivity extends AppCompatActivity {
                                 ChatActivity.class));
                         overridePendingTransition(0,0);
                         break;
-//                case R.id.home:
-//                    startActivity(new Intent(getApplicationContext(),
-//                            HomeActivity.class));
-//                    overridePendingTransition(0,0);
-//                    break;
+                    case R.id.wkscreen:
+                        startActivity(new Intent(getApplicationContext(),
+                                MainScreening.class));
+                        overridePendingTransition(0,0);
+                        break;
 
 
                 }

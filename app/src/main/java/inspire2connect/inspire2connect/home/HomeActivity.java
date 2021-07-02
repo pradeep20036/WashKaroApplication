@@ -48,6 +48,7 @@ import java.util.Locale;
 import inspire2connect.inspire2connect.BottomNavigation.HomeActivityBottomNavigation;
 import inspire2connect.inspire2connect.R;
 import inspire2connect.inspire2connect.about.aboutActivity;
+import inspire2connect.inspire2connect.aqi_cough.MainScreening;
 import inspire2connect.inspire2connect.profile.ProfileActivity;
 import inspire2connect.inspire2connect.satyaChat.ChatActivity;
 import inspire2connect.inspire2connect.survey.maleFemaleActivity;
@@ -152,11 +153,11 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
                             ChatActivity.class));
                     overridePendingTransition(0,0);
                     break;
-//                case R.id.home:
-//                    startActivity(new Intent(getApplicationContext(),
-//                            HomeActivity.class));
-//                    overridePendingTransition(0,0);
-//                    break;
+                case R.id.wkscreen:
+                    startActivity(new Intent(getApplicationContext(),
+                            MainScreening.class));
+                    overridePendingTransition(0,0);
+                    break;
 
 
             }

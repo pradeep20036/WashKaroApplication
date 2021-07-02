@@ -39,14 +39,11 @@
 
 
         </activity> <!-- Testing Activity -->
+        <activity android:name=".profile.ProfileActivity"/>
         <activity android:name=".TestingActivity" />
         <activity android:name=".quiz.quizSolutionsActivity" />
         <activity android:name=".satyaChat.ChatActivity" />
         <activity android:name=".home.HomeActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
 
         </activity>
@@ -56,6 +53,11 @@
         <activity
             android:name=".home.LoginActivity"
             android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -70,6 +72,7 @@
         <activity
             android:name=".home.EmailLogin"
             android:noHistory="true">
+
 
         </activity>
         <activity android:name=".home.PhoneLogin" />

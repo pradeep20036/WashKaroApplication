@@ -49,7 +49,7 @@
         android:background="@color/transparent"
         android:padding="@dimen/send_but_pad"
         android:src="@drawable/chat_send_but"
-        android:tint="@color/colorPrimary"
+
         app:layout_constraintBottom_toBottomOf="@+id/chatInpField"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/chatInpField" />

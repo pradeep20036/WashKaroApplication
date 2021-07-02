@@ -9,6 +9,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -17,8 +18,14 @@ import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import org.jetbrains.annotations.NotNull;
 
 import inspire2connect.inspire2connect.R;
+import inspire2connect.inspire2connect.home.HomeActivity;
+import inspire2connect.inspire2connect.profile.ProfileActivity;
+import inspire2connect.inspire2connect.satyaChat.ChatActivity;
 
 public class MainScreening extends AppCompatActivity {
 
@@ -65,6 +72,41 @@ public class MainScreening extends AppCompatActivity {
             }
         });
 
+        BottomNavigationView bottomNavigationView=findViewById(R.id.bottom_navigation);
+//    //perform item selector listener
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
+
+                switch (item.getItemId()){
+                    case R.id.home:
+                        startActivity(new Intent(getApplicationContext(),
+                                HomeActivity.class));
+                        overridePendingTransition(0,0);
+                        break;
+                    case R.id.profile:
+                        startActivity(new Intent(getApplicationContext(),
+                                ProfileActivity.class));
+                        overridePendingTransition(0,0);
+                        break;
+                    case R.id.chatbot:
+                        startActivity(new Intent(getApplicationContext(),
+                                ChatActivity.class));
+                        overridePendingTransition(0,0);
+                        break;
+                    case R.id.wkscreen:
+                        startActivity(new Intent(getApplicationContext(),
+                                MainScreening.class));
+                        overridePendingTransition(0,0);
+                        break;
+
+
+                }
+
+
+                return false;
+            }
+        });
         videoScreenButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -115,6 +157,8 @@ public class MainScreening extends AppCompatActivity {
                 }
                 break;
         }
-    }}
+    }
+
+}
 
 
