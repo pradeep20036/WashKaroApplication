@@ -23,20 +23,21 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:replace="android:appComponentFactory">
-        <activity android:name=".BottomNavigation.AboutActivityNavigation"></activity>
+        <activity android:name=".aqi_cough.YoutubePlayVid"></activity>
+        <activity android:name=".aqi_cough.UserInfoScreen" />
+        <activity android:name=".aqi_cough.TbUserLeader" />
+        <activity android:name=".aqi_cough.MainScreening" />
+        <activity android:name=".aqi_cough.DataCollection" />
+        <activity android:name=".aqi_cough.coughRecorder" />
+        <activity android:name=".aqi_cough.BookDownloader" />
+        <activity android:name=".BottomNavigation.AboutActivityNavigation" />
         <activity android:name=".BottomNavigation.HomeActivityBottomNavigation" />
-
         <activity android:name=".BottomNavigation.BottomNavigation">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
-
-
         </activity> <!-- Testing Activity -->
         <activity android:name=".TestingActivity" />
         <activity android:name=".quiz.quizSolutionsActivity" />
@@ -58,9 +59,7 @@
         </activity>
         <activity
             android:name=".home.EmailLogin"
-            android:noHistory="true">
-
-        </activity>
+            android:noHistory="true" />
         <activity android:name=".home.PhoneLogin" />
         <activity
             android:name=".home.VerifyPhoneActivity"

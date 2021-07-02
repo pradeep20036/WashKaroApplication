@@ -1,36 +1,38 @@
 package inspire2connect.inspire2connect.aqi_cough;
 
-import java.util.Date;
-
 public class UserHelperClass {
-    String aqiPredictString;
-    String dataLocationString;
-    String bmiString;
+    String aqiActualString;
+    String userLatitude;
+    String userLongitude;
+    String heightString;
+    String weightString;
     String ageString;
     boolean bronchitisVal;
     boolean asthmaVal;
     boolean pneumoniaVal;
-    boolean lungCancerVal;
+    boolean cancerVal;
     boolean tbVal;
     boolean otherRespVal;
     boolean femaleVal;
     boolean maleVal;
     boolean otherGenderVal;
-    Date currentTime;
+    String currentTime;
 
     public UserHelperClass() {
 
     }
 
-    public UserHelperClass(String aqiPredictString, String dataLocationString, String bmiString, String ageString, boolean bronchitisVal, boolean asthmaVal, boolean pneumoniaVal, boolean lungCancerVal, boolean tbVal, boolean otherRespVal, boolean femaleVal, boolean maleVal, boolean otherGenderVal, Date currentTime) {
-        this.aqiPredictString = aqiPredictString;
-        this.dataLocationString = dataLocationString;
-        this.bmiString = bmiString;
+    public UserHelperClass(String aqiActualString, String userLatitude, String userLongitude, String heightString, String weightString, String ageString, boolean bronchitisVal, boolean asthmaVal, boolean pneumoniaVal, boolean cancerVal, boolean tbVal, boolean otherRespVal, boolean femaleVal, boolean maleVal, boolean otherGenderVal, String currentTime) {
+        this.aqiActualString = aqiActualString;
+        this.userLatitude = userLatitude;
+        this.userLongitude = userLongitude;
+        this.heightString = heightString;
+        this.weightString = weightString;
         this.ageString = ageString;
         this.bronchitisVal = bronchitisVal;
         this.asthmaVal = asthmaVal;
         this.pneumoniaVal = pneumoniaVal;
-        this.lungCancerVal = lungCancerVal;
+        this.cancerVal = cancerVal;
         this.tbVal = tbVal;
         this.otherRespVal = otherRespVal;
         this.femaleVal = femaleVal;
@@ -39,28 +41,44 @@ public class UserHelperClass {
         this.currentTime = currentTime;
     }
 
-    public String getAqiPredictString() {
-        return aqiPredictString;
+    public String getAqiActualString() {
+        return aqiActualString;
     }
 
-    public void setAqiPredictString(String aqiPredictString) {
-        this.aqiPredictString = aqiPredictString;
+    public void setAqiActualString(String aqiActualString) {
+        this.aqiActualString = aqiActualString;
     }
 
-    public String getDataLocationString() {
-        return dataLocationString;
+    public String getUserLatitude() {
+        return userLatitude;
     }
 
-    public void setDataLocationString(String dataLocationString) {
-        this.dataLocationString = dataLocationString;
+    public void setUserLatitude(String userLatitude) {
+        this.userLatitude = userLatitude;
     }
 
-    public String getBmiString() {
-        return bmiString;
+    public String getUserLongitude() {
+        return userLongitude;
     }
 
-    public void setBmiString(String bmiString) {
-        this.bmiString = bmiString;
+    public void setUserLongitude(String userLongitude) {
+        this.userLongitude = userLongitude;
+    }
+
+    public String getHeightString() {
+        return heightString;
+    }
+
+    public void setHeightString(String heightString) {
+        this.heightString = heightString;
+    }
+
+    public String getWeightString() {
+        return weightString;
+    }
+
+    public void setWeightString(String weightString) {
+        this.weightString = weightString;
     }
 
     public String getAgeString() {
@@ -95,12 +113,12 @@ public class UserHelperClass {
         this.pneumoniaVal = pneumoniaVal;
     }
 
-    public boolean isLungCancerVal() {
-        return lungCancerVal;
+    public boolean isCancerVal() {
+        return cancerVal;
     }
 
-    public void setLungCancerVal(boolean lungCancerVal) {
-        this.lungCancerVal = lungCancerVal;
+    public void setCancerVal(boolean cancerVal) {
+        this.cancerVal = cancerVal;
     }
 
     public boolean isTbVal() {
@@ -143,11 +161,11 @@ public class UserHelperClass {
         this.otherGenderVal = otherGenderVal;
     }
 
-    public Date getCurrentTime() {
+    public String getCurrentTime() {
         return currentTime;
     }
 
-    public void setCurrentTime(Date currentTime) {
+    public void setCurrentTime(String currentTime) {
         this.currentTime = currentTime;
     }
 }

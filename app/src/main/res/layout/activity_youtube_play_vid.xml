@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/youtubeConsLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#222831"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:background="@drawable/full_guidline_view_roundcorner"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/editTextYOU"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingHorizontal="5dp"
+            android:gravity="center"
+            android:inputType="textPersonName"
+            android:text="TB Educational Videos"
+            android:textColor="@color/app_white"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            android:fontFamily="sans-serif-smallcaps" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/youLinLayout">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView9137"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dip"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:text="Here you can find awareness and training resources on Tuberculosis for the public and health care professionals."
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginVertical="10dp"
+                android:id="@+id/youLin2">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/quiz_round_button"
+                    android:paddingLeft="10dp"
+                    android:paddingVertical="10dp">
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/radiogroup">
+
+                        <RadioButton
+                            android:id="@+id/relCheck"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="10dp"
+                            android:includeFontPadding="true"
+                            android:paddingHorizontal="10dp"
+                            android:layout_marginVertical="5dp"
+                            android:text="Relevance and Importance"
+                            android:textColor="@color/app_black"
+                            android:buttonTint="@color/app_black"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/diagnosingCheck"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/relCheck"
+                            android:layout_marginHorizontal="10dp"
+                            android:fontFamily="sans-serif-smallcaps"                        android:includeFontPadding="true"
+                            android:paddingHorizontal="10dp"
+                            android:layout_marginVertical="5dp"
+                            android:buttonTint="@color/app_black"
+                            android:text="Diagnosing Active TB"
+                            android:textColor="@color/app_black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/preventCheck"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/diagnosingCheck"
+                            android:layout_marginHorizontal="10dp"
+                            android:fontFamily="sans-serif-smallcaps"                        android:includeFontPadding="true"
+                            android:paddingHorizontal="10dp"
+                            android:layout_marginVertical="5dp"
+                            android:buttonTint="@color/app_black"
+                            android:text="Preventing TB Transmission"
+                            android:textColor="@color/app_black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/primsecCheck"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/preventCheck"
+                            android:layout_marginHorizontal="10dp"
+                            android:fontFamily="sans-serif-smallcaps"                        android:includeFontPadding="true"
+                            android:paddingHorizontal="10dp"
+                            android:layout_marginVertical="5dp"
+                            android:buttonTint="@color/app_black"
+                            android:text="Primary and Secondary TB"
+                            android:textColor="@color/app_black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/treatmentCheck"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/primsecCheck"
+                            android:layout_marginHorizontal="10dp"
+                            android:fontFamily="sans-serif-smallcaps"                        android:includeFontPadding="true"
+                            android:paddingHorizontal="10dp"
+                            android:layout_marginVertical="5dp"
+                            android:buttonTint="@color/app_black"
+                            android:text="Treatment of Active TB"
+                            android:textColor="@color/app_black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </RadioGroup>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/btnPlay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:padding="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="50dip"
+                    android:background="@drawable/quiz_round_button"
+                    android:text=" Play "
+                    android:backgroundTint="#00ADB5"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textSize="24sp"
+                    android:textColor="@color/app_white"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <view
+                    android:id="@+id/youtubeView"
+                    class="com.google.android.youtube.player.YouTubePlayerView"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip">
+
+                <TextView
+                    android:id="@+id/laughButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:padding="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="32dp"
+                    android:background="@drawable/quiz_round_button"
+                    android:backgroundTint="#00ADB5"
+                    android:text=" PROCEED "
+                    android:textColor="@color/app_white"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

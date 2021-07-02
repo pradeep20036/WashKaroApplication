@@ -44,6 +44,7 @@ import java.util.Locale;
 
 import inspire2connect.inspire2connect.R;
 import inspire2connect.inspire2connect.about.aboutActivity;
+import inspire2connect.inspire2connect.aqi_cough.MainScreening;
 import inspire2connect.inspire2connect.satyaChat.ChatActivity;
 import inspire2connect.inspire2connect.survey.maleFemaleActivity;
 import inspire2connect.inspire2connect.utils.BaseActivity;
@@ -304,7 +305,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
                 openPrivacyPolicy(this);
                 break;
             case R.id.research_analytics:
-                i = getAqiIntent(this);
+                i = new Intent(HomeActivity.this, MainScreening.class);
                 startActivity(i);
                 break;
             case R.id.refer_app:

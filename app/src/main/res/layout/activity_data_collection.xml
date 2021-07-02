@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainConsLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#222831"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/full_guidline_view_roundcorner"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/headText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-smallcaps"
+            android:gravity="center"
+            android:paddingHorizontal="5dp"
+            android:paddingVertical="15dp"
+            android:layout_marginVertical="10dp"
+            android:text="TB Screening"
+            android:elevation="5dp"
+            android:textColor="@color/app_white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/resetButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/full_guidline_lastrow"
+                    android:text=" RESET "
+                    android:textSize="16sp"
+                    android:textColor="@color/app_white"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textStyle="bold"
+                    app:backgroundTint="#00ADB5" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/quiz_round_button"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginHorizontal="10dp"
+                        android:fontFamily="sans-serif-smallcaps"
+
+                        android:text="ENTER AGE"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/ageText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_toRightOf="@id/textView5"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:hint="XX"
+                        android:inputType="number"
+                        android:textColor="@color/app_black"
+                        android:textColorHint="#80000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/quiz_round_button"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginHorizontal="10dp"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:text="Enter Gender"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/maleCheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/textView4"
+                        android:fontFamily="sans-serif-smallcaps"
+
+                        android:paddingHorizontal="10dp"
+                        android:text="MALE"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/femaleCheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/maleCheck"
+                        android:fontFamily="sans-serif-smallcaps"
+
+                        android:paddingHorizontal="10dp"
+                        android:text="female"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/otherGenderCheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/femaleCheck"
+
+                        android:fontFamily="sans-serif-smallcaps"
+
+                        android:paddingHorizontal="10dp"
+                        android:text="other"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/quiz_round_button"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginHorizontal="10dp"
+                        android:text="Enter Height (cm) -"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:textColor="@color/app_black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/heightText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_toRightOf="@id/textView2"
+                        android:hint="XX"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/app_black"
+                        android:textColorHint="#80000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/quiz_round_button"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView29"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:layout_marginHorizontal="10dp"
+                        android:text="Enter Weight (kg) -"
+                        android:textColor="@color/app_black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/weightText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_toRightOf="@id/textView29"
+                        android:hint="XX"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/app_black"
+                        android:textColorHint="#80000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/quiz_round_button"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+
+                        android:layout_marginHorizontal="10dp"
+                        android:text="Current AQI -"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:textColor="@color/app_black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/avgAQI"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_toRightOf="@id/textView8"
+                        android:text="Unavailable"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:textAllCaps="false"
+                        android:textColor="@color/app_black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/quiz_round_button"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginVertical="10dp"
+                    android:text="Suffering from / Suspicion of :"
+                    android:textColor="#090000"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <CheckBox
+                            android:id="@+id/asthmaCheck"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginVertical="5dp"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:includeFontPadding="true"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="5dp"
+                            android:text="asthma"
+                            android:textColor="#000000"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/bronchitisCheck"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginVertical="5dp"
+                            android:layout_toRightOf="@id/asthmaCheck"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:includeFontPadding="true"
+                            android:paddingHorizontal="5dp"
+                            android:text="bronchitis"
+                            android:textColor="#000000"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/pneumoniaCheck"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/asthmaCheck"
+                            android:layout_alignLeft="@id/asthmaCheck"
+                            android:layout_marginVertical="5dp"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:includeFontPadding="true"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="5dp"
+                            android:text="pneumonia"
+                            android:textColor="#000000"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/tbCheck"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginVertical="5dp"
+                            android:layout_marginLeft="130dp"
+                            android:layout_toRightOf="@id/bronchitisCheck"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:paddingHorizontal="5dp"
+                            android:text="tuberculosis"
+                            android:textColor="#000000"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/lungCancerCheck"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/asthmaCheck"
+                            android:layout_marginVertical="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_toRightOf="@id/pneumoniaCheck"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:text="lung_cancer"
+                            android:textColor="#000000"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/otherRespCheck"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/asthmaCheck"
+                            android:layout_marginVertical="5dp"
+
+                            android:layout_toRightOf="@id/lungCancerCheck"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:paddingHorizontal="5dp"
+                            android:text="other"
+                            android:textColor="#000000"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/geotagButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="20dp"
+                android:background="@drawable/full_guidline_lastrow"
+                android:text="Cough Recording"
+                android:textAllCaps="false"
+                android:textColor="@color/app_white"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textStyle="bold"
+                app:backgroundTint="#00ADB5" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

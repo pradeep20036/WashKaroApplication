@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coughConsLay8699"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#222831"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="2dp"
+        android:background="@drawable/full_guidline_lastrow">
+
+        <TextView
+            android:id="@+id/textView85699"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingVertical="20dp"
+            android:paddingHorizontal="5dp"
+            android:elevation="2dp"
+
+            android:text="TB Screening"
+            android:textColor="@color/app_white"
+            android:textSize="36sp"
+            android:fontFamily="sans-serif-smallcaps" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginHorizontal="10dp"
+        android:paddingHorizontal="30dp"
+        android:background="@drawable/full_guidline_view_roundcorner"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            android:id="@+id/linearLayout81699">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="25dip">
+
+                <Button
+                    android:id="@+id/dataScreenButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginVertical="20dp"
+                    android:elevation="4dp"
+                    android:background="@drawable/quiz_score_btn"
+                    android:text="Data Collection"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#EEEEEE" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dip"
+                android:paddingBottom="15dip">
+
+                <Button
+                    android:id="@+id/chatbotScreenButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginVertical="20dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:background="@drawable/quiz_score_btn"
+                    android:text="Chatbots"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#EEEEEE" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dip"
+                android:paddingBottom="15dip">
+
+                <Button
+                    android:id="@+id/videoScreenButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginVertical="20dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:background="@drawable/quiz_score_btn"
+                    android:text="Training Videos"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#EEEEEE" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dip"
+                android:paddingBottom="15dip">
+
+                <Button
+                    android:id="@+id/materialScreenButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginVertical="20dp"
+                    android:background="@drawable/quiz_score_btn"
+                    android:text="Educational Materials"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#EEEEEE" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dip"
+                android:paddingBottom="15dip">
+
+                <Button
+                    android:id="@+id/leaderboardScreenButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginVertical="20dp"
+                    android:background="@drawable/quiz_score_btn"
+                    android:text="Leaderboard"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#EEEEEE" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

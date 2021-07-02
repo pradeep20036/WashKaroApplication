@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/internetDownloadLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#222831"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:background="@drawable/full_guidline_view_roundcorner"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/editTextInternetDownload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingVertical="15dp"
+            android:paddingHorizontal="5dp"
+            android:gravity="center"
+            android:inputType="textPersonName"
+
+            android:text="TB Resources"
+            android:textColor="@color/app_white"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            android:fontFamily="sans-serif-smallcaps" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/youLinLayout">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView91375"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dip"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:gravity="center"
+                    android:text="Here you can download resources on Tuberculosis."
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginVertical="10dp"
+                android:id="@+id/youLin25">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingVertical="10dp"
+                    android:background="@drawable/quiz_round_button">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/radiogrp">
+                        <RadioButton
+                            android:id="@+id/whoRepCheck"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="10dp"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:includeFontPadding="true"
+                            android:paddingHorizontal="10dp"
+                            android:text="WHO - Global TB Report 2020"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/iecChildCheck"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/whoRepCheck"
+                            android:layout_marginHorizontal="10dp"
+                            android:fontFamily="sans-serif-smallcaps"                        android:includeFontPadding="true"
+                            android:paddingHorizontal="10dp"
+                            android:text="Detection and Prevention of TB in Children"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/nikPoshCheck"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iecChildCheck"
+                            android:layout_marginHorizontal="10dp"
+                            android:fontFamily="sans-serif-smallcaps"                        android:includeFontPadding="true"
+                            android:paddingHorizontal="10dp"
+                            android:text="Nikshay Poshan Yojana Scheme"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/natStatCheck"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/nikPoshCheck"
+                            android:layout_marginHorizontal="10dp"
+                            android:fontFamily="sans-serif-smallcaps"                        android:includeFontPadding="true"
+                            android:paddingHorizontal="10dp"
+                            android:text="National Strategic Plan for TB Elimination"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/standTBCheck"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/natStatCheck"
+                            android:layout_marginHorizontal="10dp"
+                            android:fontFamily="sans-serif-smallcaps"                        android:includeFontPadding="true"
+                            android:paddingHorizontal="10dp"
+                            android:text="Standards for TB Care in India"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </RadioGroup>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/downloadFileButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:background="@drawable/full_guidline_lastrow"
+                    android:text="Download File"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#00ADB5" />
+
+
+
+
+                <Button
+                    android:id="@+id/proInterButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:background="@drawable/full_guidline_lastrow"
+                    android:text=" PROCEED "
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#00ADB5" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

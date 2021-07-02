@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/laughConsLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#222831"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="COUGH RECORDER"
+            android:background="#393E46"
+            android:textColor="#EEEEEE"
+            android:textSize="36sp"
+            android:fontFamily="sans-serif-smallcaps" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/linearLayout3">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dip"
+                android:paddingBottom="20dip">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:gravity="center"
+                    android:paddingTop="25dip"
+                    android:paddingBottom="25dip"
+                    android:text='Click on RECORD and\nPlease COUGH'
+                    android:textColor="#EEEEEE"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/recordButton1"
+                android:layout_width="200dp"
+                android:layout_height="67dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="10dp"
+
+                android:clickable="true"
+                android:elevation ="5dp"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:background="@drawable/quiz_round_button"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:layout_width="38dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/rec" />
+
+                    <TextView
+                        android:layout_width="122dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:gravity="center"
+                        android:text="RECORD"
+                        android:textColor="#000000"
+
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:iconTint="#FFFFFF" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/stopButton1"
+                android:layout_width="200dp"
+                android:layout_height="67dp"
+                android:layout_gravity="center"
+                android:layout_marginVertical="10dp"
+
+
+                android:clickable="true"
+                android:elevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:background="@drawable/quiz_round_button"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/stop" />
+
+                    <TextView
+                        android:layout_width="122dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:gravity="center"
+                        android:text="STOP"
+                        android:textColor="#000000"
+
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:iconTint="#FFFFFF" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/playFileButton1"
+                android:layout_width="200dp"
+                android:layout_height="67dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="10dp"
+                android:clickable="true"
+                android:elevation="5dp"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:background="@drawable/quiz_round_button"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/play" />
+
+                    <TextView
+                        android:layout_width="122dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:gravity="center"
+                        android:text="PLAY FILE"
+                        android:textColor="#000000"
+
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:iconTint="#FFFFFF" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/stopFileButton1"
+                android:layout_width="200dp"
+                android:layout_height="67dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="10dp"
+                android:clickable="true"
+                android:elevation="5dp"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:background="@drawable/quiz_round_button"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/stop" />
+
+                    <TextView
+                        android:layout_width="122dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:gravity="center"
+                        android:text="STOP FILE"
+                        android:textColor="#000000"
+
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:iconTint="#FFFFFF" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <Button
+                android:id="@+id/submitButton2"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="40dp"
+                android:layout_marginLeft="40dip"
+                android:layout_marginRight="40dip"
+                android:background="@drawable/full_guidline_lastrow"
+                android:paddingLeft="15dip"
+                android:paddingTop="10dip"
+                android:paddingRight="15dip"
+                android:paddingBottom="10dip"
+                android:text=" SUBMIT "
+                android:textColor="#EEEEEE"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:backgroundTint="#00ADB5" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

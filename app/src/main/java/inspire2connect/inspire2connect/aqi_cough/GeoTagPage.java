@@ -1,16 +1,9 @@
 package inspire2connect.inspire2connect.aqi_cough;
-
-import android.Manifest;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.location.Location;
+import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
-
-import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
-
-import com.google.android.gms.location.FusedLocationProviderClient;
-import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -18,146 +11,72 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.tasks.OnSuccessListener;
-
-import org.jetbrains.annotations.NotNull;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.IOException;
 
 import inspire2connect.inspire2connect.R;
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
 
+import static inspire2connect.inspire2connect.aqi_cough.UserInfoScreen.currLat;
+import static inspire2connect.inspire2connect.aqi_cough.UserInfoScreen.currLong;
 
 public class GeoTagPage extends FragmentActivity implements OnMapReadyCallback {
 
-    private static final int REQUEST_CODE = 101;
+    GoogleMap map2;
     public String finalAQI;
-    public LatLng currLoc;
     public String myLocURL;
-    public double currLat, currLong;
-    GoogleMap map;
-    FusedLocationProviderClient fusedLocationProviderClient;
-    Location currentLocation;
+
+    double actualLat;
+    double actualLong;
 
     @Override
-    protected void onCreate(android.os.Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.geotagpage);
-
-        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
-
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-        fetchLastLocation();
-
-        Button coughButton = findViewById(R.id.coughButton);
-
-        coughButton.setOnClickListener(new android.view.View.OnClickListener() {
-
-            @Override
-            public void onClick(android.view.View view) {
-                Intent coughPage = new Intent(GeoTagPage.this, cough_recorder.class);
-                startActivity(coughPage);
-            }
-
-        });
-
-        finalAQI = "";
-    }
-
-    private void fetchAQI(final double lat, final double lon, final String markerLabel, final int colorVal) {
-        myLocURL = "http://api.waqi.info/feed/geo:" + lat + ";" + lon + "/?token=262ba73b900a0ff15d3ac7bbbee593ddbb543aa9";
-        OkHttpClient client = new OkHttpClient();
-        Request request = new Request.Builder()
-                .url(myLocURL)
-                .build();
-        client.newCall(request).enqueue(new Callback() {
-            @Override
-            public void onFailure(@NotNull Call call, @NotNull IOException e) {
-                e.printStackTrace();
-            }
-
-            @Override
-            public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
-                if (response.isSuccessful()) {
-                    final String myResponse = response.body().string();
-                    try {
-                        JSONObject aqiJSON = new JSONObject(myResponse);
-                        JSONObject aqiData = (JSONObject) aqiJSON.get("data");
-                        final String AQIVal = aqiData.get("aqi").toString();
-
-                        GeoTagPage.this.runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                LatLng locPtr = new LatLng(lat, lon);
-                                map.addMarker(new MarkerOptions().position(locPtr).title(markerLabel).snippet("AQI = " + AQIVal + " , Coordinates (" + lat + "," + lon + ")").icon(BitmapDescriptorFactory.defaultMarker(colorVal)));
-                            }
-                        });
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-
-            }
-        });
-    }
-
-    private void fetchLastLocation() {
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_CODE);
-            return;
+        double prevLat = getIntent().getExtras().getDouble("actLat");
+        double prevLong = getIntent().getExtras().getDouble("actLong");
+        finalAQI = getIntent().getExtras().getString("aqiVal");
+        actualLat = 0;
+        actualLong = 0;
+        if (currLat < 0.2){
+            actualLat = currLat;
+            actualLong = currLong;
         }
-        com.google.android.gms.tasks.Task<Location> task = fusedLocationProviderClient.getLastLocation();
-        task.addOnSuccessListener(new OnSuccessListener<Location>() {
+        else if (prevLat < 0.2) {
+            actualLat = prevLat;
+            actualLong = prevLong;
+        }
+        else {
+            actualLat = 28.5456;
+            actualLong = 77.2732;
+        }
+
+        Button coughButton = (Button) findViewById(R.id.coughButton);
+
+        coughButton.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onSuccess(Location location) {
-                if (location != null) {
-                    currentLocation = location;
-                    currLat = currentLocation.getLatitude();
-                    currLong = currentLocation.getLongitude();
-                    fetchAQI(currLat, currLong, "Current Location", 270);
-                }
+            public void onClick(View view) {
+                Intent coughPage = new Intent(GeoTagPage.this, MainScreening.class);
+                startActivity(coughPage);
             }
         });
     }
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        map = googleMap;
-        fetchAQI(28.5456, 77.2732, "IIIT Delhi", 30);
-        fetchAQI(28.5355, 77.3910, "Noida", 30);
-        fetchAQI(28.4595, 77.0266, "Gurgaon", 30);
-        fetchAQI(19.0760, 72.8777, "Mumbai", 30);
-        fetchAQI(12.9716, 77.5946, "Bangalore", 30);
-        fetchAQI(22.5726, 88.3639, "Kolkata", 30);
-        LatLng IIITD = new LatLng(28.5456, 77.2732);
-        map.moveCamera(CameraUpdateFactory.newLatLng(IIITD));
-        map.animateCamera(CameraUpdateFactory.newLatLngZoom(IIITD, 10));
+        map2 = googleMap;
+        map2.addMarker(new MarkerOptions().position(new LatLng(currLat, currLong)).title("Your Location").snippet("AQI = " + finalAQI + ", Coordinates (" + actualLat + ", " + actualLong + ")").icon(BitmapDescriptorFactory.defaultMarker(270)));
+        map2.addMarker(new MarkerOptions().position(new LatLng(28.639464,77.239105)).title("New Delhi Tuberculosis Centre").snippet("NDTBC From a modest beginning in 1940 as a Model TB Clinic, NDTBC has now grown into a fully functional National level institute for TB and Chest Diseasesimparting health care, training and education are being met in an integrated form here. From the day of its inception, NDTBC nurtured a dream of becoming a National level institute for TB & chest Diseases.").icon(BitmapDescriptorFactory.defaultMarker(30)));
+        map2.addMarker(new MarkerOptions().position(new LatLng(28.5287201,77.1891771)).title("National Institute of TB and Respiratory Diseases").snippet("We aim to act as an apex Institute in the country for prevention, control and treatment of Tuberculosis and Allied Diseases. To promote National Tuberculosis Control Programme in the country and to formulate strategies which are socially acceptable and economically feasible in order to assist and strengthen the programme.").icon(BitmapDescriptorFactory.defaultMarker(30)));
+        map2.addMarker(new MarkerOptions().position(new LatLng(28.5654877,77.2083398)).title("AIIMS DOTS Centre").snippet("In 1993, Government of India started the Revised National Tuberculosis Control Programme (RNTCP). A model Directly Observed Therapy, Short-Course (DOTS) centre was established at the All India Institute of Medical Sciences (AIIMS) to (i) identify the challenges and opportunities in establishing DOTS centres at tertiary care facilities, (ii) to teach the strategies of RNTCP to medical and paramedical staff, and (iii) to undertake relevant operational research connected with tuberculosis (TB) treatment and control.").icon(BitmapDescriptorFactory.defaultMarker(30)));
+        map2.addMarker(new MarkerOptions().position(new LatLng(28.5290115,77.1892954)).title("Lala Ram Saroop T.B Hospital").snippet("This is a specialist hospital and walk-in centre in New Delhi. Amongst other initiatives, it operates the DOTS (directly observed therapy) system and provides much needed health education and support for TB patients in the city.").icon(BitmapDescriptorFactory.defaultMarker(30)));
+        map2.addMarker(new MarkerOptions().position(new LatLng(28.5361255,77.2555526)).title("Saans Foundation").snippet("Super Speciality Centre & Nursing Home in South Delhi for Respiratory, Critical Care, Sleep, Allergy, Rehabilitation & Home Care").icon(BitmapDescriptorFactory.defaultMarker(30)));
+        map2.addMarker(new MarkerOptions().position(new LatLng(28.6416491,77.2053679)).title("Delhi Heart & Lung Institute").snippet("Delhi Heart & Lung Institute offers a comprehensive Executive Health Check Program which includes an array of heart and lung diagnostics as well as laboratory investigations. The institute’s cutting-edge core competencies are well sustained by an efficient collaboration with support services like Emergency Medicine, Biochemistry, Clinical Pathology, Blood Transfusion, Telemedicine and Facilities Management adhering to world-class modern standards, making the institute comparable with any other setup of its kind in the world.").icon(BitmapDescriptorFactory.defaultMarker(30)));
+        map2.addMarker(new MarkerOptions().position(new LatLng(28.6458378,77.1961842)).title("Ramakrishna Mission Medical Centre").snippet("Besides giving treatment to TB patients and chest symptomatics, this clinic also imparts health education to patients and to the community at large.").icon(BitmapDescriptorFactory.defaultMarker(30)));
+        map2.addMarker(new MarkerOptions().position(new LatLng(28.67237,77.1865113)).title("Gulabi Bagh Chest Clinic").snippet("DOT CUM MICROSCOPY CENTRE in North Delhi").icon(BitmapDescriptorFactory.defaultMarker(30)));
+        LatLng userLoc = new LatLng(actualLat, actualLong);
+        map2.moveCamera(CameraUpdateFactory.newLatLng(userLoc));
+        map2.animateCamera(CameraUpdateFactory.newLatLngZoom(userLoc, 10));
     }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @androidx.annotation.NonNull String[] permissions, @androidx.annotation.NonNull int[] grantResults) {
-        switch (requestCode) {
-            case REQUEST_CODE:
-                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    fetchLastLocation();
-                }
-                break;
-        }
-    }
-
-    @Override
-    public void onPointerCaptureChanged(boolean hasCapture) {
-
-    }
-
-
 }

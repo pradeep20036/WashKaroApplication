@@ -14,6 +14,7 @@ import org.jetbrains.annotations.NotNull;
 import java.sql.Time;
 
 import inspire2connect.inspire2connect.R;
+import inspire2connect.inspire2connect.aqi_cough.MainScreening;
 import inspire2connect.inspire2connect.home.HomeActivity;
 import inspire2connect.inspire2connect.quiz.Time_Up;
 
@@ -42,10 +43,10 @@ public class BottomNavigation extends AppCompatActivity {
 
                         break;
 
-                    case R.id.about:
+                    case R.id.wkscreen:
 
                         startActivity(new Intent(getApplicationContext(),
-                                Time_Up.class));
+                                MainScreening.class));
                         overridePendingTransition(0,0);
 
                         break;
