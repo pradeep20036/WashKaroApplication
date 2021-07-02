@@ -1,23 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/image_bg">
+        android:background="@drawable/image_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/account_image"
-            android:layout_width="146dp"
-            android:layout_height="167dp"
+            android:layout_width="176dp"
+            android:layout_height="188dp"
             android:layout_gravity="center"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="32dp"
             android:clickable="true"
             android:focusable="true"
             android:focusableInTouchMode="true"
@@ -25,38 +35,15 @@
 
             app:layout_constraintBottom_toTopOf="@id/tv_name"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.134" />
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardView3"
-            android:layout_width="184dp"
-            android:layout_height="179dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="90dp"
-            app:cardCornerRadius="160dp"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/tv_name"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <ImageView
-                android:id="@+id/imageView10"
-                android:layout_width="220dp"
-                android:layout_height="131dp"
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/ic_cough" />
-        </androidx.cardview.widget.CardView>
-
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_name"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="80dp"
             android:background="@drawable/quiz_round_button"
             android:fontFamily="sans-serif-smallcaps"
             android:gravity="center"
@@ -67,14 +54,15 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cardView3" />
+
+            app:layout_constraintTop_toBottomOf="@id/account_image" />
 
         <TextView
             android:id="@+id/bt_signout"
             android:layout_width="167dp"
             android:layout_height="53dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginBottom="40dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="100dp"
             android:background="@drawable/quiz_round_button"
             android:backgroundTint="#00ADB5"
             android:fontFamily="sans-serif-smallcaps"
@@ -82,12 +70,12 @@
             android:text="Sign Out"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
+            android:onClick="onLogout"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintHorizontal_bias="0.479"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_bloodgp"
-            app:layout_constraintVertical_bias="0.848" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_bloodgp" />
 
         <TextView
             android:id="@+id/tv_bloodgp"
@@ -101,10 +89,10 @@
             android:text="O+ve"
             android:textColor="@color/app_black"
             android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@id/bt_signout"
             app:layout_constraintEnd_toEndOf="@+id/tv_email"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/tv_email"
-            app:layout_constraintBottom_toTopOf="@id/bt_signout"
             app:layout_constraintTop_toBottomOf="@+id/tv_email" />
 
         <TextView
@@ -122,12 +110,28 @@
             android:text="Email"
             android:textColor="@color/app_black"
             android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_bloodgp"
             app:layout_constraintEnd_toEndOf="@+id/tv_name"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/tv_name"
-            app:layout_constraintBottom_toTopOf="@id/tv_bloodgp"
             app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</ScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/app_blue"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:menu="@menu/menu_navigation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

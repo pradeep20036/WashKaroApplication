@@ -12,7 +12,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import org.jetbrains.annotations.NotNull;
 
 import inspire2connect.inspire2connect.R;
-import inspire2connect.inspire2connect.aqi_cough.MainScreening;
 
 public class HomeActivityBottomNavigation extends AppCompatActivity {
 
@@ -37,17 +36,7 @@ public class HomeActivityBottomNavigation extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(),
                                 HomeActivityBottomNavigation.class));
                         overridePendingTransition(0,0);
-
                         break;
-
-                    case R.id.wkscreen:
-
-                        startActivity(new Intent(getApplicationContext(),
-                                MainScreening.class));
-                        overridePendingTransition(0,0);
-
-                        break;
-
                 }
 
 

@@ -12,7 +12,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import org.jetbrains.annotations.NotNull;
 
 import inspire2connect.inspire2connect.R;
-import inspire2connect.inspire2connect.aqi_cough.MainScreening;
+import inspire2connect.inspire2connect.satyaChat.ChatActivity;
 
 public class AboutActivityNavigation extends AppCompatActivity {
 
@@ -37,10 +37,10 @@ public class AboutActivityNavigation extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         break;
 
-                    case R.id.wkscreen:
+                    case R.id.chatbot:
 
                         startActivity(new Intent(getApplicationContext(),
-                                MainScreening.class));
+                                ChatActivity.class));
                         overridePendingTransition(0,0);
 
                         break;

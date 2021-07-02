@@ -25,6 +25,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
 import androidx.core.graphics.drawable.DrawableCompat;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.play.core.appupdate.AppUpdateInfo;
 import com.google.android.play.core.appupdate.AppUpdateManager;
 import com.google.android.play.core.appupdate.AppUpdateManagerFactory;
@@ -38,17 +39,21 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+import inspire2connect.inspire2connect.BottomNavigation.HomeActivityBottomNavigation;
 import inspire2connect.inspire2connect.R;
 import inspire2connect.inspire2connect.about.aboutActivity;
-import inspire2connect.inspire2connect.aqi_cough.MainScreening;
+import inspire2connect.inspire2connect.profile.ProfileActivity;
 import inspire2connect.inspire2connect.satyaChat.ChatActivity;
 import inspire2connect.inspire2connect.survey.maleFemaleActivity;
 import inspire2connect.inspire2connect.utils.BaseActivity;
 import inspire2connect.inspire2connect.utils.LocaleHelper;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HomeActivity extends BaseActivity implements View.OnClickListener {
 
@@ -66,6 +71,19 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
     String currentUserID;
     private ViewFlipper viewFlipper;
     private List<Infographics> slideLists;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public void update_handle() {
         final AppUpdateManager appUpdateManager = AppUpdateManagerFactory.create(this);
@@ -110,6 +128,53 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
         setContentView(R.layout.activity_home_);
         update_handle();
         initialize_view_flipper();
+
+        // handling bottom navigation
+        BottomNavigationView bottomNavigationView=findViewById(R.id.bottom_navigation);
+//    //perform item selector listener
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+        @Override
+        public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
+
+            switch (item.getItemId()){
+                case R.id.home:
+                    startActivity(new Intent(getApplicationContext(),
+                            HomeActivity.class));
+                    overridePendingTransition(0,0);
+                    break;
+                case R.id.profile:
+                    startActivity(new Intent(getApplicationContext(),
+                            ProfileActivity.class));
+                    overridePendingTransition(0,0);
+                    break;
+                case R.id.chatbot:
+                    startActivity(new Intent(getApplicationContext(),
+                            ChatActivity.class));
+                    overridePendingTransition(0,0);
+                    break;
+//                case R.id.home:
+//                    startActivity(new Intent(getApplicationContext(),
+//                            HomeActivity.class));
+//                    overridePendingTransition(0,0);
+//                    break;
+
+
+            }
+
+
+            return false;
+        }
+    });
+
+
+
+
+
+
+
+
+
+
 
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
@@ -305,7 +370,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
                 openPrivacyPolicy(this);
                 break;
             case R.id.research_analytics:
-                i = new Intent(HomeActivity.this, MainScreening.class);
+                i = getAqiIntent(this);
                 startActivity(i);
                 break;
             case R.id.refer_app:
