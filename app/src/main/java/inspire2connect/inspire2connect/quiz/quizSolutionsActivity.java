@@ -22,7 +22,7 @@ public class quizSolutionsActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_solutions);
         setStatusBarGradiant(this);
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+//        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         ArrayList<questionObject> questions = quizActivity.selected_questions;
 

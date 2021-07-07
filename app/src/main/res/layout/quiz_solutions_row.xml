@@ -167,6 +167,8 @@
                         android:fontFamily="@font/mukta_semibold"
                         android:textAlignment="center"
                         android:textSize="@dimen/home_card_font"
+                        android:background="#393e46"
+                        android:layout_marginBottom="10dp"
                         android:textColor="@color/app_white">
 
                     </TextView>

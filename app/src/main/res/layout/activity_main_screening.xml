@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/coughConsLay8699"
     android:layout_width="match_parent"
@@ -30,20 +30,25 @@
     </RelativeLayout>
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_width="389dp"
+        android:layout_height="515dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
         android:layout_marginHorizontal="10dp"
-        android:paddingHorizontal="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="10dp"
+
         android:background="@drawable/full_guidline_view_roundcorner"
+        android:paddingHorizontal="30dp"
         android:scrollbars="none">
 
         <LinearLayout
+            android:id="@+id/linearLayout81699"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
 
-            android:id="@+id/linearLayout81699">
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -57,10 +62,10 @@
                     android:layout_centerInParent="true"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginVertical="20dp"
-                    android:elevation="4dp"
                     android:background="@drawable/quiz_score_btn"
-                    android:text="Data Collection"
+                    android:elevation="4dp"
                     android:fontFamily="sans-serif-smallcaps"
+                    android:text="Data Collection"
                     android:textColor="#000000"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -80,8 +85,8 @@
                     android:layout_centerInParent="true"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginVertical="20dp"
-                    android:fontFamily="sans-serif-smallcaps"
                     android:background="@drawable/quiz_score_btn"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:text="Chatbots"
                     android:textColor="#000000"
                     android:textSize="20sp"
@@ -102,8 +107,8 @@
                     android:layout_centerInParent="true"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginVertical="20dp"
-                    android:fontFamily="sans-serif-smallcaps"
                     android:background="@drawable/quiz_score_btn"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:text="Training Videos"
                     android:textColor="#000000"
                     android:textSize="20sp"
@@ -122,10 +127,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:fontFamily="sans-serif-smallcaps"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginVertical="20dp"
                     android:background="@drawable/quiz_score_btn"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:text="Educational Materials"
                     android:textColor="#000000"
                     android:textSize="20sp"
@@ -144,10 +149,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:fontFamily="sans-serif-smallcaps"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginVertical="20dp"
                     android:background="@drawable/quiz_score_btn"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:text="Leaderboard"
                     android:textColor="#000000"
                     android:textSize="20sp"
@@ -157,15 +162,14 @@
 
         </LinearLayout>
     </ScrollView>
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/bottom_navigation"
-        app:itemBackground="@color/blackcolor"
-        app:backgroundTint="@color/blackcolor"
-        app:itemTextColor="@drawable/selector"
-        app:itemIconTint="@drawable/selector"
-        app:menu="@menu/menu_navigation"
         android:layout_alignParentBottom="true"
-        />
-</LinearLayout>
+        android:layout_gravity="bottom"
+        android:background="@color/navbarcolor"
+        app:itemTextColor="@drawable/selector"
+        app:menu="@menu/menu_navigation" />
+</RelativeLayout>
