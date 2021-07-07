@@ -20,7 +20,7 @@ public class scoreActivity extends BaseActivity {
     String currentUserID;
     private TextView score;
     private int[] user_selections;
-    private Button done, solutions;
+    private TextView done, solutions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +30,8 @@ public class scoreActivity extends BaseActivity {
 
 
         score = findViewById(R.id.sa_score);
-        done = findViewById(R.id.sa_done);
-        solutions = findViewById(R.id.button_view_solutions);
+        done = findViewById(R.id.sa_done_textview);
+        solutions = findViewById(R.id.button_view_solutions_textview);
 
         String score_str = getIntent().getStringExtra("SCORE");
         user_selections = getIntent().getIntArrayExtra("SELECTED_OPTIONS");
@@ -49,7 +49,7 @@ public class scoreActivity extends BaseActivity {
         bundle1.putString("QuizScore", score_str);
         FirebaseAnalytics.getInstance(this).logEvent("QuizStatus", bundle1);
 
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+//        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
 
         done.setOnClickListener(new View.OnClickListener() {

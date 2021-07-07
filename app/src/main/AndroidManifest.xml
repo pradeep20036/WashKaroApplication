@@ -99,7 +99,8 @@
 
 
 
-        <activity android:name=".quiz.scoreActivity" />
+        <activity android:name=".quiz.scoreActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name=".utils.urlActivity" />
         <activity android:name=".aqi_cough.aqi_activity" />
         <activity android:name=".aqi_cough.cough_recorder" />

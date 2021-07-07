@@ -33,6 +33,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
 import com.google.gson.Gson;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -503,7 +505,7 @@ public class quizActivity extends BaseActivity implements View.OnClickListener {
             ColorDrawable colorDrawable = new ColorDrawable(Color.TRANSPARENT);
             dialogWrong.getWindow().setBackgroundDrawable(colorDrawable);
         }
-        dialogWrong.setContentView(R.layout.dialog_wrong);
+        dialogWrong.setContentView(R.layout.dialog_incorrect_new);
         dialogWrong.setCancelable(false);
         dialogWrong.show();
 
@@ -516,12 +518,12 @@ public class quizActivity extends BaseActivity implements View.OnClickListener {
         bundle1.putString("UID", currentUserID);
         bundle1.putString("QuizAnswerStatus", "Wrong Answer");
         FirebaseAnalytics.getInstance(this).logEvent("QuizStatus", bundle1);
-
-        TextView wrongText = dialogWrong.findViewById(R.id.wrongText);
-        Button buttonNext = dialogWrong.findViewById(R.id.dialogNext);
+//
+//        TextView wrongText = dialogWrong.findViewById(R.id.wrongText);
+        TextView textView = dialogWrong.findViewById(R.id.quiz_incorrect_dialog);
 
         //OnCLick listener to go next que
-        buttonNext.setOnClickListener(new View.OnClickListener() {
+        textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //This will dismiss the dialog
@@ -545,7 +547,7 @@ public class quizActivity extends BaseActivity implements View.OnClickListener {
             ColorDrawable colorDrawable = new ColorDrawable(Color.TRANSPARENT);
             dialogCorrect.getWindow().setBackgroundDrawable(colorDrawable);
         }
-        dialogCorrect.setContentView(R.layout.dialog_correct);
+        dialogCorrect.setContentView(R.layout.dialog_correct_new);
         dialogCorrect.setCancelable(false);
         dialogCorrect.show();
 
@@ -559,11 +561,11 @@ public class quizActivity extends BaseActivity implements View.OnClickListener {
         bundle1.putString("QuizAnswerStatus", "Correct Answer");
         FirebaseAnalytics.getInstance(this).logEvent("QuizStatus", bundle1);
 
-        TextView correctText = dialogCorrect.findViewById(R.id.correctText);
-        Button buttonNext = dialogCorrect.findViewById(R.id.dialogNext);
+//        TextView correctText = dialogCorrect.findViewById(R.id.correctText);
+        TextView textView = dialogCorrect.findViewById(R.id.quiz_correct_dialog);
 
         //OnCLick listener to go next que
-        buttonNext.setOnClickListener(new View.OnClickListener() {
+        textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //This will dismiss the dialog

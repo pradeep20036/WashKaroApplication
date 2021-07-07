@@ -47,7 +47,7 @@
                 app:srcCompat="@drawable/cancel_icon" />
 
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id/quiz_incorrect_dialog"
                 android:layout_width="223dp"
                 android:layout_height="63dp"
                 android:layout_marginStart="100dp"
@@ -55,6 +55,7 @@
                 android:background="@drawable/quiz_round_button"
                 android:gravity="center"
                 android:text="NEXT"
+                android:clickable="true"
                 android:textSize="40sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

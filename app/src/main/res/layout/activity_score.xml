@@ -36,7 +36,7 @@
                 android:layout_marginTop="130dp"
                 android:fontFamily="@font/roboto_medium"
                 android:gravity="center"
-                android:text="CONGRATS!"
+                android:text="Your Score!"
                 android:textColor="@color/app_black"
                 android:textSize="25sp" />
 
@@ -105,10 +105,11 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/button_view_solutions"
-                    android:layout_width="160dp"
+                    android:layout_width="140dp"
                     android:layout_height="50dp"
                     android:padding="8dp"
-                    android:layout_margin="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
                     android:layout_gravity="center"
                     android:background="@drawable/quiz_score_btn"
                     android:clickable="true"
@@ -121,6 +122,7 @@
                         android:gravity="center"
                         android:fontFamily="@font/mukta_bold"
                         android:text="CHECK SOLUTIONS"
+                        android:clickable="true"
                         android:textAlignment="center"
                         android:textColor="@color/app_white"
                         android:textSize="15sp"
@@ -133,7 +135,7 @@
                     android:layout_width="160dp"
                     android:layout_height="50dp"
                     android:padding="8dp"
-                    android:layout_margin="5dp"
+                    android:layout_marginRight="20dp"
                     android:layout_gravity="center"
                     android:background="@drawable/quiz_score_btn"
                     android:clickable="true"
@@ -146,6 +148,7 @@
                         android:gravity="center"
                         android:fontFamily="@font/mukta_bold"
                         android:text="DONE"
+                        android:clickable="true"
                         android:textAlignment="center"
                         android:textColor="@color/app_white"
                         android:textSize="15sp"
