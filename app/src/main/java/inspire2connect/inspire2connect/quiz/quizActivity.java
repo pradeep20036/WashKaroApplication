@@ -244,7 +244,7 @@ public class quizActivity extends BaseActivity implements View.OnClickListener {
         quesNum = 0;
 
 
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+//        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
 
         Intent i = getIntent();
@@ -289,8 +289,8 @@ public class quizActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case QUIZ:
                 databaseReference = quizReference;
-                getSupportActionBar().setTitle(getString(R.string.quiz_title));
-                getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+//                getSupportActionBar().setTitle(getString(R.string.quiz_title));
+//                getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 break;
             default:
                 Logv(TAG, "Invalid Intent");
