@@ -18,7 +18,7 @@
 
     <style name="MyActionBar" parent="@android:style/Widget.ActionBar">
         <item name="android:background">@color/app_white</item>
-        <item name="fontFamily">@font/mukta_bold</item>
+        <item name="fontFamily">@font/opensans_regular</item>
         <item name="titleTextStyle">@style/MyActionBarTitle</item>
         <item name="actionMenuTextColor">@color/app_light_black</item>
 

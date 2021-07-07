@@ -23,6 +23,7 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:replace="android:appComponentFactory">
+
         <activity android:name=".aqi_cough.YoutubePlayVid"></activity>
         <activity android:name=".aqi_cough.UserInfoScreen" />
         <activity android:name=".aqi_cough.TbUserLeader" />
@@ -45,6 +46,10 @@
         <activity android:name=".satyaChat.ChatActivity" />
         <activity android:name=".home.HomeActivity">
 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
 
@@ -53,10 +58,7 @@
         <activity
             android:name=".home.LoginActivity"
             android:noHistory="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
 
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />

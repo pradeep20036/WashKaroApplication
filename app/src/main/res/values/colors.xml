@@ -9,6 +9,7 @@
     <color name="RedColor">#f85f68</color>
     <color name="backColor">#4dffff</color>
     <color name="blackcolor">#000000</color>
+    <color name="navbarcolor">#00ADB5</color>
     <color name="home_buton_color">#A9F0F0</color>
     <color name="Home_background_color">#F8F8F8</color>
     <!-- Screens background color-->

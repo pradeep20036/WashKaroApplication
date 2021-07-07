@@ -245,8 +245,8 @@ public class BaseActivity extends AppCompatActivity {
             Window window = activity.getWindow();
             Drawable background = activity.getResources().getDrawable(R.drawable.gradient_effect);
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(Color.TRANSPARENT);
-            window.setNavigationBarColor(Color.TRANSPARENT);
+            window.setStatusBarColor(Color.rgb(4,5,6));
+//            window.setNavigationBarColor(Color.TRANSPARENT);
             window.setBackgroundDrawable(background);
         }
     }

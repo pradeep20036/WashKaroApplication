@@ -8,10 +8,11 @@
     tools:context=".home.HomeActivity">
 
 
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:scrollbars="none">
+        android:scrollbars="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -20,12 +21,12 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="250dp">
+                android:layout_height="204dp">
 
                 <ViewFlipper
                     android:id="@+id/viewFlipper_slide_show"
                     android:layout_width="match_parent"
-                    android:layout_height="224dp" />
+                    android:layout_height="200dp" />
 
                 <ImageButton
 
@@ -751,8 +752,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/bottom_navigation"
-        app:itemBackground="@color/blackcolor"
-        app:backgroundTint="@color/blackcolor"
+        app:backgroundTint="@color/navbarcolor"
         app:itemTextColor="@drawable/selector"
         app:itemIconTint="@drawable/selector"
         app:menu="@menu/menu_navigation"
