@@ -19,6 +19,10 @@
     <string name="firebase_status_fmt" translatable="false">Firebase UID: %s</string>
     <string name="firebase_user_management">Firebase User Management</string>
 
+    <style name="circleView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
     <string name="tavlab_logo">Tav Lab at IIIT Delhi</string>
     <string name="precog_logo">Precog Lab at IIIT Delhi</string>
     <string name="iiitd_logo">IIIT Delhi</string>

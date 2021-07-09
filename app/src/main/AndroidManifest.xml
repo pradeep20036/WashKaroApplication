@@ -23,51 +23,44 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:replace="android:appComponentFactory">
-
-        <activity android:name=".aqi_cough.YoutubePlayVid"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
-        <activity android:name=".aqi_cough.UserInfoScreen"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
-        <activity android:name=".aqi_cough.TbUserLeader"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
-        <activity android:name=".aqi_cough.MainScreening"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".NlpChatbot.MainChatScreen"></activity>
+        <activity
+            android:name=".aqi_cough.YoutubePlayVid"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".aqi_cough.UserInfoScreen"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".aqi_cough.TbUserLeader"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".aqi_cough.MainScreening"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".aqi_cough.DataCollection" />
         <activity android:name=".aqi_cough.coughRecorder" />
         <activity android:name=".aqi_cough.BookDownloader" />
         <activity android:name=".BottomNavigation.AboutActivityNavigation" />
         <activity android:name=".BottomNavigation.HomeActivityBottomNavigation" />
-
-        <activity android:name=".BottomNavigation.BottomNavigation">
-
-
-
-
-        </activity> <!-- Testing Activity -->
-        <activity android:name=".profile.ProfileActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            />
+        <activity android:name=".BottomNavigation.BottomNavigation"></activity> <!-- Testing Activity -->
+        <activity
+            android:name=".profile.ProfileActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".TestingActivity" />
-        <activity android:name=".quiz.quizSolutionsActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".quiz.quizSolutionsActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".satyaChat.ChatActivity" />
         <activity android:name=".home.HomeActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-        </activity>
-
-
-        <!-- <activity android:name=".male_female_2" /> -->
+        </activity> <!-- <activity android:name=".male_female_2" /> -->
         <activity
             android:name=".home.LoginActivity"
             android:noHistory="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-
-
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -82,17 +75,14 @@
         <activity
             android:name=".home.EmailLogin"
             android:noHistory="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-
-
-        </activity>
-        <activity android:name=".home.PhoneLogin"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity
+            android:name=".home.PhoneLogin"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".home.VerifyPhoneActivity"
             android:noHistory="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".home.WelcomeActivity" />
         <activity android:name=".survey.maleFemaleActivity" />
         <activity android:name=".news.text2speech2_2Activity" />
@@ -104,15 +94,12 @@
         <!-- <activity android:name=".daily_updates" /> -->
         <activity android:name=".mythGuidelineUpdates.UpdateActivity" />
         <activity android:name=".tweets.tweetActivity" />
-        <activity android:name=".quiz.quizActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            />
-
-
-
-
-        <activity android:name=".quiz.scoreActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".quiz.quizActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".quiz.scoreActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".utils.urlActivity" />
         <activity android:name=".aqi_cough.aqi_activity" />
         <activity android:name=".aqi_cough.cough_recorder" />

@@ -46,6 +46,7 @@ import java.util.List;
 import java.util.Locale;
 
 import inspire2connect.inspire2connect.BottomNavigation.HomeActivityBottomNavigation;
+import inspire2connect.inspire2connect.NlpChatbot.MainChatScreen;
 import inspire2connect.inspire2connect.R;
 import inspire2connect.inspire2connect.about.aboutActivity;
 import inspire2connect.inspire2connect.aqi_cough.MainScreening;
@@ -297,7 +298,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
                 FirebaseAnalytics.getInstance(this).logEvent("ScrollingInfographics", bundle2);
                 break;
             case R.id.misc_but2_layout:
-                i = new Intent(HomeActivity.this, ChatActivity.class);
+                i = new Intent(HomeActivity.this, MainChatScreen.class);
                 startActivity(i);
                 break;
             case R.id.misc_but3_layout:
