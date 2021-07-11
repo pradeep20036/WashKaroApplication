@@ -131,6 +131,8 @@ public class MainChatScreen extends AppCompatActivity {
 
                 String msg = "Check Your connection";
                 messageClassArrayList.add(new MessageClass(msg,BOT));
+                adapter.notifyDataSetChanged();
+                recyclerView.smoothScrollToPosition(recyclerView.getAdapter().getItemCount());
 
             }
         });
