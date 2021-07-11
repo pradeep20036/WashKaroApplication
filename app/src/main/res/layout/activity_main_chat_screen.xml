@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+android:background="@color/differentWhite"
     android:layout_height="match_parent"
 
     tools:context=".NlpChatbot.MainChatScreen">
@@ -19,13 +20,15 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginEnd="16dp"
-                app:shapeAppearance="@style/circleView"
+
                 android:background="@drawable/ic_chatbot_new"
                 android:layout_marginRight="16dp" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="TB Chatbot"
+                android:textSize="20dp"
+                android:fontFamily="@font/opensans_regular"
                 android:textColor="@color/differentWhite"
 
                 android:layout_margin="16dp"/>
@@ -55,7 +58,9 @@
             android:id="@+id/messagebox"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="3dp"
+            android:padding="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:hint="ENTER YOUR MESSAGE"
             android:background="@drawable/quiz_round_button"/>
 

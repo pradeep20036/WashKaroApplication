@@ -100,31 +100,38 @@ public class MainChatScreen extends AppCompatActivity {
         response.enqueue(new Callback<List<BotResponse>>() {
             @Override
             public void onResponse(Call<List<BotResponse>> call, Response<List<BotResponse>> response) {
-                Log.d("CHECK","at line response");
-                Log.d("CHECK","response"+response.body());
-                Log.d("CHECK","response"+response.toString());
-                Log.d("CHECK","response"+response.isSuccessful());
+                Log.d("CHECK", "at line response");
+                Log.d("CHECK", "response" + response.body());
+                Log.d("CHECK", "response" + response.toString());
+                Log.d("CHECK", "response" + response.isSuccessful());
 
-                Log.d("CHECK","call"+call.isExecuted());
+                Log.d("CHECK", "call" + call.isExecuted());
 
-
-
-                if(response.body()==null || response.body().size() ==0)
-                {
+                if (response.body() == null || response.body().size() == 0) {
 
 
-                }
-                else{
-                    BotResponse botResponse = response.body().get(0);
-                    Log.d("CHECK",""+botResponse.text);
-                    messageClassArrayList.add(new MessageClass(botResponse.text,BOT));
-//                    recyclerView.scrollToPosition(messageClassArrayList.size()-1);
-                    adapter.notifyDataSetChanged();
-                    recyclerView.smoothScrollToPosition(recyclerView.getAdapter().getItemCount());
+                } else {
+                    if (response.body().size() > 1) {
+                        for (int i = 1; i <= response.body().size(); i++) {
+                            BotResponse botResponse = response.body().get(i - 1);
+                            Log.d("CHECK", "" + botResponse.text);
+                            messageClassArrayList.add(new MessageClass(botResponse.text, BOT));
+                            adapter.notifyDataSetChanged();
+                            recyclerView.smoothScrollToPosition(recyclerView.getAdapter().getItemCount());
+
+                        }
+                    } else {
+                        BotResponse botResponse = response.body().get(0);
+                        Log.d("CHECK", "" + botResponse.text);
+                        messageClassArrayList.add(new MessageClass(botResponse.text, BOT));
+                        adapter.notifyDataSetChanged();
+                        recyclerView.smoothScrollToPosition(recyclerView.getAdapter().getItemCount());
+
+                    }
+
 
                 }
             }
-
             @Override
             public void onFailure(Call<List<BotResponse>> call, Throwable t) {
 //                Log.d("CHECK","at line 113 failure");
