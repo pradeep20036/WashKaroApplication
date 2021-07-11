@@ -8,6 +8,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
         android:layout_width="match_parent"
+        android:background="@color/blue_heading"
         android:layout_height="?attr/actionBarSize"
         tools:ignore="MissingConstraints">
         <androidx.appcompat.widget.Toolbar
@@ -18,13 +19,14 @@
                 android:layout_height="40dp"
                 android:layout_marginEnd="16dp"
                 app:shapeAppearance="@style/circleView"
-                android:background="@drawable/ic_launcher_background"
+                android:background="@drawable/ic_chatbot_new"
                 android:layout_marginRight="16dp" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Rasa"
-                android:textColor="@color/app_white"
+                android:text="TB Chatbot"
+                android:textColor="@color/differentWhite"
+
                 android:layout_margin="16dp"/>
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
@@ -32,6 +34,7 @@
         android:layout_width="match_parent"
         android:id="@+id/recyclerview"
         android:layout_height="0dp"
+        android:background="@color/background"
         app:layout_constraintTop_toBottomOf="@id/appbar"
         app:layout_constraintBottom_toTopOf="@id/messageview"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,10 +43,9 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="300dp"
         android:id="@+id/messageview"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_height="55dp"
+        android:background="@color/differentWhite"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/sendbutton"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -51,9 +53,10 @@
         <EditText
             android:id="@+id/messagebox"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="enter your message"
-            android:background="@android:color/transparent"/>
+            android:layout_height="match_parent"
+            android:padding="3dp"
+            android:hint="ENTER YOUR MESSAGE"
+            android:background="@drawable/quiz_round_button"/>
 
 
 
@@ -63,8 +66,8 @@
         android:layout_height="wrap_content"
         app:fabSize="normal"
         android:src="@drawable/ic_send"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
+
+        android:background="@color/blue_heading"
         android:id="@+id/sendbutton"
         app:layout_constraintStart_toEndOf="@id/messageview"
         app:layout_constraintBottom_toBottomOf="parent"

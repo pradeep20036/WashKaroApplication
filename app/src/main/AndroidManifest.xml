@@ -23,7 +23,8 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:replace="android:appComponentFactory">
-        <activity android:name=".NlpChatbot.MainChatScreen"></activity>
+        <activity android:name=".NlpChatbot.MainChatScreen"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
         <activity
             android:name=".aqi_cough.YoutubePlayVid"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
@@ -36,9 +37,12 @@
         <activity
             android:name=".aqi_cough.MainScreening"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".aqi_cough.DataCollection" />
-        <activity android:name=".aqi_cough.coughRecorder" />
-        <activity android:name=".aqi_cough.BookDownloader" />
+        <activity android:name=".aqi_cough.DataCollection"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".aqi_cough.coughRecorder"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".aqi_cough.BookDownloader"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name=".BottomNavigation.AboutActivityNavigation" />
         <activity android:name=".BottomNavigation.HomeActivityBottomNavigation" />
         <activity android:name=".BottomNavigation.BottomNavigation"></activity> <!-- Testing Activity -->

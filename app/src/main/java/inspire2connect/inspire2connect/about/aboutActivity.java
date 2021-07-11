@@ -65,7 +65,7 @@ public class aboutActivity extends BaseActivity implements View.OnClickListener 
 
         super.onCreate(savedInstanceState);
         setStatusBarGradiant(this);
-        setContentView(R.layout.ca_activity_about_new);
+        setContentView(R.layout.ca_activity_about);
 
 
         if (getActionBar() != null) {
