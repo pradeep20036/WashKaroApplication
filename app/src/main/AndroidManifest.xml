@@ -14,6 +14,8 @@
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
 
     <application
+
+
         android:allowBackup="true"
         android:appComponentFactory="whateverString"
         android:icon="@mipmap/ic_launcher"
@@ -23,7 +25,10 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:replace="android:appComponentFactory">
-        <activity android:name=".NlpChatbot.MainChatScreen"></activity>
+        <activity android:name=".NlpChatbot.MainChatScreen"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustResize"
+            ></activity>
         <activity
             android:name=".aqi_cough.YoutubePlayVid"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />

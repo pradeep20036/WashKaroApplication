@@ -83,7 +83,9 @@ public class MainChatScreen extends AppCompatActivity {
         else{
             temp = new MessageClass(message,USER);
             messageClassArrayList.add(temp);
+//            recyclerView.scrollToPosition(messageClassArrayList.size()-1);
             adapter.notifyDataSetChanged();
+            recyclerView.smoothScrollToPosition(recyclerView.getAdapter().getItemCount());
 
         }
         OkHttpClient okHttpClient = new OkHttpClient();
@@ -116,7 +118,9 @@ public class MainChatScreen extends AppCompatActivity {
                     BotResponse botResponse = response.body().get(0);
                     Log.d("CHECK",""+botResponse.text);
                     messageClassArrayList.add(new MessageClass(botResponse.text,BOT));
+//                    recyclerView.scrollToPosition(messageClassArrayList.size()-1);
                     adapter.notifyDataSetChanged();
+                    recyclerView.smoothScrollToPosition(recyclerView.getAdapter().getItemCount());
 
                 }
             }

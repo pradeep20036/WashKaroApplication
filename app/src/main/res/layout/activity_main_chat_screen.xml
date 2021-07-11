@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".NlpChatbot.MainChatScreen">
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
@@ -18,14 +19,18 @@
                 android:layout_height="40dp"
                 android:layout_marginEnd="16dp"
                 app:shapeAppearance="@style/circleView"
-                android:background="@drawable/ic_launcher_background"
+                android:background="@drawable/ic_chatbot_new"
                 android:layout_marginRight="16dp" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Rasa"
-                android:textColor="@color/app_white"
-                android:layout_margin="16dp"/>
+                android:text="TB Chatbot"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:fontFamily="@font/opensans_regular"
+                android:textColor="@color/blackcolor"
+                android:padding="16dp"
+                />
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
     <androidx.recyclerview.widget.RecyclerView
@@ -44,32 +49,34 @@
         android:background="@android:color/transparent"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginBottom="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/sendbutton"
         app:layout_constraintBottom_toBottomOf="parent"
         >
+
         <EditText
             android:id="@+id/messagebox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="enter your message"
-            android:background="@android:color/transparent"/>
+            android:background="@drawable/ca_share_app_border"
+
+            android:hint="enter your message" />
 
 
 
     </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:fabSize="normal"
-        android:src="@drawable/ic_send"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         android:id="@+id/sendbutton"
-        app:layout_constraintStart_toEndOf="@id/messageview"
+        android:layout_width="49dp"
+        android:layout_height="56dp"
+        android:src="@drawable/ic_send"
+        app:fabSize="normal"
+        android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-
-        android:layout_marginLeft="16dp" />
+        app:layout_constraintStart_toEndOf="@id/messageview"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
