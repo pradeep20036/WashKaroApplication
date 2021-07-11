@@ -8,6 +8,7 @@
     android:orientation="vertical">
 
     <RelativeLayout
+        android:id="@+id/heading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -30,14 +31,13 @@
     </RelativeLayout>
 
     <ScrollView
-        android:layout_width="389dp"
-        android:layout_height="515dp"
-        android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginHorizontal="10dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="110dp"
         android:layout_marginRight="10dp"
+        android:layout_marginBottom="50dp"
 
         android:background="@drawable/full_guidline_view_roundcorner"
         android:paddingHorizontal="30dp"

@@ -9,6 +9,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
         android:layout_width="match_parent"
+        android:background="@color/blue_heading"
         android:layout_height="?attr/actionBarSize"
         tools:ignore="MissingConstraints">
         <androidx.appcompat.widget.Toolbar
@@ -25,18 +26,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="TB Chatbot"
-                android:textSize="20dp"
-                android:gravity="center"
-                android:fontFamily="@font/opensans_regular"
-                android:textColor="@color/blackcolor"
-                android:padding="16dp"
-                />
+                android:textColor="@color/differentWhite"
+
+                android:layout_margin="16dp"/>
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:id="@+id/recyclerview"
         android:layout_height="0dp"
+        android:background="@color/background"
         app:layout_constraintTop_toBottomOf="@id/appbar"
         app:layout_constraintBottom_toTopOf="@id/messageview"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,38 +44,36 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="300dp"
         android:id="@+id/messageview"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginBottom="20dp"
+        android:layout_height="55dp"
+        android:background="@color/differentWhite"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/sendbutton"
         app:layout_constraintBottom_toBottomOf="parent"
         >
-
         <EditText
             android:id="@+id/messagebox"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/ca_share_app_border"
-
-            android:hint="enter your message" />
+            android:layout_height="match_parent"
+            android:padding="3dp"
+            android:hint="ENTER YOUR MESSAGE"
+            android:background="@drawable/quiz_round_button"/>
 
 
 
     </com.google.android.material.textfield.TextInputLayout>
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/sendbutton"
-        android:layout_width="49dp"
-        android:layout_height="56dp"
-        android:src="@drawable/ic_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:fabSize="normal"
-        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_send"
+
+        android:background="@color/blue_heading"
+        android:id="@+id/sendbutton"
+        app:layout_constraintStart_toEndOf="@id/messageview"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/messageview"
-        />
+
+        android:layout_marginLeft="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

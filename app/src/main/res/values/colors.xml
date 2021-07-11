@@ -64,6 +64,10 @@
 
     <color name="chat_other">#212121</color>
     <color name="chat_me">#FFFFFF</color>
+    <color name="background">#222831</color>
+    <color name="lighter_than_background">#393e46</color>
+    <color name="blue_heading">#00ADB5</color>
+    <color name="differentWhite">#EEEEEE</color>
 
 </resources>
 
