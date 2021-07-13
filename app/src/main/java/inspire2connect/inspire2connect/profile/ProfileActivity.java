@@ -23,6 +23,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 import org.jetbrains.annotations.NotNull;
 
+import inspire2connect.inspire2connect.NlpChatbot.MainChatScreen;
 import inspire2connect.inspire2connect.R;
 import inspire2connect.inspire2connect.aqi_cough.MainScreening;
 import inspire2connect.inspire2connect.home.EmailLogin;
@@ -64,21 +65,25 @@ public class ProfileActivity extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(),
                                 HomeActivity.class));
                         overridePendingTransition(0,0);
+                        finish();
                         break;
                     case R.id.profile:
                         startActivity(new Intent(getApplicationContext(),
                                 ProfileActivity.class));
                         overridePendingTransition(0,0);
+                        finish();
                         break;
                     case R.id.chatbot:
                         startActivity(new Intent(getApplicationContext(),
-                                ChatActivity.class));
+                                MainChatScreen.class));
                         overridePendingTransition(0,0);
+
                         break;
                     case R.id.wkscreen:
                         startActivity(new Intent(getApplicationContext(),
                                 MainScreening.class));
                         overridePendingTransition(0,0);
+                        finish();
                         break;
 
 
@@ -234,7 +239,7 @@ public class ProfileActivity extends AppCompatActivity {
 
 public void onLogout(View view) {
     FirebaseAuth.getInstance().signOut();
-    startActivity(new Intent(this, EmailLogin.class));
+    startActivity(new Intent(this, LoginActivity.class));
 
     }
 

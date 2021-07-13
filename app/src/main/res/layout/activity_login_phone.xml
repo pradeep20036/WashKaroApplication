@@ -15,6 +15,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/image_bg"
     android:orientation="vertical"
+    android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
     tools:context=".home.PhoneLogin">
 
     <ImageView
@@ -61,6 +62,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"
+                android:outlineAmbientShadowColor="@color/app_black"
+                android:outlineSpotShadowColor="@color/app_black"
                 app:boxStrokeColor="@color/app_black"
                 android:hint="Your Phone Number"
                 android:textColorHint="@color/app_blue"
@@ -70,12 +73,14 @@
                 app:endIconDrawable="@drawable/ic_clear"
                 app:helperText="Required"
                 app:helperTextTextColor="@color/red"
+                app:startIconTint="@color/app_black"
                 app:startIconDrawable="@drawable/fui_ic_phone_white_24dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
+                    android:textColor="@color/blackcolor"
                     android:maxLength="40" />
 
             </com.google.android.material.textfield.TextInputLayout>

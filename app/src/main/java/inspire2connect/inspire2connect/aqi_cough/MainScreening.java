@@ -22,6 +22,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.jetbrains.annotations.NotNull;
 
+import inspire2connect.inspire2connect.NlpChatbot.MainChatScreen;
 import inspire2connect.inspire2connect.R;
 import inspire2connect.inspire2connect.home.HomeActivity;
 import inspire2connect.inspire2connect.profile.ProfileActivity;
@@ -83,21 +84,25 @@ public class MainScreening extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(),
                                 HomeActivity.class));
                         overridePendingTransition(0,0);
+                        finish();
                         break;
                     case R.id.profile:
                         startActivity(new Intent(getApplicationContext(),
                                 ProfileActivity.class));
                         overridePendingTransition(0,0);
+                        finish();
                         break;
                     case R.id.chatbot:
                         startActivity(new Intent(getApplicationContext(),
-                                ChatActivity.class));
+                                MainChatScreen.class));
                         overridePendingTransition(0,0);
+
                         break;
                     case R.id.wkscreen:
                         startActivity(new Intent(getApplicationContext(),
                                 MainScreening.class));
                         overridePendingTransition(0,0);
+                        finish();
                         break;
 
 

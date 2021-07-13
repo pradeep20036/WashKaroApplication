@@ -51,7 +51,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setStatusBarGradiant(this);
         setContentView(R.layout.activity_login);
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+//        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         progressDialog= new ProgressDialog(LoginActivity.this);
         progressDialog.setTitle("Please Wait..");
         progressDialog.setMessage("Loading");

@@ -143,21 +143,25 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
                     startActivity(new Intent(getApplicationContext(),
                             HomeActivity.class));
                     overridePendingTransition(0,0);
+                    finish();
                     break;
                 case R.id.profile:
                     startActivity(new Intent(getApplicationContext(),
                             ProfileActivity.class));
                     overridePendingTransition(0,0);
+                    finish();
                     break;
                 case R.id.chatbot:
                     startActivity(new Intent(getApplicationContext(),
-                            ChatActivity.class));
+                            MainChatScreen.class));
                     overridePendingTransition(0,0);
+
                     break;
                 case R.id.wkscreen:
                     startActivity(new Intent(getApplicationContext(),
                             MainScreening.class));
                     overridePendingTransition(0,0);
+                    finish();
                     break;
 
 

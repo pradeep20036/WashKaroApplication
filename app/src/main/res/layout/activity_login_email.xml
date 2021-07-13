@@ -13,6 +13,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/image_bg"
     android:orientation="vertical"
+    android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
     tools:context=".home.EmailLogin">
 
     <ImageView
@@ -64,15 +65,19 @@
 
                 android:layout_marginBottom="10dp"
 
+                android:outlineAmbientShadowColor="@color/app_black"
                 android:hint="Your Email"
                 android:textColorHint="@color/app_blue"
                 app:counterEnabled="true"
                 app:counterMaxLength="40"
                 app:endIconDrawable="@drawable/ic_clear"
+                app:boxBackgroundColor="@color/differentWhite"
                 app:helperText="Required"
                 app:helperTextTextColor="@color/red"
+                app:endIconTint="@color/app_black"
                 app:hintTextColor="@color/app_black"
-                app:startIconDrawable="@drawable/ic_email">
+                app:startIconTint="@color/app_black"
+                app:startIconDrawable="@drawable/ic_email_black">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -81,6 +86,7 @@
                     android:textColorHighlight="@color/app_black"
                     android:textColorHint="@color/app_black"
                     android:maxLength="40"
+                    android:textColor="@color/app_black"
                     android:visibility="visible" />
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -106,7 +112,10 @@
 
                 app:helperTextTextColor="@color/red"
                 app:passwordToggleEnabled="true"
-                app:startIconDrawable="@drawable/ic_lock">
+                app:startIconTint="@color/app_black"
+                app:endIconTint="@color/app_black"
+                app:passwordToggleTint="@color/app_black"
+                app:startIconDrawable="@drawable/ic_twotone_lock_24">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -115,6 +124,7 @@
 
                     android:textColorHint="@color/blackcolor"
                     android:maxLength="20"
+                    android:textColor="@color/app_black"
                     android:visibility="visible" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -142,7 +152,7 @@
                     android:layout_marginEnd="20dp"
                     android:layout_marginBottom="20dp"
                     android:background="@drawable/full_guidline_lastrow"
-                    android:backgroundTint="#00ADB5"
+                    android:backgroundTint="@color/blue_heading"
                     android:fontFamily="sans-serif-smallcaps"
                     android:onClick="signUpEmailButton"
                     android:text="Sign Up"

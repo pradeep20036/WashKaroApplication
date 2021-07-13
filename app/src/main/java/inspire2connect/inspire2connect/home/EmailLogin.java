@@ -28,6 +28,7 @@ public class EmailLogin extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_email);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
         t1 = (TextInputLayout) findViewById(R.id.email);
         t2 = (TextInputLayout) findViewById(R.id.pwd);
         bar = (ProgressBar) findViewById(R.id.progressBar);
