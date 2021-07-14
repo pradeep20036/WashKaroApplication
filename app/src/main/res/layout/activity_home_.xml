@@ -756,10 +756,12 @@
         android:layout_height="wrap_content"
         android:id="@+id/bottom_navigation"
         app:backgroundTint="@color/navbarcolor"
-        app:itemTextColor="@drawable/selector"
+        app:itemTextColor="@color/app_white"
         app:itemIconTint="@drawable/selector"
+        app:labelVisibilityMode="labeled"
         app:menu="@menu/menu_navigation"
         android:layout_alignParentBottom="true"
+        android:tooltipText="true"
         />
 
 

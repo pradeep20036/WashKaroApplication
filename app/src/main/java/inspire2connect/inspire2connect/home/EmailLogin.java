@@ -56,7 +56,7 @@ public class EmailLogin extends BaseActivity {
                             bar.setVisibility(View.INVISIBLE);
                             t1.getEditText().setText("");
                             t2.getEditText().setText("");
-                            Toast.makeText(getApplicationContext(), "Process Error", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "Error:  "+task.getException().getMessage(), Toast.LENGTH_LONG).show();
                             Intent intent = new Intent(EmailLogin.this, LoginActivity.class);
                             startActivity(intent);
                         }

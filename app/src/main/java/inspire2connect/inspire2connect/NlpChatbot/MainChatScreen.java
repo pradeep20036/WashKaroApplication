@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -16,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import inspire2connect.inspire2connect.R;
+import inspire2connect.inspire2connect.home.HomeActivity;
 import okhttp3.OkHttpClient;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -30,6 +33,7 @@ public class MainChatScreen extends AppCompatActivity {
     private final int USER = 0;
     private final int BOT = 1;
     MessageAdapter adapter;
+    TextView tv_back_button;
     private ArrayList<MessageClass> messageClassArrayList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +43,17 @@ public class MainChatScreen extends AppCompatActivity {
         sendbutton = findViewById(R.id.sendbutton);
         messagebox = findViewById(R.id.messagebox);
         recyclerView = findViewById(R.id.recyclerview);
+        tv_back_button= findViewById(R.id.tv_back);
+        tv_back_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),
+                        HomeActivity.class));
+                overridePendingTransition(0,0);
+                finish();
+            }
+        });
+
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 //        recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
         adapter = new MessageAdapter(MainChatScreen.this,messageClassArrayList);

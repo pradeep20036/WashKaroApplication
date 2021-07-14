@@ -195,6 +195,7 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     public void getReferralLink(){
+        Log.d("Referral", "getReferralLink: Working ");
         DynamicLink dynamicLink = FirebaseDynamicLinks.getInstance().createDynamicLink()
                 .setLink(Uri.parse("http://tavlab.iiitd.edu.in/"))
                 .setDomainUriPrefix("washkaro.page.link")
@@ -232,8 +233,7 @@ public class BaseActivity extends AppCompatActivity {
                             intent.setType("text/plain");
                             startActivity(intent);
                         } else {
-                            // Error
-                            // ...
+                            Log.d("Dynamic Link", "Error:"+task.getException().getMessage());
                         }
                     }
                 });
