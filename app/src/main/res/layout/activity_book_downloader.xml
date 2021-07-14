@@ -168,6 +168,8 @@
                     android:background="@drawable/full_guidline_lastrow"
                     android:text="Download File"
                     android:textSize="20sp"
+                    android:textColor="@color/differentWhite"
+                    android:padding="10dp"
                     android:textStyle="bold"
                     app:backgroundTint="#00ADB5" />
 
@@ -182,6 +184,8 @@
                     android:fontFamily="sans-serif-smallcaps"
                     android:background="@drawable/full_guidline_lastrow"
                     android:text=" PROCEED "
+                    android:padding="10dp"
+                    android:textColor="@color/differentWhite"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:backgroundTint="#00ADB5" />

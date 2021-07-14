@@ -55,6 +55,17 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".satyaChat.ChatActivity" />
         <activity android:name=".home.HomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="washkaro.page.link"
+                    android:scheme="https" />
+                <data android:host="washkaro.page.link" android:scheme="http"/>
+            </intent-filter>
 
         </activity> <!-- <activity android:name=".male_female_2" /> -->
         <activity
@@ -77,6 +88,7 @@
                 <data
                     android:host="washkaro.page.link"
                     android:scheme="https" />
+                <data android:host="washkaro.page.link" android:scheme="http"/>
             </intent-filter>
         </activity>
         <activity

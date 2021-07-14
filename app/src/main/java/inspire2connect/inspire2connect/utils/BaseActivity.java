@@ -208,18 +208,20 @@ public class BaseActivity extends AppCompatActivity {
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String uid = user.getUid();
-        String shareLinkText = "https://washkaro.inspire2connect.com/?invitedby=" + uid
+        String shareLinkText = "https://washkaro.page.link/?"
                 +"link=http://tavlab.iiitd.edu.in/"
                 +"&apn=" + "WashKaro-TB"
                 +"&st=" + "My Referral Link"
                 +"&sp=" + "Reward Points = 20"
                 +"&si=" + "http://tavlab.iiitd.edu.in/WashKaro/assets/img/washkaro.png"
                 ;
+        Log.d("Check",shareLinkText);
 
         Task<ShortDynamicLink> shortLinkTask = FirebaseDynamicLinks.getInstance().createDynamicLink()
                 .setLongLink(Uri.parse(shareLinkText))
                 .buildShortDynamicLink()
                 .addOnCompleteListener(this, new OnCompleteListener<ShortDynamicLink>() {
+
                     @Override
                     public void onComplete(@NonNull Task<ShortDynamicLink> task) {
                         if (task.isSuccessful()) {
@@ -232,7 +234,7 @@ public class BaseActivity extends AppCompatActivity {
                             intent.setType("text/plain");
                             startActivity(intent);
                         } else {
-                            // Error
+                            Log.d("Check","error " + task.getException());
                             // ...
                         }
                     }

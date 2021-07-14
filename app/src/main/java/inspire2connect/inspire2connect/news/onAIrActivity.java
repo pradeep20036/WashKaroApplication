@@ -86,10 +86,7 @@ public class onAIrActivity extends BaseActivity {
             case R.id.privacy_policy:
                 openPrivacyPolicy(this);
                 break;
-            case R.id.research_analytics:
-                i = getAqiIntent(this);
-                startActivity(i);
-                break;
+
             case R.id.refer_app:
                 getReferralLink();
                 break;

@@ -69,6 +69,7 @@ public class UserInfoScreen extends AppCompatActivity {
                 mainIntent.putExtra("studRollArr", getIntent().getExtras().getStringArray("studRollArr"));
                 mainIntent.putExtra("studBranchArr", getIntent().getExtras().getStringArray("studBranchArr"));
                 startActivity(mainIntent);
+                finish();
             }
         });
     }
