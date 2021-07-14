@@ -1,21 +1,27 @@
 package inspire2connect.inspire2connect.NlpChatbot;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.speech.RecognizerIntent;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.imageview.ShapeableImageView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
+import java.util.Objects;
 
 import inspire2connect.inspire2connect.R;
 import inspire2connect.inspire2connect.home.HomeActivity;
@@ -34,6 +40,10 @@ public class MainChatScreen extends AppCompatActivity {
     private final int BOT = 1;
     MessageAdapter adapter;
     TextView tv_back_button;
+    private static final int REQUEST_CODE_SPEECH_INPUT = 1;
+    ShapeableImageView iv_mic;
+
+
     private ArrayList<MessageClass> messageClassArrayList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +54,34 @@ public class MainChatScreen extends AppCompatActivity {
         messagebox = findViewById(R.id.messagebox);
         recyclerView = findViewById(R.id.recyclerview);
         tv_back_button= findViewById(R.id.tv_back);
+
+        // adding speech to text converter
+        iv_mic=findViewById(R.id.mic);
+
+        iv_mic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent
+                        = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+                intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+                        RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+                intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE,
+                        Locale.getDefault());
+                intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Speak to text");
+
+                try {
+                    startActivityForResult(intent, REQUEST_CODE_SPEECH_INPUT);
+                }
+                catch (Exception e) {
+                    Toast.makeText(MainChatScreen.this, " " + e.getMessage(),
+                            Toast.LENGTH_SHORT)
+                            .show();
+                }
+            }
+        });
+
+
         tv_back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -89,6 +127,32 @@ public class MainChatScreen extends AppCompatActivity {
 
 
     }
+    // result for mic activity
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode,
+                                    @Nullable Intent data)
+    {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_CODE_SPEECH_INPUT) {
+            if (resultCode == RESULT_OK && data != null) {
+                ArrayList<String> result = data.getStringArrayListExtra(
+                        RecognizerIntent.EXTRA_RESULTS);
+//                tv_Speech_to_text.setText(
+//                        Objects.requireNonNull(result).get(0));
+
+                String messageResponse=Objects.requireNonNull(result).get(0);
+                sendMessage(messageResponse);
+                Toast.makeText(MainChatScreen.this,"Message sent",Toast.LENGTH_SHORT).show();
+
+
+            }
+        }
+    }
+
+
+
+
+
     public void sendMessage(String message)
     {
         MessageClass temp = null;
