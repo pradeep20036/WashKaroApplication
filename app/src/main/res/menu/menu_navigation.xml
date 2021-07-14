@@ -10,7 +10,7 @@
     <item
         android:id="@+id/wkscreen"
         android:title="TB Screening"
-        android:icon="@drawable/ic_home_menu"
+        android:icon="@drawable/ic_baseline_info_24"
     />
 
 

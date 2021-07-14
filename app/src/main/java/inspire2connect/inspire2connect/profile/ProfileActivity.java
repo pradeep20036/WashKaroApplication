@@ -36,10 +36,15 @@ public class ProfileActivity extends AppCompatActivity {
     ImageView iv_profile;
     TextView tv_name;
     TextView tv_email;
-    TextView tv_blood;
+
     TextView tv_phone;
     Uri imageUri;
 
+    @Override
+    public void onBackPressed()
+    {
+     // do nothing
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,8 +53,6 @@ public class ProfileActivity extends AppCompatActivity {
         iv_profile=findViewById(R.id.account_image);
         tv_name=findViewById(R.id.tv_name);
         tv_email=findViewById(R.id.tv_email);
-        tv_blood=findViewById(R.id.tv_bloodgp);
-
 
 //        code for switching activity on navbar
 
@@ -77,7 +80,7 @@ public class ProfileActivity extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(),
                                 MainChatScreen.class));
                         overridePendingTransition(0,0);
-
+                        finish();
                         break;
                     case R.id.wkscreen:
                         startActivity(new Intent(getApplicationContext(),
@@ -86,21 +89,11 @@ public class ProfileActivity extends AppCompatActivity {
                         finish();
                         break;
 
-
                 }
-
 
                 return false;
             }
         });
-
-
-
-
-
-
-
-
 
         // check if image is already saved in the memory, if yes then load it.
 
@@ -132,8 +125,6 @@ public class ProfileActivity extends AppCompatActivity {
 
                 tv_name.setText(name);
                 tv_email.setText(email);
-                if (phone != null)
-                    tv_blood.setText(phone);
 
                 Toast.makeText(getApplicationContext(), photoUrl + "", Toast.LENGTH_LONG).show();
                 Glide.with(this).load(photoUrl.toString()).into(iv_profile);
@@ -149,11 +140,6 @@ public class ProfileActivity extends AppCompatActivity {
             }
 
         }
-
-
-
-
-
 
     public void imageClicked(){
         Intent intent = new Intent();
@@ -191,15 +177,6 @@ public class ProfileActivity extends AppCompatActivity {
             // Sets the ImageView with the Image URI
             iv_profile.setImageURI(imageUri);
             iv_profile.invalidate();
-
-
-
-
-
-
-
-
-
 
 
         }
@@ -240,17 +217,7 @@ public class ProfileActivity extends AppCompatActivity {
 public void onLogout(View view) {
     FirebaseAuth.getInstance().signOut();
     startActivity(new Intent(this, LoginActivity.class));
-
+    finish();
     }
-
-
-
-
-
-
-
-
-
-
 
 }
