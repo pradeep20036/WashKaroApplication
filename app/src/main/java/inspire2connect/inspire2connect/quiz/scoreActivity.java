@@ -6,6 +6,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
@@ -18,9 +19,11 @@ import inspire2connect.inspire2connect.utils.BaseActivity;
 
 public class scoreActivity extends BaseActivity {
     String currentUserID;
-    private TextView score;
+    private ImageView imageView;
+    private TextView score,share,note;
     private int[] user_selections;
     private TextView done, solutions;
+    String score_str;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,10 +33,13 @@ public class scoreActivity extends BaseActivity {
 
 
         score = findViewById(R.id.sa_score);
+        imageView = findViewById(R.id.face);
         done = findViewById(R.id.sa_done_textview);
         solutions = findViewById(R.id.button_view_solutions_textview);
+        share = findViewById(R.id.share_button_textview);
+        note = findViewById(R.id.note);
 
-        String score_str = getIntent().getStringExtra("SCORE");
+        score_str = getIntent().getStringExtra("SCORE");
         user_selections = getIntent().getIntArrayExtra("SELECTED_OPTIONS");
         ArrayList<questionObject> questions = (ArrayList<questionObject>) getIntent().getSerializableExtra("QUESTIONS");
 //        ArrayList<questionObject> questions = quizActivity.selected_questions
@@ -51,6 +57,26 @@ public class scoreActivity extends BaseActivity {
 
 //        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
+        Logd("CHECK",score_str.charAt(0)+" "+ score_str.length());
+        int x = Integer.parseInt(String.valueOf(score_str.charAt(0)));
+        if(x>=3){
+            note.setText("You have completed your quiz successfully");
+        }
+        else{
+            note.setText("Try harder next time!");
+        }
+
+        if(x==5){
+            imageView.setImageResource(R.drawable.happy_full);
+        }
+        else if(x>=3 && x <5)
+        {
+            imageView.setImageResource(R.drawable.happiness);
+        }
+        else
+        {
+            imageView.setImageResource(R.drawable.sad);
+        }
 
         done.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,6 +94,16 @@ public class scoreActivity extends BaseActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(scoreActivity.this, quizSolutionsActivity.class);
 //                intent.putExtra("QUESTIONS", questions);
+                startActivity(intent);
+            }
+        });
+        share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_SEND);
+                intent.putExtra(Intent.EXTRA_TEXT, "I have got " +score_str + " score in the quiz" );
+                intent.setType("text/plain");
                 startActivity(intent);
             }
         });
