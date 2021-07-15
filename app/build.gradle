@@ -32,6 +32,16 @@ dependencies {
     def room_version = "2.2.5"
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:28.2.1')
+
+    // Declare the dependencies for the In-App Messaging and Analytics libraries
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-inappmessaging-display'
+    implementation 'com.google.firebase:firebase-analytics'
+
+
     //card view dependency
     implementation 'androidx.cardview:cardview:1.0.0'
 
