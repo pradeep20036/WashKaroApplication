@@ -128,7 +128,7 @@ public class ProfileActivity extends AppCompatActivity {
                 tv_name.setText(name);
                 tv_email.setText(email);
 
-                Toast.makeText(getApplicationContext(), photoUrl + "", Toast.LENGTH_LONG).show();
+//                Toast.makeText(getApplicationContext(), photoUrl + "", Toast.LENGTH_LONG).show();
                 Glide.with(this).load(photoUrl.toString()).into(iv_profile);
 
 
@@ -138,7 +138,7 @@ public class ProfileActivity extends AppCompatActivity {
                 // The user's ID, unique to the Firebase project. Do NOT use this value to authenticate with your backend server, if you  have one. Use FirebaseUser.getToken() instead
                 String uid = user.getUid();
             } else {
-                Toast.makeText(getApplicationContext(), "User is null" + "", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "SignIn Not complete" + "", Toast.LENGTH_LONG).show();
             }
 
         }
