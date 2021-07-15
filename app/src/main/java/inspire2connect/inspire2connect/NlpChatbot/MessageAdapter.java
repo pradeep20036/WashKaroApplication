@@ -52,10 +52,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.RecycleV
     public void onBindViewHolder(@NonNull @org.jetbrains.annotations.NotNull MessageAdapter.RecycleViewholder holder, int position) {
         MessageClass currentmessage = messageClasses.get(position);
         FrameLayout frameLayout = getUserlayout();
-        Date date = new Date(System.currentTimeMillis());
-        SimpleDateFormat dateFormat = new SimpleDateFormat("hh:mm aa",
-                Locale.ENGLISH);
-        String time = dateFormat.format(date);
+
 
         if(currentmessage.sender == 0)
         {
