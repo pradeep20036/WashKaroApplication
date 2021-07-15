@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -153,9 +154,9 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
                     break;
                 case R.id.chatbot:
                     startActivity(new Intent(getApplicationContext(),
-                            MainChatScreen.class));
+                            TermsAndConditionActivity.class));
                     overridePendingTransition(0,0);
-
+                    finish();
                     break;
                 case R.id.wkscreen:
                     startActivity(new Intent(getApplicationContext(),
@@ -252,6 +253,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
     private void usingFirebaseImages(List<Infographics> slideLists) {
         for (int i = 0; i < slideLists.size(); i++) {
             String downloadImageUrl = slideLists.get(i).InfoURL;
+            Log.d("Image", "usingFirebaseImages: "+slideLists.size());
             flipImages(downloadImageUrl);
         }
     }
@@ -260,7 +262,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
         ImageView imageView = new ImageView(this);
         Picasso.get().load(imageUrl).into(imageView);
         viewFlipper.addView(imageView);
-        viewFlipper.setFlipInterval(3500);
+        viewFlipper.setFlipInterval(10000);
         viewFlipper.setAutoStart(true);
         viewFlipper.setDisplayedChild(0);
         viewFlipper.startFlipping();
@@ -401,13 +403,13 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         if (dataSnapshot.exists()) {
+//                            Log.d(TAG, "onDataChange: ");
                             slideLists.clear();
                             for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-
-                                Infographics graphic = snapshot.getValue(Infographics.class);
-
-                                slideLists.add(graphic);
+                                    Infographics graphic = snapshot.getValue(Infographics.class);
+                                    slideLists.add(graphic);
                             }
+
                             viewFlipper.removeAllViews();
                             usingFirebaseImages(slideLists);
                         } else {

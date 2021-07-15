@@ -34,6 +34,12 @@
         <activity
             android:name=".aqi_cough.TbUserLeader"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <activity android:name=".home.TermsAndConditionActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+
+
+
         <activity
             android:name=".aqi_cough.MainScreening"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />

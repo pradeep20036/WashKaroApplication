@@ -486,7 +486,6 @@ public class quizActivity extends BaseActivity implements View.OnClickListener {
         options[2].setBackgroundTintList(ColorStateList.valueOf(Color.WHITE));
         options[3].setBackgroundTintList(ColorStateList.valueOf(Color.WHITE));
 
-
     }
 
     @Override

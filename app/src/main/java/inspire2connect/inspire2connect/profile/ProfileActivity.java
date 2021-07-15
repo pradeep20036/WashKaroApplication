@@ -29,6 +29,8 @@ import inspire2connect.inspire2connect.aqi_cough.MainScreening;
 import inspire2connect.inspire2connect.home.EmailLogin;
 import inspire2connect.inspire2connect.home.HomeActivity;
 import inspire2connect.inspire2connect.home.LoginActivity;
+import inspire2connect.inspire2connect.home.TermsAndConditionActivity;
+
 import inspire2connect.inspire2connect.satyaChat.ChatActivity;
 
 public class ProfileActivity extends AppCompatActivity {
@@ -78,7 +80,7 @@ public class ProfileActivity extends AppCompatActivity {
                         break;
                     case R.id.chatbot:
                         startActivity(new Intent(getApplicationContext(),
-                                MainChatScreen.class));
+                                TermsAndConditionActivity.class));
                         overridePendingTransition(0,0);
                         finish();
                         break;

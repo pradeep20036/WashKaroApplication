@@ -25,6 +25,7 @@ import org.jetbrains.annotations.NotNull;
 import inspire2connect.inspire2connect.NlpChatbot.MainChatScreen;
 import inspire2connect.inspire2connect.R;
 import inspire2connect.inspire2connect.home.HomeActivity;
+import inspire2connect.inspire2connect.home.TermsAndConditionActivity;
 import inspire2connect.inspire2connect.profile.ProfileActivity;
 import inspire2connect.inspire2connect.satyaChat.ChatActivity;
 
@@ -94,9 +95,9 @@ public class MainScreening extends AppCompatActivity {
                         break;
                     case R.id.chatbot:
                         startActivity(new Intent(getApplicationContext(),
-                                MainChatScreen.class));
+                                TermsAndConditionActivity.class));
                         overridePendingTransition(0,0);
-
+                        finish();
                         break;
                     case R.id.wkscreen:
                         startActivity(new Intent(getApplicationContext(),
