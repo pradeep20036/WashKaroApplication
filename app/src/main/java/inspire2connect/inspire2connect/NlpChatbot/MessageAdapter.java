@@ -60,12 +60,12 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.RecycleV
         if(currentmessage.sender == 0)
         {
             holder.message.setText(currentmessage.message);
-            holder.time.setText(time.toString());
+//            holder.time.setText(time.toString());
         }
         else if(currentmessage.sender == 1)
         {
             holder.message.setText(currentmessage.message);
-            holder.time.setText(time.toString());
+//            holder.time.setText(time.toString());
 
         }
 
