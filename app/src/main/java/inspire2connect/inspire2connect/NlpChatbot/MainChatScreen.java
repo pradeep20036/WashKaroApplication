@@ -17,6 +17,8 @@ import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.imageview.ShapeableImageView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,8 +38,8 @@ public class MainChatScreen extends AppCompatActivity {
     FloatingActionButton sendbutton;
     RecyclerView recyclerView;
     EditText messagebox;
-    private final int USER = 0;
-    private final int BOT = 1;
+    private String USER;
+    private String BOT = "MYBOT";
     MessageAdapter adapter;
     TextView tv_back_button;
     private static final int REQUEST_CODE_SPEECH_INPUT = 1;
@@ -55,6 +57,8 @@ public class MainChatScreen extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerview);
         tv_back_button= findViewById(R.id.tv_back);
 
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        USER = user.getUid();
         // adding speech to text converter
         iv_mic=findViewById(R.id.mic);
 
@@ -169,7 +173,7 @@ public class MainChatScreen extends AppCompatActivity {
         }
         OkHttpClient okHttpClient = new OkHttpClient();
         Retrofit retrofit =new Retrofit.Builder()
-                .baseUrl("http://33b645f93335.ngrok.io/webhooks/rest/")
+                .baseUrl("http://fd8926d6aa3f.ngrok.io/webhooks/rest/")
                 .client(okHttpClient)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();

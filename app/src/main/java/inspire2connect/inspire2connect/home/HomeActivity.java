@@ -308,7 +308,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
                 i = new Intent(HomeActivity.this, TermsAndConditionActivity.class);
                 startActivity(i);
                 overridePendingTransition(0,0);
-                finish();
+
                 break;
             case R.id.misc_but3_layout:
                 i = getMythIntent(this);
