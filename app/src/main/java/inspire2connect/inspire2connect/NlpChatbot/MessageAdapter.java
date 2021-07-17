@@ -11,6 +11,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -24,6 +27,8 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.RecycleV
     ArrayList<MessageClass> messageClasses ;
     private int USER_LAYOUT = 0;
     private int BOT_LAYOUT = 1;
+    FirebaseUser user;
+    String USER;
 
     public MessageAdapter(Context context, ArrayList<MessageClass> messageClasses) {
         this.context = context;
@@ -52,20 +57,20 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.RecycleV
     public void onBindViewHolder(@NonNull @org.jetbrains.annotations.NotNull MessageAdapter.RecycleViewholder holder, int position) {
         MessageClass currentmessage = messageClasses.get(position);
         FrameLayout frameLayout = getUserlayout();
-        Date date = new Date(System.currentTimeMillis());
-        SimpleDateFormat dateFormat = new SimpleDateFormat("hh:mm aa",
-                Locale.ENGLISH);
-        String time = dateFormat.format(date);
 
-        if(currentmessage.sender == 0)
+
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        USER = user.getUid();
+
+        if(currentmessage.sender==USER)
         {
             holder.message.setText(currentmessage.message);
-            holder.time.setText(time.toString());
+//            holder.time.setText(time.toString());
         }
-        else if(currentmessage.sender == 1)
+        else if(currentmessage.sender == "MYBOT")
         {
             holder.message.setText(currentmessage.message);
-            holder.time.setText(time.toString());
+//            holder.time.setText(time.toString());
 
         }
 
@@ -82,7 +87,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.RecycleV
     public int getItemViewType(int position) {
         super.getItemViewType(position);
         MessageClass msg = messageClasses.get(position);
-        if(msg.sender == USER_LAYOUT)
+        if(msg.sender == USER)
         {
             return USER_LAYOUT;
         }

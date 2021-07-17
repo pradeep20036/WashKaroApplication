@@ -15,7 +15,7 @@
         android:layout_marginBottom="4dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="8dp"
-        android:background="@drawable/user_chat"
+        android:background="@drawable/right_background"
         android:gravity="start|center_vertical"
         android:orientation="horizontal"
         android:layout_marginRight="16dp"
@@ -34,9 +34,7 @@
             android:id="@+id/message_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="end|bottom"
-            android:layout_margin="4dp"
-            tools:text="@tools:sample/date/hhmm"
+
             android:textColor="@android:color/black"
             android:textSize="12sp" />
     </LinearLayout>

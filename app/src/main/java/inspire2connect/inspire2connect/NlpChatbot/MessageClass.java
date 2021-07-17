@@ -2,9 +2,9 @@ package inspire2connect.inspire2connect.NlpChatbot;
 
 public class MessageClass {
     String message="";
-    int sender=0;
+    String sender="";
 
-    public MessageClass(String message, int sender) {
+    public MessageClass(String message, String sender) {
         this.message = message;
         this.sender = sender;
     }
@@ -17,11 +17,11 @@ public class MessageClass {
         this.message = message;
     }
 
-    public int getSender() {
+    public String getSender() {
         return sender;
     }
 
-    public void setSender(int sender) {
+    public void setSender(String sender) {
         this.sender = sender;
     }
 }
