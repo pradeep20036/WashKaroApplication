@@ -208,11 +208,12 @@ public class BaseActivity extends AppCompatActivity {
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String uid = user.getUid();
+        String name = user.getDisplayName();
         String shareLinkText = "https://washkaro.page.link/?"
-                +"link=http://tavlab.iiitd.edu.in/"
+                +"link=http://tavlab.iiitd.edu.in/myrefer.php?uid="+uid+"-"+name
                 +"&apn=" + "WashKaro-TB"
                 +"&st=" + "My Referral Link"
-                +"&sp=" + "Reward Points = 20"
+                +"&sd=" + "Reward Points 20"
                 +"&si=" + "http://tavlab.iiitd.edu.in/WashKaro/assets/img/washkaro.png"
                 ;
         Log.d("Check",shareLinkText);
