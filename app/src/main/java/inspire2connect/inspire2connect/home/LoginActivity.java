@@ -72,8 +72,9 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
         for (int i = 0; i < btnToAdd.length; i++) {
             ll_but[btnToAdd[i]].setOnClickListener(this);
         }
-
-        FirebaseUser user = mAuth.getCurrentUser();
+        FirebaseUser user=null;
+        if(mAuth!=null)
+            user = mAuth.getCurrentUser();
         if (user != null) {
             progressDialog.dismiss();
             startActivity(new Intent(LoginActivity.this, HomeActivity.class));
