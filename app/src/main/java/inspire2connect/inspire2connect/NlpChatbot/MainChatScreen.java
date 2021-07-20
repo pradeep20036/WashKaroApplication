@@ -118,7 +118,7 @@ public class MainChatScreen extends AppCompatActivity {
                 {
                     sendMessage(msg);
 
-                    Toast.makeText(MainChatScreen.this,"Message sent",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(MainChatScreen.this,"Message sent",Toast.LENGTH_SHORT).show();
                 }
                 else
                 {
@@ -146,7 +146,7 @@ public class MainChatScreen extends AppCompatActivity {
 
                 String messageResponse=Objects.requireNonNull(result).get(0);
                 sendMessage(messageResponse);
-                Toast.makeText(MainChatScreen.this,"Message sent",Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainChatScreen.this,"Message sent",Toast.LENGTH_SHORT).show();
 
 
             }
@@ -171,9 +171,12 @@ public class MainChatScreen extends AppCompatActivity {
             recyclerView.smoothScrollToPosition(recyclerView.getAdapter().getItemCount());
 
         }
+
+//        http://fd8926d6aa3f.ngrok.io
+
         OkHttpClient okHttpClient = new OkHttpClient();
         Retrofit retrofit =new Retrofit.Builder()
-                .baseUrl("http://fd8926d6aa3f.ngrok.io/webhooks/rest/")
+                .baseUrl("https://33cbce9f0436.ap.ngrok.io/webhooks/rest/")
                 .client(okHttpClient)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
