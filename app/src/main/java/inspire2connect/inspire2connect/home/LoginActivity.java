@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -21,19 +20,12 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.dynamiclinks.FirebaseDynamicLinks;
-import com.google.firebase.dynamiclinks.PendingDynamicLinkData;
-
-import java.util.HashMap;
 
 import inspire2connect.inspire2connect.R;
 import inspire2connect.inspire2connect.utils.BaseActivity;
@@ -66,52 +58,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
         progressDialog.setCancelable(false);
         progressDialog.show();
 
-        FirebaseDynamicLinks.getInstance()
-                .getDynamicLink(getIntent())
-                .addOnSuccessListener(this, new OnSuccessListener<PendingDynamicLinkData>() {
-                    @Override
-                    public void onSuccess(PendingDynamicLinkData pendingDynamicLinkData) {
-                        // Get deep link from result (may be null if no link is found)
-                        Uri deepLink = null;
-                        if (pendingDynamicLinkData != null) {
-                            deepLink = pendingDynamicLinkData.getLink();
-                        }
-//                        Log.e("CHECK",deepLink.toString());
-//                        http://tavlab.iiitd.edu.in/myrefer.php?uid="+uid+"-"+name
-
-
-                        try {
-                            String referlink = deepLink.toString();
-                            String userid ="";
-                            String username ="";
-                            referlink =referlink.substring(referlink.lastIndexOf("=")+1);
-                            userid = referlink.substring(0,referlink.indexOf("-"));
-                            username = referlink.substring(referlink.indexOf("-")+1);
-                            HashMap<String, Object> map = new HashMap<>();
-                            map.put("Name",username);
-                            map.put("Rewards",20);
-
-                            FirebaseDatabase.getInstance().getReference().child("https://washkaro-referral-rewards-2d45a.firebaseio.com/").child(userid).updateChildren(map);
-
-                            Log.e("CHECK","userid " +userid+ "----- "+username);
-
-
-                        }catch (Exception e)
-                        {
-                            Log.e("CHECK",e.toString());
-                        }
-
-
-
-                    }
-                })
-                .addOnFailureListener(this, new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Log.w(TAG, "getDynamicLink:onFailure", e);
-                    }
-                });
-
         mAuth = FirebaseAuth.getInstance();
 
 
@@ -126,14 +72,9 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
         for (int i = 0; i < btnToAdd.length; i++) {
             ll_but[btnToAdd[i]].setOnClickListener(this);
         }
-
         FirebaseUser user=null;
-        if(mAuth != null){
-
-
+        if(mAuth!=null)
             user = mAuth.getCurrentUser();
-        }
-
         if (user != null) {
             progressDialog.dismiss();
             startActivity(new Intent(LoginActivity.this, HomeActivity.class));
