@@ -26,7 +26,7 @@
         android:background="@drawable/full_guidline_view_roundcorner"
         android:fontFamily="sans-serif-smallcaps"
         android:gravity="center"
-        android:text="Enter the verfification code sent to you"
+        android:text="Enter the verfication code sent to you"
         android:textColor="@color/Home_background_color"
         android:textSize="20sp" />
 

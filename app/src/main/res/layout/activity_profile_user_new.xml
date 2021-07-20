@@ -80,10 +80,11 @@
 
         <TextView
             android:id="@+id/tv_email"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/quiz_round_button"
             android:ems="10"
+            android:layout_marginVertical="20dp"
             android:fontFamily="sans-serif-smallcaps"
             android:gravity="center"
             android:layout_marginLeft="4dp"
@@ -96,11 +97,35 @@
             android:text="Email"
             android:textColor="@color/app_black"
             android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_name"
+            app:layout_constraintVertical_bias="0.106" />
+        <TextView
+            android:id="@+id/rewards"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/quiz_round_button"
+            android:ems="10"
+            android:fontFamily="sans-serif-smallcaps"
+            android:gravity="center"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+
+
+            android:inputType="textEmailAddress"
+
+            android:padding="16dp"
+            android:text="Rewards"
+            android:textColor="@color/app_black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_email"
             app:layout_constraintVertical_bias="0.106" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView

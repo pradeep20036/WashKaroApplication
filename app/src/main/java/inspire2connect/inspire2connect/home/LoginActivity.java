@@ -29,8 +29,11 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.dynamiclinks.FirebaseDynamicLinks;
 import com.google.firebase.dynamiclinks.PendingDynamicLinkData;
+
+import java.util.HashMap;
 
 import inspire2connect.inspire2connect.R;
 import inspire2connect.inspire2connect.utils.BaseActivity;
@@ -73,23 +76,29 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
                         if (pendingDynamicLinkData != null) {
                             deepLink = pendingDynamicLinkData.getLink();
                         }
-                        Log.d("CHECK",deepLink.toString());
+//                        Log.e("CHECK",deepLink.toString());
 //                        http://tavlab.iiitd.edu.in/myrefer.php?uid="+uid+"-"+name
 
-                        String referlink = deepLink.toString();
-                        String userid ="";
-                        String username ="";
+
                         try {
+                            String referlink = deepLink.toString();
+                            String userid ="";
+                            String username ="";
                             referlink =referlink.substring(referlink.lastIndexOf("=")+1);
                             userid = referlink.substring(0,referlink.indexOf("-"));
                             username = referlink.substring(referlink.indexOf("-")+1);
+                            HashMap<String, Object> map = new HashMap<>();
+                            map.put("Name",username);
+                            map.put("Rewards",20);
 
-                            Log.d("CHECK","userid " +userid+ "----- "+username);
+                            FirebaseDatabase.getInstance().getReference().child("https://washkaro-referral-rewards-2d45a.firebaseio.com/").child(userid).updateChildren(map);
+
+                            Log.e("CHECK","userid " +userid+ "----- "+username);
 
 
                         }catch (Exception e)
                         {
-                            Log.d("CHECK",e.toString());
+                            Log.e("CHECK",e.toString());
                         }
 
 
@@ -118,7 +127,13 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
             ll_but[btnToAdd[i]].setOnClickListener(this);
         }
 
-        FirebaseUser user = mAuth.getCurrentUser();
+        FirebaseUser user=null;
+        if(mAuth != null){
+
+
+            user = mAuth.getCurrentUser();
+        }
+
         if (user != null) {
             progressDialog.dismiss();
             startActivity(new Intent(LoginActivity.this, HomeActivity.class));
