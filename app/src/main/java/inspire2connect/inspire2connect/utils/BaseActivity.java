@@ -210,7 +210,7 @@ public class BaseActivity extends AppCompatActivity {
         String uid = user.getUid();
         String name = user.getDisplayName();
         String shareLinkText = "https://washkaro.page.link/?"
-                +"link=https://play.google.com/store/apps/details?id=inspire2connect.inspire2connect/?invitedby=" + uid+"-"+name
+                +"link=https://washkaro.page.link/wkrr/?invitedby=" + uid+"-"+name
                 +"&apn=" + "WashKaro-TB"
                 +"&st=" + "My Referral Link"
                 +"&sd=" + "Reward Points 20"

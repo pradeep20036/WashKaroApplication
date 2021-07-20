@@ -169,14 +169,11 @@ public class MainChatScreen extends AppCompatActivity {
 //            recyclerView.scrollToPosition(messageClassArrayList.size()-1);
             adapter.notifyDataSetChanged();
             recyclerView.smoothScrollToPosition(recyclerView.getAdapter().getItemCount());
-
         }
-
 //        http://fd8926d6aa3f.ngrok.io
-
         OkHttpClient okHttpClient = new OkHttpClient();
         Retrofit retrofit =new Retrofit.Builder()
-                .baseUrl("https://33cbce9f0436.ap.ngrok.io/webhooks/rest/")
+                .baseUrl("http://ac0717fae23b.ap.ngrok.io/webhooks/rest/")
                 .client(okHttpClient)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
@@ -190,7 +187,6 @@ public class MainChatScreen extends AppCompatActivity {
                 Log.d("CHECK", "response" + response.body());
                 Log.d("CHECK", "response" + response.toString());
                 Log.d("CHECK", "response" + response.isSuccessful());
-
                 Log.d("CHECK", "call" + call.isExecuted());
 
                 if (response.body() == null || response.body().size() == 0) {

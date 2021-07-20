@@ -94,6 +94,8 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
 
                         try {
                             String referlink = deepLink.toString();
+
+
                             String userid ="";
                             String username ="";
                             referlink =referlink.substring(referlink.lastIndexOf("=")+1);
@@ -103,6 +105,20 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
                             map.put("Name",username);
                             map.put("Rewards",20);
                             databaseReference.child(userid).child("Rewards").setValue(20);
+//
+//                            databaseReference.child("users").child(userId).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+//                                @Override
+//                                public void onComplete(@NonNull Task<DataSnapshot> task) {
+//                                    if (!task.isSuccessful()) {
+//                                        Log.e("firebase", "Error getting data", task.getException());
+//                                    }
+//                                    else {
+//                                        Log.d("firebase", String.valueOf(task.getResult().getValue()));
+//                                    }
+//                                }
+//                            });
+
+
 
 
                             Log.e("CHECK","userid " +userid+ "----- "+username);
