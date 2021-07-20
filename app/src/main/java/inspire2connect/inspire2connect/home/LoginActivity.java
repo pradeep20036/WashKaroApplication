@@ -30,6 +30,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.dynamiclinks.FirebaseDynamicLinks;
@@ -52,6 +53,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
     private static final int MY_REQUEST_CODE = 2399;
     ConstraintLayout[] ll_but = new ConstraintLayout[10];
     ProgressDialog progressDialog;
+    private TextView reward;
 
     @Override
     protected void attachBaseContext(Context newBase) {
@@ -70,6 +72,8 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
         progressDialog.setCancelable(false);
         progressDialog.show();
         databaseReference = FirebaseDatabase.getInstance("https://washkaro-referral-rewards-2d45a.firebaseio.com/").getReference();
+
+
 
         withoutlogin = findViewById(R.id.without_login);
         withoutlogin.setOnClickListener(new View.OnClickListener() {
@@ -105,18 +109,23 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
                             map.put("Name",username);
                             map.put("Rewards",20);
                             databaseReference.child(userid).child("Rewards").setValue(20);
-//
-//                            databaseReference.child("users").child(userId).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
-//                                @Override
-//                                public void onComplete(@NonNull Task<DataSnapshot> task) {
-//                                    if (!task.isSuccessful()) {
-//                                        Log.e("firebase", "Error getting data", task.getException());
-//                                    }
-//                                    else {
-//                                        Log.d("firebase", String.valueOf(task.getResult().getValue()));
-//                                    }
-//                                }
-//                            });
+
+                            final int[] points = {0};
+                            databaseReference.child(userid).child("Rewards").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                                @Override
+                                public void onComplete(@NonNull Task<DataSnapshot> task) {
+                                    if (!task.isSuccessful()) {
+                                        Log.e("firebase", "Error getting data", task.getException());
+                                        points[0] =20;
+                                    }
+                                    else {
+                                        Log.d("firebase", String.valueOf(task.getResult().getValue()));
+                                        points[0]=Integer.parseInt(String.valueOf(task.getResult().getValue()))+20;
+                                    }
+                                }
+                            });
+
+                            databaseReference.child(userid).child("Rewards").setValue(points[0]);
 
 
 

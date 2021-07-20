@@ -136,6 +136,7 @@
         android:text="Continue without login"
         android:layout_marginHorizontal="40dp"
         android:padding="10dp"
+        android:fontFamily="@font/mukta_semibold"
         android:elevation="3dp"
         android:gravity="center"
         android:textColor="@color/app_black"

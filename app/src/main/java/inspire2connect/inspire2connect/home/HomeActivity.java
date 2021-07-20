@@ -157,10 +157,15 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
                     finish();
                     break;
                 case R.id.profile:
-                    startActivity(new Intent(getApplicationContext(),
-                            ProfileActivity.class));
+                    if(uid!=null){
+                        startActivity(new Intent(getApplicationContext(),
+                                ProfileActivity.class));
                     overridePendingTransition(0,0);
-                    finish();
+                    finish();}
+                    else{
+                        Toast.makeText(HomeActivity.this,"Required login to access the Profile",Toast.LENGTH_SHORT).show();
+
+                    }
                     break;
                 case R.id.chatbot:
                     if(uid!= null)

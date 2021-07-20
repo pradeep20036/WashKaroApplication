@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -17,9 +18,14 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -38,10 +44,10 @@ public class ProfileActivity extends AppCompatActivity {
     ImageView iv_profile;
     TextView tv_name;
     TextView tv_email;
-
+    private static DatabaseReference databaseReference = null;
     TextView tv_phone;
     Uri imageUri;
-
+    TextView rewards;
     @Override
     public void onBackPressed()
     {
@@ -55,59 +61,97 @@ public class ProfileActivity extends AppCompatActivity {
         iv_profile=findViewById(R.id.account_image);
         tv_name=findViewById(R.id.tv_name);
         tv_email=findViewById(R.id.tv_email);
+        rewards=findViewById(R.id.rewards);
+
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+        String uid=user.getUid();
+        if(uid!=null) {
+            databaseReference = FirebaseDatabase.getInstance("https://washkaro-referral-rewards-2d45a.firebaseio.com/").getReference();
+
+            if (databaseReference != null) {
+                databaseReference.child(FirebaseAuth.getInstance().getUid()).child("Rewards").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DataSnapshot> task) {
+                        if (!task.isSuccessful()) {
+                            rewards.setText("Reward: " + "0");
+                            Log.e("firebase", "Error getting data", task.getException());
+
+                        } else {
+                            Log.d("firebase", String.valueOf(task.getResult().getValue()));
+
+                            if(String.valueOf(task.getResult().getValue()).compareTo("null")==0){
+                                rewards.setText("Reward: " +"0");
+                            }else{
+                                int value = Integer.parseInt(String.valueOf(task.getResult().getValue())) + 20;
+                                rewards.setText("Reward: " + value + "");
+                            }
+
+                        }
+                    }
+                });
+            }
+
 
 //        code for switching activity on navbar
 
-        // handling bottom navigation
-        BottomNavigationView bottomNavigationView=findViewById(R.id.bottom_navigation);
+            // handling bottom navigation
+            BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 //    //perform item selector listener
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
+            bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
 
-                switch (item.getItemId()){
-                    case R.id.home:
-                        startActivity(new Intent(getApplicationContext(),
-                                HomeActivity.class));
-                        overridePendingTransition(0,0);
-                        finish();
-                        break;
-                    case R.id.profile:
-                        startActivity(new Intent(getApplicationContext(),
-                                ProfileActivity.class));
-                        overridePendingTransition(0,0);
-                        finish();
-                        break;
-                    case R.id.chatbot:
-                        startActivity(new Intent(getApplicationContext(),
-                                TermsAndConditionActivity.class));
-                        overridePendingTransition(0,0);
-                        finish();
-                        break;
-                    case R.id.wkscreen:
-                        startActivity(new Intent(getApplicationContext(),
-                                MainScreening.class));
-                        overridePendingTransition(0,0);
-                        finish();
-                        break;
+                    switch (item.getItemId()) {
+                        case R.id.home:
+                            startActivity(new Intent(getApplicationContext(),
+                                    HomeActivity.class));
+                            overridePendingTransition(0, 0);
+                            finish();
+                            break;
+                        case R.id.profile:
+                            startActivity(new Intent(getApplicationContext(),
+                                    ProfileActivity.class));
+                            overridePendingTransition(0, 0);
+                            finish();
+                            break;
+                        case R.id.chatbot:
+                            startActivity(new Intent(getApplicationContext(),
+                                    TermsAndConditionActivity.class));
+                            overridePendingTransition(0, 0);
+                            finish();
+                            break;
+                        case R.id.wkscreen:
+                            startActivity(new Intent(getApplicationContext(),
+                                    MainScreening.class));
+                            overridePendingTransition(0, 0);
+                            finish();
+                            break;
 
+                    }
+
+                    return false;
                 }
+            });
 
-                return false;
-            }
-        });
+            // check if image is already saved in the memory, if yes then load it.
 
-        // check if image is already saved in the memory, if yes then load it.
+            loadInformation();
 
-        loadInformation();
-
-        // now making the imageView clickable
+            // now making the imageView clickable
 //        iv_profile.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
 //                imageClicked();
 //            }
 //        });
+
+        }
+
+        else{
+            Toast.makeText(ProfileActivity.this,"Required login to access the Profile",Toast.LENGTH_SHORT).show();
+        }
+
 
 
 
