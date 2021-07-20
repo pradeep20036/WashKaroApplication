@@ -444,6 +444,7 @@
                 android:textAllCaps="false"
                 android:textColor="@color/app_white"
                 android:textSize="16sp"
+                android:padding="10dp"
                 android:fontFamily="sans-serif-smallcaps"
                 android:textStyle="bold"
                 app:backgroundTint="#00ADB5" />

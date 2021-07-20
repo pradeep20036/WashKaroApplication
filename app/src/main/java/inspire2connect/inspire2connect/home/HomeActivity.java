@@ -35,6 +35,8 @@ import com.google.android.play.core.install.model.UpdateAvailability;
 import com.google.android.play.core.tasks.OnSuccessListener;
 import com.google.android.play.core.tasks.Task;
 import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
@@ -75,10 +77,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
     private ViewFlipper viewFlipper;
     private List<Infographics> slideLists;
 
-
-
-
-
+    String uid;
 
 
 
@@ -132,6 +131,17 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
         update_handle();
         initialize_view_flipper();
 
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+        try {
+            uid = user.getUid();
+        }
+        catch (Exception e)
+        {
+
+        }
+
+
         // handling bottom navigation
         BottomNavigationView bottomNavigationView=findViewById(R.id.bottom_navigation);
 //    //perform item selector listener
@@ -153,10 +163,15 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
                     finish();
                     break;
                 case R.id.chatbot:
+                    if(uid!= null)
+                    {
                     startActivity(new Intent(getApplicationContext(),
                             TermsAndConditionActivity.class));
                     overridePendingTransition(0,0);
-                    finish();
+                    finish();}
+                    else{
+                        Toast.makeText(HomeActivity.this,"Required login to access the chatbot",Toast.LENGTH_SHORT).show();
+                    }
                     break;
                 case R.id.wkscreen:
                     startActivity(new Intent(getApplicationContext(),
@@ -304,11 +319,15 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
                 FirebaseAnalytics.getInstance(this).logEvent("ScrollingInfographics", bundle2);
                 break;
             case R.id.misc_but2_layout:
+                if(uid!=null) {
 
-                i = new Intent(HomeActivity.this, TermsAndConditionActivity.class);
-                startActivity(i);
-                overridePendingTransition(0,0);
-
+                    i = new Intent(HomeActivity.this, TermsAndConditionActivity.class);
+                    startActivity(i);
+                    overridePendingTransition(0, 0);
+                 }
+                 else{
+                    Toast.makeText(HomeActivity.this,"Required login to access the chatbot",Toast.LENGTH_SHORT).show();
+                }
                 break;
             case R.id.misc_but3_layout:
                 i = getMythIntent(this);
@@ -382,7 +401,17 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
                 break;
 
             case R.id.refer_app:
-                getReferralLink();
+
+
+                if(uid!= null)
+                {
+
+                    getReferralLink();
+                }
+                else{
+                    Toast.makeText(HomeActivity.this,"Required login to refer someone",Toast.LENGTH_SHORT).show();
+                }
+
                 break;
             default:
                 i = null;

@@ -35,6 +35,8 @@ import com.google.android.play.core.install.model.UpdateAvailability;
 import com.google.android.play.core.tasks.OnSuccessListener;
 import com.google.android.play.core.tasks.Task;
 import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -47,6 +49,7 @@ import java.util.Locale;
 
 import inspire2connect.inspire2connect.R;
 import inspire2connect.inspire2connect.about.aboutActivity;
+import inspire2connect.inspire2connect.home.HomeActivity;
 import inspire2connect.inspire2connect.survey.maleFemaleActivity;
 import inspire2connect.inspire2connect.utils.BaseActivity;
 import inspire2connect.inspire2connect.utils.LocaleHelper;
@@ -73,6 +76,7 @@ public class tweetActivity extends BaseActivity implements TextToSpeech.OnInitLi
     private tweetRecyclerViewAdapter mAdapter;
     private TextToSpeech tts;
     private boolean setDate;
+    private String uid;
 
     public void update_handle() {
         final AppUpdateManager appUpdateManager = AppUpdateManagerFactory.create(this);
@@ -158,6 +162,15 @@ public class tweetActivity extends BaseActivity implements TextToSpeech.OnInitLi
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+        try {
+            uid = user.getUid();
+        }
+        catch (Exception e)
+        {
+
+        }
         update_handle();
         initialize_view_flipper();
 
@@ -465,7 +478,17 @@ public class tweetActivity extends BaseActivity implements TextToSpeech.OnInitLi
                 break;
 
             case R.id.refer_app:
-                getReferralLink();
+
+
+                if(uid!= null)
+                {
+
+                    getReferralLink();
+                }
+                else{
+                    Toast.makeText(tweetActivity.this,"Required login to refer someone",Toast.LENGTH_SHORT).show();
+                }
+
                 break;
             default:
                 i = null;

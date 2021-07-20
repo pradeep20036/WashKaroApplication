@@ -9,12 +9,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -30,6 +33,7 @@ import java.util.Map;
 import inspire2connect.inspire2connect.R;
 import inspire2connect.inspire2connect.about.aboutActivity;
 import inspire2connect.inspire2connect.survey.maleFemaleActivity;
+import inspire2connect.inspire2connect.tweets.tweetActivity;
 import inspire2connect.inspire2connect.utils.BaseActivity;
 import inspire2connect.inspire2connect.utils.LocaleHelper;
 
@@ -41,6 +45,7 @@ public class onAIrActivity extends BaseActivity {
     String currentUserID;
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
+    private String uid;
 
     @Override
     protected void attachBaseContext(Context newBase) {
@@ -88,7 +93,17 @@ public class onAIrActivity extends BaseActivity {
                 break;
 
             case R.id.refer_app:
-                getReferralLink();
+
+
+                if(uid!= null)
+                {
+
+                    getReferralLink();
+                }
+                else{
+                    Toast.makeText(onAIrActivity.this,"Required login to refer someone",Toast.LENGTH_SHORT).show();
+                }
+
                 break;
             default:
                 break;
@@ -107,6 +122,15 @@ public class onAIrActivity extends BaseActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setTitle(R.string.onair_tile);
             getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        }
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+        try {
+            uid = user.getUid();
+        }
+        catch (Exception e)
+        {
+
         }
 
         final ArrayList<newsObject> results = new ArrayList<>();

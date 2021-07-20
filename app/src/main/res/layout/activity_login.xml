@@ -126,5 +126,20 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <TextView
+        android:clickable="true"
+        android:id="@+id/without_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/quiz_round_button"
+        android:text="Continue without login"
+        android:layout_marginHorizontal="40dp"
+        android:padding="10dp"
+        android:elevation="3dp"
+        android:gravity="center"
+        android:textColor="@color/app_black"
+        />
+
 
 </LinearLayout>

@@ -14,11 +14,15 @@ import android.view.View;
 import android.widget.Button;
 
 import android.location.Location;
+import android.widget.Toast;
+
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -35,11 +39,21 @@ public class MainScreening extends AppCompatActivity {
     Location currentLocation;
     private static final int REQUEST_CODE = 101;
     public static double currLat, currLong;
+    private String uid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screening);
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+        try {
+            uid = user.getUid();
+        }
+        catch (Exception e)
+        {
+
+        }
 
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
         fetchLastLocation();
@@ -62,6 +76,15 @@ public class MainScreening extends AppCompatActivity {
         chatbotScreenButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(uid!= null)
+                {
+                    startActivity(new Intent(getApplicationContext(),
+                            TermsAndConditionActivity.class));
+                    overridePendingTransition(0,0);
+                    finish();}
+                else{
+                    Toast.makeText(MainScreening.this,"Required login to access the chatbot",Toast.LENGTH_SHORT).show();
+                }
 
             }
         });

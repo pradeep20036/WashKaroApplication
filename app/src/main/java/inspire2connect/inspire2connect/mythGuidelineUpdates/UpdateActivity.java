@@ -9,6 +9,7 @@ import android.speech.tts.TextToSpeech;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -17,6 +18,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -28,6 +31,7 @@ import java.util.Locale;
 import inspire2connect.inspire2connect.R;
 import inspire2connect.inspire2connect.about.aboutActivity;
 import inspire2connect.inspire2connect.survey.maleFemaleActivity;
+import inspire2connect.inspire2connect.tweets.tweetActivity;
 import inspire2connect.inspire2connect.utils.BaseActivity;
 import inspire2connect.inspire2connect.utils.LocaleHelper;
 
@@ -42,6 +46,7 @@ public class UpdateActivity extends BaseActivity implements TextToSpeech.OnInitL
     private TextToSpeech tts;
     private boolean setDate;
     private String screenName;
+    private String uid;
 
     @Override
     protected void attachBaseContext(Context newBase) {
@@ -100,6 +105,15 @@ public class UpdateActivity extends BaseActivity implements TextToSpeech.OnInitL
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+        try {
+            uid = user.getUid();
+        }
+        catch (Exception e)
+        {
+
+        }
         setDate = false;
 
         Intent i = getIntent();
@@ -224,7 +238,17 @@ public class UpdateActivity extends BaseActivity implements TextToSpeech.OnInitL
                 break;
 
             case R.id.refer_app:
-                getReferralLink();
+
+
+                if(uid!= null)
+                {
+
+                    getReferralLink();
+                }
+                else{
+                    Toast.makeText(UpdateActivity.this,"Required login to refer someone",Toast.LENGTH_SHORT).show();
+                }
+
                 break;
             default:
                 i = null;

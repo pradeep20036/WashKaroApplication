@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -29,6 +30,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.dynamiclinks.FirebaseDynamicLinks;
 import com.google.firebase.dynamiclinks.PendingDynamicLinkData;
@@ -45,6 +47,8 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
     private  String TAG = "LoginActivity";
     private FirebaseAuth mAuth;
     private int RC_SIGN_IN = 1;
+    private TextView withoutlogin;
+    private static DatabaseReference databaseReference = null;
     private static final int MY_REQUEST_CODE = 2399;
     ConstraintLayout[] ll_but = new ConstraintLayout[10];
     ProgressDialog progressDialog;
@@ -65,7 +69,15 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
         progressDialog.setMessage("Loading");
         progressDialog.setCancelable(false);
         progressDialog.show();
+        databaseReference = FirebaseDatabase.getInstance("https://washkaro-referral-rewards-2d45a.firebaseio.com/").getReference();
 
+        withoutlogin = findViewById(R.id.without_login);
+        withoutlogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+            }
+        });
         FirebaseDynamicLinks.getInstance()
                 .getDynamicLink(getIntent())
                 .addOnSuccessListener(this, new OnSuccessListener<PendingDynamicLinkData>() {
@@ -90,8 +102,8 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
                             HashMap<String, Object> map = new HashMap<>();
                             map.put("Name",username);
                             map.put("Rewards",20);
+                            databaseReference.child(userid).child("Rewards").setValue(20);
 
-                            FirebaseDatabase.getInstance().getReference().child("https://washkaro-referral-rewards-2d45a.firebaseio.com/").child(userid).updateChildren(map);
 
                             Log.e("CHECK","userid " +userid+ "----- "+username);
 
