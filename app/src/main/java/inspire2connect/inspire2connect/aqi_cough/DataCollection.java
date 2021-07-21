@@ -60,16 +60,16 @@ public class DataCollection extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
 
-        if (firebaseUser == null) {
-            firebaseAuth.signInAnonymously().addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                    if (task.isSuccessful()) {
-                        firebaseUser = firebaseAuth.getCurrentUser();
-                    }
-                }
-            });
-        }
+//        if (firebaseUser == null) {
+//            firebaseAuth.signInAnonymously().addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+//                @Override
+//                public void onComplete(@NonNull Task<AuthResult> task) {
+//                    if (task.isSuccessful()) {
+//                        firebaseUser = firebaseAuth.getCurrentUser();
+//                    }
+//                }
+//            });
+//        }
 
         if (firebaseUser != null) {
             currentUserID = firebaseUser.getUid();
