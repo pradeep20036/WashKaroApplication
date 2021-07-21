@@ -74,7 +74,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
         databaseReference = FirebaseDatabase.getInstance("https://washkaro-referral-rewards-2d45a.firebaseio.com/").getReference();
 
 
-
         withoutlogin = findViewById(R.id.without_login);
         withoutlogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -135,7 +134,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
 
                         }catch (Exception e)
                         {
-                            Log.e("CHECK",e.toString());
+//                            Log.e("CHECK",e.toString());
                         }
 
 
