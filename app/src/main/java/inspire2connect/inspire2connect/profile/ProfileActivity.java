@@ -109,17 +109,12 @@ public class ProfileActivity extends AppCompatActivity {
                             overridePendingTransition(0, 0);
                             finish();
                             break;
-                        case R.id.profile:
-                            startActivity(new Intent(getApplicationContext(),
-                                    ProfileActivity.class));
-                            overridePendingTransition(0, 0);
-                            finish();
-                            break;
+
                         case R.id.chatbot:
                             startActivity(new Intent(getApplicationContext(),
                                     TermsAndConditionActivity.class));
                             overridePendingTransition(0, 0);
-                            finish();
+
                             break;
                         case R.id.wkscreen:
                             startActivity(new Intent(getApplicationContext(),

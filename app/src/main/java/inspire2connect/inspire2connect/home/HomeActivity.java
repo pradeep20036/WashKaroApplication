@@ -150,12 +150,8 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
         public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
 
             switch (item.getItemId()){
-                case R.id.home:
-                    startActivity(new Intent(getApplicationContext(),
-                            HomeActivity.class));
-                    overridePendingTransition(0,0);
-                    finish();
-                    break;
+
+
                 case R.id.profile:
                     if(uid!=null){
                         startActivity(new Intent(getApplicationContext(),
@@ -173,7 +169,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
                     startActivity(new Intent(getApplicationContext(),
                             TermsAndConditionActivity.class));
                     overridePendingTransition(0,0);
-                    finish();}
+                   }
                     else{
                         Toast.makeText(HomeActivity.this,"Required login to access the chatbot",Toast.LENGTH_SHORT).show();
                     }

@@ -126,18 +126,13 @@ public class MainScreening extends AppCompatActivity {
                             startActivity(new Intent(getApplicationContext(),
                                     TermsAndConditionActivity.class));
                             overridePendingTransition(0,0);
-                            finish();
+
                         }else{
                             Toast.makeText(MainScreening.this,"Required login to access the Profile",Toast.LENGTH_SHORT).show();
                         }
 
                         break;
-                    case R.id.wkscreen:
-                        startActivity(new Intent(getApplicationContext(),
-                                MainScreening.class));
-                        overridePendingTransition(0,0);
-                        finish();
-                        break;
+
 
 
                 }
