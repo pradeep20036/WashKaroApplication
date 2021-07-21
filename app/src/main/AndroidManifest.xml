@@ -23,8 +23,10 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:replace="android:appComponentFactory">
-        <activity android:name=".NlpChatbot.MainChatScreen"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".home.SplashScreen"></activity>
+        <activity
+            android:name=".NlpChatbot.MainChatScreen"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".aqi_cough.YoutubePlayVid"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
@@ -34,24 +36,24 @@
         <activity
             android:name=".aqi_cough.TbUserLeader"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-
-        <activity android:name=".home.TermsAndConditionActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
-
-
-
+        <activity
+            android:name=".home.TermsAndConditionActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".aqi_cough.MainScreening"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".aqi_cough.DataCollection"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
-        <activity android:name=".aqi_cough.coughRecorder"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
-        <activity android:name=".aqi_cough.BookDownloader"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".aqi_cough.DataCollection"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".aqi_cough.coughRecorder"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".aqi_cough.BookDownloader"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".BottomNavigation.AboutActivityNavigation" />
         <activity android:name=".BottomNavigation.HomeActivityBottomNavigation" />
-        <activity android:name=".BottomNavigation.BottomNavigation"></activity> <!-- Testing Activity -->
+        <activity android:name=".BottomNavigation.BottomNavigation" /> <!-- Testing Activity -->
         <activity
             android:name=".profile.ProfileActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
@@ -61,31 +63,26 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".satyaChat.ChatActivity" />
         <activity android:name=".home.HomeActivity">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.VIEW" />-->
 
-<!--                <category android:name="android.intent.category.DEFAULT" />-->
-<!--                <category android:name="android.intent.category.BROWSABLE" />-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.VIEW" /> -->
 
-<!--                <data-->
-<!--                    android:host="washkaro.page.link"-->
-<!--                    android:scheme="https" />-->
-<!--                <data android:host="washkaro.page.link" android:scheme="http"/>-->
-<!--            </intent-filter>-->
+
+            <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+            <!-- <category android:name="android.intent.category.BROWSABLE" /> -->
+
+
+            <!-- <data -->
+            <!-- android:host="washkaro.page.link" -->
+            <!-- android:scheme="https" /> -->
+            <!-- <data android:host="washkaro.page.link" android:scheme="http"/> -->
+            <!-- </intent-filter> -->
 
         </activity> <!-- <activity android:name=".male_female_2" /> -->
         <activity
             android:name=".home.LoginActivity"
             android:noHistory="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -95,13 +92,14 @@
                 <data
                     android:host="washkaro.page.link"
                     android:scheme="https" />
-                <data android:host="washkaro.page.link" android:scheme="http"/>
+                <data
+                    android:host="washkaro.page.link"
+                    android:scheme="http" />
             </intent-filter>
         </activity>
         <activity
             android:name=".home.EmailLogin"
-            android:noHistory="true"
-           ></activity>
+            android:noHistory="true" />
         <activity
             android:name=".home.PhoneLogin"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
@@ -109,7 +107,13 @@
             android:name=".home.VerifyPhoneActivity"
             android:noHistory="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".home.WelcomeActivity" />
+        <activity android:name=".home.WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".survey.maleFemaleActivity" />
         <activity android:name=".news.text2speech2_2Activity" />
         <activity android:name=".about.aboutActivity" />

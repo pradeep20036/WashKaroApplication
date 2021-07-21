@@ -34,6 +34,7 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
     </style>
+
     <string name="tavlab_logo">Tav Lab at IIIT Delhi</string>
     <string name="precog_logo">Precog Lab at IIIT Delhi</string>
     <string name="iiitd_logo">IIIT Delhi</string>
