@@ -60,6 +60,19 @@ android:background="@color/differentWhite"
 
                 android:layout_margin="16dp"/>
 
+            <Switch
+                android:id="@+id/tg_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="हिन्दी"
+                android:textColor="#FFFFFF"
+                android:textOff="हिन्दी"
+                android:textOn="English"
+                app:layout_constraintEnd_toStartOf="@+id/mic"
+                app:layout_constraintStart_toEndOf="@+id/title_tv"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/mic"
                 android:layout_width="40dp"
