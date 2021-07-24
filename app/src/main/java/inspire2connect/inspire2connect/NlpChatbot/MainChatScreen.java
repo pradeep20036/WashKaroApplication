@@ -246,7 +246,7 @@ public class MainChatScreen extends AppCompatActivity {
 //        http://fd8926d6aa3f.ngrok.io
         OkHttpClient okHttpClient = new OkHttpClient();
         Retrofit retrofit =new Retrofit.Builder()
-                .baseUrl("http://c03107cd3d1d.ap.ngrok.io/webhooks/rest/")
+                .baseUrl("http://6de72a2fbadc.ap.ngrok.io/webhooks/rest/")
                 .client(okHttpClient)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();

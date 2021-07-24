@@ -9,6 +9,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -156,6 +157,9 @@ public class MainScreening extends AppCompatActivity {
                 Intent dataIntent = new Intent(MainScreening.this, DataCollection.class);
                 dataIntent.putExtra("currLat", currLat);
                 dataIntent.putExtra("currLong", currLong);
+                Log.i("Location intent",currLat+"");
+                Log.i("Location intent",currLong+"");
+
                 startActivity(dataIntent);
             }
         });
@@ -176,6 +180,9 @@ public class MainScreening extends AppCompatActivity {
                     currentLocation = location;
                     currLat = currentLocation.getLatitude();
                     currLong = currentLocation.getLongitude();
+                    Log.i("Location",currLat+"");
+                    Log.i("Location",currLong+"");
+
                 }
             }
         });

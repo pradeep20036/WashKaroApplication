@@ -82,20 +82,20 @@ public class coughRecorder extends AppCompatActivity {
         double prevLong = getIntent().getExtras().getDouble("actLong");
         AQInum = getIntent().getExtras().getString("aqiVal");
 
-        actualLat = 0;
-        actualLong = 0;
-        if (currLat < 0.2){
-            actualLat = currLat;
-            actualLong = currLong;
-        }
-        else if (prevLat < 0.2) {
-            actualLat = prevLat;
-            actualLong = prevLong;
-        }
-        else {
-            actualLat = 28.5456;
-            actualLong = 77.2732;
-        }
+        actualLat = prevLat;
+        actualLong = prevLong;
+//        if (currLat < 0.2){
+//            actualLat = currLat;
+//            actualLong = currLong;
+//        }
+//        else if (prevLat < 0.2) {
+//            actualLat = prevLat;
+//            actualLong = prevLong;
+//        }
+//        else {
+//            actualLat = 28.5456;
+//            actualLong = 77.2732;
+//        }
 
         submitButton2.setOnClickListener(new View.OnClickListener(){
 
@@ -207,6 +207,7 @@ public class coughRecorder extends AppCompatActivity {
 
                 if(mediaPlayer2 != null){
                     mediaPlayer2.stop();
+                    Toast.makeText(coughRecorder.this, "STOPPED", Toast.LENGTH_SHORT).show();
                     mediaPlayer2.release();
                     setupMediaRecorder();
                 }

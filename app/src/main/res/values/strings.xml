@@ -102,6 +102,13 @@
     <string name="tav">Dr Tavpritesh Sethi</string>
     <string name="tav_description">Assistant Professor(CB), IIIT Delhi</string>
 
+    <string name="Pradeep">Pradeep Kumar</string>
+    <string name="Pradeep_tag">MTech CSE, IIIT Delhi</string>
+
+    <string name="Sudeep">Sudeep Vig</string>
+    <string name="Sudeep_tag">MTech CSE, IIIT Delhi</string>
+
+
     <string name="rohan">Rohan Pandey</string>
     <string name="rohan_tag">Undergraduate, SNU</string>
 
@@ -134,6 +141,10 @@
     <string name="rishabh">Rishabh Jalan</string>
     <string name="ayush">Ayush Garg</string>
     <string name="akshat">Akshat Wadhwa</string>
+
+
+    <string name="PradeepURL" translatable="false">https://www.linkedin.com/in/pradeep-kumar-10065b15b/</string>
+    <string name="sudeepURL" translatable="false">https://www.linkedin.com/in/sudeep-vig-038543151/</string>
 
     <string name="precogURL" translatable="false">http://precog.iiitd.edu.in/</string>
     <string name="iiitdURL" translatable="false">https://www.iiitd.ac.in/</string>

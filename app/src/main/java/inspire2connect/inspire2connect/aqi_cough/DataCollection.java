@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -83,20 +84,20 @@ public class DataCollection extends AppCompatActivity {
         double prevLat = getIntent().getExtras().getDouble("currLat");
         double prevLong = getIntent().getExtras().getDouble("currLong");
         System.out.println("CURR LAT - " + currLat + ", CURR LONG - " + currLong);
-        actualLat = 0;
-        actualLong = 0;
-        if (currLat < 0.2){
-            actualLat = currLat;
-            actualLong = currLong;
-        }
-        else if (prevLat < 0.2) {
-            actualLat = prevLat;
-            actualLong = prevLong;
-        }
-        else {
-            actualLat = 28.5456;
-            actualLong = 77.2732;
-        }
+        actualLat = prevLat;
+        actualLong = prevLong;
+//        if (currLat < 0.2){
+//            actualLat = currLat;
+//            actualLong = currLong;
+//        }
+//        else if (prevLat < 0.2) {
+//            actualLat = prevLat;
+//            actualLong = prevLong;
+//        }
+//        else {
+//            actualLat = 28.5456;
+//            actualLong = 77.2732;
+//        }
 
         String url = "http://api.waqi.info/feed/geo:" + actualLat + ";" + actualLong + "/?token=74483de2b4238f9e5ba5ce927bfc0476bd2b10d2";
 
@@ -192,14 +193,17 @@ public class DataCollection extends AppCompatActivity {
 
                 UserHelperClass helperClass = new UserHelperClass(avgAQI.getText().toString(), "" + actualLat, "" + actualLong, heightString, weightString, ageString, bronchitisVal, asthmaVal, pneumoniaVal, cancerVal, tbVal, otherRespVal, femaleVal, maleVal, otherGenderVal, currentTime);
 
-                rootNode = FirebaseDatabase.getInstance();
+                rootNode = FirebaseDatabase.getInstance("https://wkscreen.firebaseio.com/");
                 reference = rootNode.getReference("TbUserData").child(currentUserID);
                 reference.push().setValue(helperClass);
+                Log.i("Issue","Line 199 run successfully");
 
                 Intent geotagIntent = new Intent(DataCollection.this, coughRecorder.class);
                 geotagIntent.putExtra("actLat", actualLat);
                 geotagIntent.putExtra("actLong", actualLong);
                 geotagIntent.putExtra("aqiVal", AQIVal[0]);
+                Log.i("Issue","Line 205 run successfully");
+
                 startActivity(geotagIntent);
             }
         });
