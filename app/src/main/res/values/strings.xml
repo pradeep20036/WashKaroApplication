@@ -3,7 +3,7 @@
     <string name="term_and_cond" translatable="false">Please read these <b>Terms of Service</b>
         carefully before using the Chatbot. By accessing or using the service, you agree to be bound by these terms.
         If you disagree with any part of the terms, then you may not access the service.\n\n
-        <br>1. During the conversation, your medical data will be scraped and collected.\n</br>
+        <br>1. During the conversation, your health data will be scraped and collected.\n</br>
         <br>2. we will store the health data to use it for symptom tracking.\n</br>
         <br>3. We may share your data with third parties for research purposes only.</br>\n\n
         <br><b>I agree to these terms and conditions</b></br>
