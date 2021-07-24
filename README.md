@@ -31,6 +31,9 @@ WashKaro is a free Android-based app which aims to spread awareness among the ma
 5. Himanshu Sharma 
 6. Yashwin Agrawal
 7. Vihaan Misra
+8. Pradeep kumar (MTech CSE IIITD)
+9. Sudeep Vig(MTech CSE IIITD)
+
 
 ### Designers
 1. Bhavika Rana
